@@ -1,4 +1,4 @@
-# ==================================================
+#!/bin/bash
 #wget https://github.com/${GitUser}/
 GitUser="Jesanne87"
 
