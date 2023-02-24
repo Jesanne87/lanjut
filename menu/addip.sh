@@ -1,3 +1,4 @@
+#!/bin/bash
 # Color Validation
 DF='\e[39m'
 Bold='\e[1m'

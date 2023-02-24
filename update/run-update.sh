@@ -1,3 +1,4 @@
+#!/bin/bash
 #wget https://github.com/${GitUser}/
 GitUser="Jesanne87"
 if [ "${EUID}" -ne 0 ]; then

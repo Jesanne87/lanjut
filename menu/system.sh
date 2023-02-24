@@ -1,3 +1,4 @@
+#!/bin/bash
 #wget https://gJesanne87ithub.com/${GitUser}/
 GitUser="Internetvps"
 #IZIN SCRIPT

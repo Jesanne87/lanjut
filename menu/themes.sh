@@ -1,3 +1,4 @@
+#!/bin/bash
 #Script Auto Reboot Vps
 #wget https://github.com/${GitUser}/
 GitUser="Jesanne87"
