@@ -1,4 +1,4 @@
-#wget https://github.com/${GitUser}/
+#wget https://gJesanne87ithub.com/${GitUser}/
 GitUser="Internetvps"
 #IZIN SCRIPT
 MYIP=$(curl -sS ipv4.icanhazip.com)

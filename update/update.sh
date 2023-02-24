@@ -1,6 +1,6 @@
 #Script Auto Reboot Vps
 #wget https://github.com/${GitUser}/
-GitUser="Internetvps"
+GitUser="Jesanne87"
 #IZIN SCRIPT
 MYIP=$(curl -sS ipv4.icanhazip.com)
 # Valid Script
