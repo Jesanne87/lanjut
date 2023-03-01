@@ -158,9 +158,9 @@ clear
 #install ohp-server
 echo -e "\e[0;32mINSTALLING OHP PORT...\e[0m"
 sleep 1
-wget https://raw.githubusercontent.com/${GitUser}/lanjut/main/install/ohp.sh && chmod +x ohp.sh && ./ohp.sh
-wget https://raw.githubusercontent.com/${GitUser}/lanjut/main/install/ohp-dropbear.sh && chmod +x ohp-dropbear.sh && ./ohp-dropbear.sh
-wget https://raw.githubusercontent.com/${GitUser}/lanjut/main/install/ohp-ssh.sh && chmod +x ohp-ssh.sh && ./ohp-ssh.sh
+wget https://raw.githubusercontent.com/${GitUser}/lanjut/main/ohp.sh && chmod +x ohp.sh && ./ohp.sh
+#wget https://raw.githubusercontent.com/${GitUser}/lanjut/main/install/ohp-dropbear.sh && chmod +x ohp-dropbear.sh && ./ohp-dropbear.sh
+#wget https://raw.githubusercontent.com/${GitUser}/lanjut/main/install/ohp-ssh.sh && chmod +x ohp-ssh.sh && ./ohp-ssh.sh
 echo -e "\e[0;32mDONE INSTALLING OHP PORT\e[0m"
 clear
 #install websocket
@@ -191,8 +191,8 @@ wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/${GitUser}
 rm -f /root/ssh-vpn.sh
 rm -f /root/ins-xray.sh
 rm -f /root/ohp.sh
-rm -f /root/ohp-dropbear.sh
-rm -f /root/ohp-ssh.sh
+#rm -f /root/ohp-dropbear.sh
+#rm -f /root/ohp-ssh.sh
 rm -f /root/websocket.sh
 rm -f /root/set-br.sh
 # Colour Default
