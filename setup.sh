@@ -21,7 +21,7 @@ echo ''
 echo "                                                              "
 echo -e "$Lyellow                ⚡ PREMIUM AUTO SCRIPT ⚡"$NC
 echo -e "$green.........................................................."$NC
-echo -e "$Lyellow                  Autoscript By drgvpn"$NC
+echo -e "$Lyellow                  Autoscript By JSphantom"$NC
 echo -e "$Lyellow                    CONTACT TELEGRAM"$NC
 echo -e "$Lyellow                       @info_android9"$NC
 echo -e "$green.........................................................."$NC
@@ -50,7 +50,7 @@ VALIDITY() {
     today=$(date -d "0 days" +"%Y-%m-%d")
     Exp1=$(curl https://raw.githubusercontent.com/${GitUser}/allow/main/ipvps.conf | grep $MYIP | awk '{print $4}')
     if [[ $today < $Exp1 ]]; then
-        echo -e "\e[32mTahniah! Anda Dibenarkan menggunakan AUTOSCRIPT DRGVPN..\e[0m"
+        echo -e "\e[32mTahniah! Anda Dibenarkan menggunakan AUTOSCRIPT JSphantom..\e[0m"
         sleep 5
     else
         echo -e "\e[31mYOUR SCRIPT HAS EXPIRED!\e[0m"
@@ -63,7 +63,7 @@ VALIDITY() {
     today=$(date -d "0 days" +"%Y-%m-%d")
     Exp1=$(curl https://raw.githubusercontent.com/${GitUser}/allow/main/ipvps.conf | grep $MYIP | awk '{print $4}')
     if [[ $today < $Exp1 ]]; then
-        echo -e "\e[32mTahniah! Anda Dibenarkan menggunakan AUTOSCRIPT DRGVPN..\e[0m"
+        echo -e "\e[32mTahniah! Anda Dibenarkan menggunakan AUTOSCRIPT JSphantom..\e[0m"
         sleep 5
     else
         echo -e "\e[31mYOUR SCRIPT HAS EXPIRED!\e[0m"
@@ -268,7 +268,7 @@ echo "   - Auto Delete Expired Account" | tee -a log-install.txt
 echo "   - Full Orders For Various Services" | tee -a log-install.txt
 echo "   - White Label" | tee -a log-install.txt
 echo "   - Installation Log --> /root/log-install.txt"  | tee -a log-install.txt
-echo -e "\e[1;32m══════════════════Autoscript By DRGVPN══════════════════\e[0m" | tee -a log-install.txt
+echo -e "\e[1;32m══════════════════Autoscript By JSphantom══════════════════\e[0m" | tee -a log-install.txt
 sleep 7
 clear
 echo ""

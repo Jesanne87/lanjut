@@ -1,4 +1,4 @@
-# Created by drgvpn
+# Created by JSphantom
 #!/bin/bash
 #wget https://github.com/${GitUser}/
 GitUser="Jesanne87"
