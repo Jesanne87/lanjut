@@ -23,7 +23,7 @@ echo -e "$Lyellow                ⚡ PREMIUM AUTO SCRIPT ⚡"$NC
 echo -e "$green.........................................................."$NC
 echo -e "$Lyellow                  Autoscript By JSphantom"$NC
 echo -e "$Lyellow                    CONTACT TELEGRAM"$NC
-echo -e "$Lyellow                       @info_android9"$NC
+echo -e "$Lyellow                       @okkkk"$NC
 echo -e "$green.........................................................."$NC
 echo ''
 echo -e "$Lyellow                       Tunggu 10 Saat!"$NC
