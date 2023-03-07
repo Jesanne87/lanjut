@@ -19,11 +19,11 @@ echo ''
 clear
 echo ''
 echo "                                                              "
-echo -e "[ ${green}INFO${NC} ] Preparing the install file"
+echo -e "${NC}[ ${green}INFO${NC} ] \e[93mPreparing the install file"
 apt install git curl -y >/dev/null 2>&1
-echo -e "[ ${green}INFO${NC} ] Alright good ... installation file is ready"
+echo -e "${NC}[ ${green}INFO${NC} ] \e[93mAlright good ... installation file is ready"
 sleep 2
-echo -ne "[ ${green}INFO${NC} ] Check permission : "
+echo -ne "${NC}[ ${green}INFO${NC} ] \e[93mCheck permission... "
 sleep 6
 clear
 if [ "${EUID}" -ne 0 ]; then
@@ -46,7 +46,7 @@ VALIDITY() {
     today=$(date -d "0 days" +"%Y-%m-%d")
     Exp1=$(curl https://raw.githubusercontent.com/${GitUser}/allow/main/ipvps.conf | grep $MYIP | awk '{print $4}')
     if [[ $today < $Exp1 ]]; then
-        echo -e "\e[32mTahniah! Anda Dibenarkan menggunakan AUTOSCRIPT JSphantom..\e[0m"
+        echo -e "\e[93mGood!!You are Allowed To use This Script By JSphantom..\e[0m"
         sleep 5
     else
         echo -e "\e[31mYOUR SCRIPT HAS EXPIRED!\e[0m"
@@ -59,21 +59,21 @@ VALIDITY() {
     today=$(date -d "0 days" +"%Y-%m-%d")
     Exp1=$(curl https://raw.githubusercontent.com/${GitUser}/allow/main/ipvps.conf | grep $MYIP | awk '{print $4}')
     if [[ $today < $Exp1 ]]; then
-        echo -e "\e[32mTahniah! Anda Dibenarkan menggunakan AUTOSCRIPT JSphantom..\e[0m"
+        echo -e "\e[93mGood!!You are Allowed To use This Script By JSphantom..\e[0m"
         sleep 5
     else
-        echo -e "\e[31mYOUR SCRIPT HAS EXPIRED!\e[0m"
-        echo -e "\e[31mPlease renew your ipvps first\e[0m"
+        echo -e "\e[93mYOUR SCRIPT HAS EXPIRED!\e[0m"
+        echo -e "\e[93mPlease renew your ipvps first\e[0m"
         exit 0
     fi
 }
 IZIN=$(curl https://raw.githubusercontent.com/${GitUser}/allow/main/ipvps.conf | awk '{print $5}' | grep $MYIP)
 if [ $MYIP = $IZIN ]; then
-    echo -e "\e[32mPermission Accepted...\e[0m"
+    echo -e "\e[93mPermission Accepted...\e[0m"
     VALIDITY
 else
-    echo -e "\e[31mPermission Denied!\e[0m"
-    echo -e "\e[31mPlease buy script first\e[0m"
+    echo -e "\e[93mPermission Denied!\e[0m"
+    echo -e "\e[93mPlease buy script first\e[0m"
     rm -f setup.sh
     exit 0
 fi
@@ -86,7 +86,7 @@ clear
 #Nama penyedia script
 echo -e "\e[1;32m════════════════════════════════════════════════════════════\e[0m"
 echo ""
-echo -e "   \e[1;32mPlease enter the name of Provider for Script."
+echo -e "   \e[1;32mPlease Enter the name of the Script Provider"
 read -p "   Name : " nm
 echo $nm > /root/provided
 echo ""
