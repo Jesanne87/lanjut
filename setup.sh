@@ -19,15 +19,11 @@ echo ''
 clear
 echo ''
 echo "                                                              "
-echo -e "$Lyellow                ⚡ PREMIUM AUTO SCRIPT ⚡"$NC
-echo -e "$green.........................................................."$NC
-echo -e "$Lyellow                  Autoscript By JSphantom"$NC
-echo -e "$Lyellow                    CONTACT TELEGRAM"$NC
-echo -e "$Lyellow                       @okkkk"$NC
-echo -e "$green.........................................................."$NC
-echo ''
-echo -e "$Lyellow                       Tunggu 10 Saat!"$NC
-echo -e "$green.........................................................."$NC
+echo -e "[ ${green}INFO${NC} ] Preparing the install file"
+apt install git curl -y >/dev/null 2>&1
+echo -e "[ ${green}INFO${NC} ] Alright good ... installation file is ready"
+sleep 2
+echo -ne "[ ${green}INFO${NC} ] Check permission : "
 sleep 6
 clear
 if [ "${EUID}" -ne 0 ]; then
