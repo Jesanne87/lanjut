@@ -3,7 +3,7 @@
 ## Update & Upgrade First Your VPS for Debian 10 & 11
 
   ```html
-  apt-get update && apt-get upgrade -y 
+apt update -y && apt upgrade -y && apt dist-upgrade -y && reboot
 
   ```
 
