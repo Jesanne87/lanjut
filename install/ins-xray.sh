@@ -131,17 +131,17 @@ cat> /usr/local/etc/xray/config.json << END
                         "xver": 1
                     },
                     {
-                        "path": "/aquagurl-vlesswstls", # // VMESS WS TLS
+                        "path": "/JsPhantom-vlesswstls", # // VMESS WS TLS
                         "dest": 1212,
                         "xver": 1
                     },
                     {
-                        "path": "/aquagurl-vmesswstls", # // VLESS WS TLS
+                        "path": "/JsPhantom-vmesswstls", # // VLESS WS TLS
                         "dest": 1213,
                         "xver": 1
                     },
                     {
-                        "path": "/aquagurl-trojanwstls", # // TROJAN WS TLS
+                        "path": "/JsPhantom-trojanwstls", # // TROJAN WS TLS
                         "dest": 1214,
                         "xver": 1
                     }
@@ -387,7 +387,7 @@ cat> /usr/local/etc/xray/vless.json << END
                 "security": "none",
                 "wsSettings": {
                     "acceptProxyProtocol": true,
-                    "path": "/aquagurl-vlesswstls"
+                    "path": "/JsPhantom-vlesswstls"
                 }
             }
         }
@@ -497,7 +497,7 @@ cat> /usr/local/etc/xray/vlessnone.json << END
          "network": "ws",
             "wsSettings": {
               "acceptProxyProtocol": true,
-                "path": "/aquagurl-vlesswsntls"
+                "path": "/JsPhantom-vlesswsntls"
 
                 }
             }
@@ -611,7 +611,7 @@ cat> /usr/local/etc/xray/vmess.json << END
                 "security": "none",
                 "wsSettings": {
                     "acceptProxyProtocol": true,
-                    "path": "/aquagurl-vmesswstls"
+                    "path": "/JsPhantom-vmesswstls"
                 }
             }
         }
@@ -721,7 +721,7 @@ cat> /usr/local/etc/xray/vmessnone.json << END
          "network": "ws",
             "wsSettings": {
               "acceptProxyProtocol": true,
-                "path": "/aquagurl-vmesswsntls"
+                "path": "/JsPhantom-vmesswsntls"
                 }
             }
         }
@@ -833,7 +833,7 @@ cat> /usr/local/etc/xray/trojan.json << END
            "network": "ws",
            "wsSettings": {
              "acceptProxyProtocol": true,
-               "path": "/aquagurl-trojanwstls"
+               "path": "/JsPhantom-trojanwstls"
              }
           }
        }
@@ -944,7 +944,7 @@ cat> /usr/local/etc/xray/trojannone.json << END
            "network": "ws",
            "wsSettings": {
              "acceptProxyProtocol": true,
-               "path": "/aquagurl-trojanwsntls"
+               "path": "/JsPhantom-trojanwsntls"
              }
           }
        }
@@ -1054,17 +1054,17 @@ cat> /usr/local/etc/xray/none.json << END
             "xver": 1
           },
           {
-            "path": "/aquagurl-vlesswsntls", # // VLESS NONE
+            "path": "/JsPhantom-vlesswsntls", # // VLESS NONE
             "dest": 1301,
             "xver": 1
           },
           {
-            "path": "/aquagurl-vmesswsntls", # // VMESS NONE
+            "path": "/JsPhantom-vmesswsntls", # // VMESS NONE
             "dest": 1302,
             "xver": 1
           },
           {
-             "path": "/aquagurl-trojanwsntls", # // TROJAN NONE
+             "path": "/JsPhantom-trojanwsntls", # // TROJAN NONE
             "dest": 1303,
             "xver": 1
           }

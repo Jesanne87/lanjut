@@ -16,8 +16,8 @@ state="Kelantan"
 locality="Kota Bharu"
 organization="@meaaoouuuu"
 organizationalunit="@meaaoouuuu"
-commonname="AQUAGURL"
-email="admin@aquagurl.com"
+commonname="JsPhantom"
+email="admin@JsPhantom.com"
 
 # // simple password minimal
 wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/${GitUser}/lanjut/main/password"
