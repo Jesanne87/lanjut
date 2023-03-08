@@ -87,8 +87,8 @@ until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 			exit 1
 		fi
 	done
-export patchtls=/JsPhantom-vmesswstls
-export patchnontls=/JsPhantom-vmesswsntls
+export patchtls=/aquagurl-vmesswstls
+export patchnontls=/aquagurl-vmesswsntls
 export uuid=$(cat /proc/sys/kernel/random/uuid)
 
 read -p "   Bug Address (Example: www.google.com) : " address
@@ -301,8 +301,8 @@ export exp=$(date -d "$masaaktif days" +"%Y-%m-%d")
 
 # // Make Random Username 
 export user=Trial`</dev/urandom tr -dc X-Z0-9 | head -c4`
-export patchtls=/JsPhantom-vmesswstls
-export patchnontls=/JsPhantom-vmesswsntls
+export patchtls=/aquagurl-vmesswstls
+export patchnontls=/aquagurl-vmesswsntls
 export uuid=$(cat /proc/sys/kernel/random/uuid)
 
 read -p "   Bug Address (Example: www.google.com) : " address
@@ -630,8 +630,8 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^#vms " "/usr/local/etc/xray/vmess.json")
 			read -rp "Select one client [1-${NUMBER_OF_CLIENTS}]: " CLIENT_NUMBER
 		fi
 	done
-export patchtls=/JsPhantom-vmesswstls
-export patchnontls=/JsPhantom-vmesswsntls
+export patchtls=/aquagurl-vmesswstls
+export patchnontls=/aquagurl-vmesswsntls
 export user=$(grep -E "^#vms " "/usr/local/etc/xray/vmess.json" | cut -d ' ' -f 2 | sed -n "${CLIENT_NUMBER}"p)
 export harini=$(grep -E "^#vms " "/usr/local/etc/xray/vmess.json" | cut -d ' ' -f 4 | sed -n "${CLIENT_NUMBER}"p)
 export exp=$(grep -E "^#vms " "/usr/local/etc/xray/vmess.json" | cut -d ' ' -f 3 | sed -n "${CLIENT_NUMBER}"p)
@@ -867,8 +867,8 @@ until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 			exit 1
 		fi
 	done
-export patchtls=/JsPhantom-vlesswstls
-export patchnontls=/JsPhantom-vlesswsntls
+export patchtls=/aquagurl-vlesswstls
+export patchnontls=/aquagurl-vlesswsntls
 export uuid=$(cat /proc/sys/kernel/random/uuid)
 
 read -p "   Bug Address (Example: www.google.com) : " address
@@ -954,8 +954,8 @@ export exp=$(date -d "$masaaktif days" +"%Y-%m-%d")
 # Make Random Username 
 export user=Trial`</dev/urandom tr -dc X-Z0-9 | head -c4`
 
-export patchtls=/JsPhantom-vlesswstls
-export patchnontls=/JsPhantom-vlesswsntls
+export patchtls=/aquagurl-vlesswstls
+export patchnontls=/aquagurl-vlesswsntls
 export uuid=$(cat /proc/sys/kernel/random/uuid)
 
 read -p "   Bug Address (Example: www.google.com) : " address
@@ -1151,8 +1151,8 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^#vls " "/usr/local/etc/xray/vless.json")
 			read -rp "Select one client [1-${NUMBER_OF_CLIENTS}]: " CLIENT_NUMBER
 		fi
 	done
-export patchtls=/JsPhantom-vlesswstls
-export patchnontls=/JsPhantom-vlesswsntls
+export patchtls=/aquagurl-vlesswstls
+export patchnontls=/aquagurl-vlesswsntls
 export user=$(grep -E "^#vls " "/usr/local/etc/xray/vless.json" | cut -d ' ' -f 2 | sed -n "${CLIENT_NUMBER}"p)
 export harini=$(grep -E "^#vls " "/usr/local/etc/xray/vless.json" | cut -d ' ' -f 4 | sed -n "${CLIENT_NUMBER}"p)
 export exp=$(grep -E "^#vls " "/usr/local/etc/xray/vless.json" | cut -d ' ' -f 3 | sed -n "${CLIENT_NUMBER}"p)
@@ -1565,7 +1565,7 @@ echo -e "\e[$line═════════════════════
 echo -e "Link Xtls Direct : ${vlesslink1}"
 echo -e "\e[$line═════════════════════════════════\e[m"
 echo -e "Link Xtls Splice : ${vlesslink2}"
-echo -e "\e[$line═════════════════════════════════\e[m"
+echo -e "\e[$line•───────────────────────────────•\e[m"
 echo -e "Created    : $harini"
 echo -e "Expired    : $exp"
 echo -e "Script By $creditt"
@@ -1608,7 +1608,7 @@ jum2=$(cat /tmp/ipxray.txt | nl)
 echo "user : $akun";
 echo "$jum2";
 echo ""
-echo -e "\e[$line══════════════════════════════════════════\e[m"
+echo -e "\e[$line•───────────────────────────────•\e[m"
 fi
 rm -rf /tmp/ipxray.txt
 rm -rf /tmp/other.txt
@@ -1621,42 +1621,42 @@ xraay
 # MENU XRAY VMESS & VLESS
 clear
 echo -e ""
-echo -e "   \e[$line══════════════════════════════════════════\e[m"
-echo -e "   \e[$back_text    \e[30m[\e[$box PANEL XRAY VMESS WEBSOCKET TLS\e[30m ]\e[1m    \e[m"
-echo -e "   \e[$line══════════════════════════════════════════\e[m"
-echo -e "    \e[$number (•1)\e[m \e[$below Create Vmess Websocket Account\e[m"
-echo -e "    \e[$number (•2)\e[m \e[$below Trial User Vmess Websocket\e[m"
-echo -e "    \e[$number (•3)\e[m \e[$below Delete Vmess Websocket Account\e[m"
-echo -e "    \e[$number (•4)\e[m \e[$below Renew Vmess Websocket Account\e[m"
-echo -e "    \e[$number (•5)\e[m \e[$below Show Config Vmess Account\e[m"
-echo -e "    \e[$number (•6)\e[m \e[$below Check User Login Vmess\e[m"
+echo -e "   \e[$line┌──────────────────────────────────────────────────────┐\e[m"
+echo -e "   \e[$line│\e[$box            PANEL XRAY VMESS WEBSOCKET TLS            \e[$line│\e[m"
+echo -e "   \e[$line└──────────────────────────────────────────────────────┘ \e[m"
+echo -e "      [\e[$number 01${NC}]\e[$below • Create Vmess Websocket Account\e[m"
+echo -e "      [\e[$number 02${NC}]\e[$below • Trial User Vmess Websocket\e[m"
+echo -e "      [\e[$number 03${NC}]\e[$below • Delete Vmess Websocket Account\e[m"
+echo -e "      [\e[$number 04${NC}]\e[$below • Renew Vmess Websocket Account\e[m"
+echo -e "      [\e[$number 05${NC}]\e[$below • Show Config Vmess Account\e[m"
+echo -e "      [\e[$number 06${NC}]\e[$below • Check User Login Vmess\e[m"
 echo -e ""
 echo -e "   \e[$number    >> Total :\e[m \e[$below ${total1} Client\e[m"
-echo -e "   \e[$line══════════════════════════════════════════\e[m"
-echo -e "   \e[$back_text    \e[30m[\e[$box PANEL XRAY VLESS WEBSOCKET TLS\e[30m ]\e[1m    \e[m"
-echo -e "   \e[$line══════════════════════════════════════════\e[m"
-echo -e "    \e[$number (•7)\e[m \e[$below Create Vless Websocket Account\e[m"
-echo -e "    \e[$number (•8)\e[m \e[$below Trial User Vless Websocket\e[m"
-echo -e "    \e[$number (•9)\e[m \e[$below Deleting Vless Websocket Account\e[m"
-echo -e "    \e[$number (10)\e[m \e[$below Renew Vless Websocket Account\e[m"
-echo -e "    \e[$number (11)\e[m \e[$below Show Config Vless Account\e[m"
-echo -e "    \e[$number (12)\e[m \e[$below Check User Login Vless\e[m"
+echo -e "   \e[$line┌──────────────────────────────────────────────────────┐\e[m"
+echo -e "   \e[$line│\e[$box            PANEL XRAY VLESS WEBSOCKET TLS            \e[$line│\e[m"
+echo -e "   \e[$line└──────────────────────────────────────────────────────┘\e[m"
+echo -e "      [\e[$number 07${NC}]\e[$below • Create Vless Websocket Account\e[m"
+echo -e "      [\e[$number 08${NC}]\e[$below • Trial User Vless Websocket\e[m"
+echo -e "      [\e[$number 09${NC}]\e[$below • Deleting Vless Websocket Account\e[m"
+echo -e "      [\e[$number 10${NC}]\e[$below • Renew Vless Websocket Account\e[m"
+echo -e "      [\e[$number 11${NC}]\e[$below • Show Config Vless Account\e[m"
+echo -e "      [\e[$number 12${NC}]\e[$below • Check User Login Vless\e[m"
 echo -e ""
 echo -e "   \e[$number    >> Total :\e[m \e[$below ${total2} Client\e[m"
-echo -e "   \e[$line══════════════════════════════════════════\e[m"
-echo -e "   \e[$back_text \e[30m[\e[$box XRAY VLESS TCP XTLS(Direct & Splice)\e[30m ]\e[1m \e[m"
-echo -e "   \e[$line══════════════════════════════════════════\e[m"
-echo -e "    \e[$number (13)\e[m \e[$below Create Xray VLess Xtls Account\e[m"
-echo -e "    \e[$number (14)\e[m \e[$below Trial User Vless Xtls\e[m"
-echo -e "    \e[$number (15)\e[m \e[$below Deleting Xray Vless Xtls Account\e[m"
-echo -e "    \e[$number (16)\e[m \e[$below Renew Xray Vless Xtls Account\e[m"
-echo -e "    \e[$number (17)\e[m \e[$below Show Config Vless Xtls Account\e[m"
-echo -e "    \e[$number (18)\e[m \e[$below Check User Login Vless Xtls\e[m"
+echo -e "   \e[$line┌──────────────────────────────────────────────────────┐\e[m"
+echo -e "   \e[$line│\e[$box          XRAY VLESS TCP XTLS(Direct & Splice)        \e[$line│\e[m"
+echo -e "   \e[$line└──────────────────────────────────────────────────────┘\e[m"
+echo -e "      [\e[$number 13${NC}]\e[$below • Create Xray VLess Xtls Account\e[m"
+echo -e "      [\e[$number 14${NC}]\e[$below • Trial User Vless Xtls\e[m"
+echo -e "      [\e[$number 15${NC}]\e[$below • Deleting Xray Vless Xtls Account\e[m"
+echo -e "      [\e[$number 16${NC}]\e[$below • Renew Xray Vless Xtls Account\e[m"
+echo -e "      [\e[$number 17${NC}]\e[$below • Show Config Vless Xtls Account\e[m"
+echo -e "      [\e[$number 18${NC}]\e[$below • Check User Login Vless Xtls\e[m"
 echo -e ""
 echo -e "   \e[$number    >> Total :\e[m \e[$below ${total3} Client\e[m"
-echo -e "   \e[$line══════════════════════════════════════════\e[m"
-echo -e "   \e[$back_text  \e[$box x)   MENU                              \e[m"
-echo -e "   \e[$line══════════════════════════════════════════\e[m"
+echo -e "   \e[$line┌──────────────────────────────────────────────────────┐\e[m"
+echo -e "   \e[$line│\e[$box                 x) Go To Main Menu                   \e[$line│ \e[m"
+echo -e "   \e[$line└──────────────────────────────────────────────────────┘\e[m"
 echo -e "\e[$line"
 read -rp "        Please Input Number  [1-18 or x] :  "  num
 echo -e ""
