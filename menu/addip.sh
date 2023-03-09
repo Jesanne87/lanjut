@@ -49,7 +49,8 @@ cat << EOF >> /etc/crontab
 EOF
 rm -f /root/.bash_history
 sleep 2
-echo " Setelah Selesai type menu-admin untuk access"
+read -n 1 -s -r -p "Press any key to back on menu-addip"
+addip
 }
 
 add-ip() {
