@@ -310,7 +310,7 @@ wget -O run-update "https://raw.githubusercontent.com/${GitUser}/lanjut/main/upd
 wget -O message-ssh "https://raw.githubusercontent.com/${GitUser}/lanjut/main/update/message-ssh.sh"
 wget -O dns "https://raw.githubusercontent.com/${GitUser}/lanjut/main/system/dns.sh"
 wget -O nf "https://raw.githubusercontent.com/${GitUser}/lanjut/main/system/nf.sh"
-wget -O addip "https://raw.githubusercontent.com/${GitUser}/lanjut/main/system/addip.sh"
+wget -O addip "https://raw.githubusercontent.com/${GitUser}/lanjut/main/menu/addip.sh"
 chmod +x addip
 chmod +x add-host
 chmod +x menu
