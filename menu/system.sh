@@ -45,29 +45,20 @@ NC='\e[0m'
 MYIP=$(wget -qO- ifconfig.me/ip);
 clear
 echo -e ""
-echo -e "   \e[$line════════════════════════════════════════\e[m"
-echo -e "   \e[$back_text             \e[30m═[\e[$box SYSTEM MENU\e[30m ]═          \e[m"
-echo -e "   \e[$line════════════════════════════════════════\e[m"
-echo -e "   \e[$number (•1)\e[m \e[$below Add New Subdomain\e[m"
-echo -e "   \e[$number (•2)\e[m \e[$below Renew Cert Xray Core\e[m"
-echo -e "   \e[$number (•3)\e[m \e[$below Setup DNS NETFLIX\e[m"
-echo -e "   \e[$number (•4)\e[m \e[$below Check DNS NETFLIX\e[m"
-echo -e "   \e[$number (•5)\e[m \e[$below Panel Domain\e[m"
-echo -e "   \e[$number (•6)\e[m \e[$below Backup Vps\e[m"
-echo -e "   \e[$number (•7)\e[m \e[$below Autobackup Vps\e[m"
-echo -e "   \e[$number (•8)\e[m \e[$below Restore Vps\e[m"
-echo -e "   \e[$number (•9)\e[m \e[$below Install Webmin\e[m"
-echo -e "   \e[$number (10)\e[m \e[$below Setup Speed VPS\e[m"
-echo -e "   \e[$number (11)\e[m \e[$below Restart VPN\e[m"
-echo -e "   \e[$number (12)\e[m \e[$below Speedtest VPS\e[m"
-echo -e "   \e[$number (13)\e[m \e[$below Info All Port\e[m"
-echo -e "   \e[$number (14)\e[m \e[$below Install BBR\e[m"
-echo -e "   \e[$number (15)\e[m \e[$below ON/OF Auto Reboot\e[m"
-echo -e "   \e[$number (16)\e[m \e[$below Change Password VPS\e[m"
-echo -e "   \e[$number (17)\e[m \e[$below UPDATE SCRIPT\e[m"
-echo -e "   \e[$line════════════════════════════════════════\e[m"
-echo -e "   \e[$back_text \e[$box x)   MENU                             \e[m"
-echo -e "   \e[$line════════════════════════════════════════\e[m"
+echo -e "   \e[$line┌──────────────────────────────────────────────────────┐\e[m"
+echo -e "   \e[$line│                     \e[$box SYSTEM MENU\e[30m                     \e[$line│\e[m"
+echo -e "   \e[$line└──────────────────────────────────────────────────────┘\e[m"
+echo -e "   [\e[$number 01${NC}]\e[$below • Add New Subdomain    ${NC}[\e[$number 10${NC}]\e[$below • Setup Speed VPS\e[m"
+echo -e "   [\e[$number 02${NC}]\e[$below • Renew Cert Xray Core ${NC}[\e[$number 11${NC}]\e[$below • Restart VPN\e[m"
+echo -e "   [\e[$number 03${NC}]\e[$below • Setup DNS NETFLIX    ${NC}[\e[$number 12${NC}]\e[$below • Speedtest VPS\e[m"
+echo -e "   [\e[$number 04${NC}]\e[$below • Check DNS NETFLIX    ${NC}[\e[$number 13${NC}]\e[$below • Info All Port\e[m"
+echo -e "   [\e[$number 05${NC}]\e[$below • Panel Domain         ${NC}[\e[$number 14${NC}]\e[$below • Install BBR\e[m"
+echo -e "   [\e[$number 06${NC}]\e[$below • Backup Vps           ${NC}[\e[$number 15${NC}]\e[$below • ON/OF Auto Reboot\e[m"
+echo -e "   [\e[$number 07${NC}]\e[$below • Autobackup Vps       ${NC}[\e[$number 16${NC}]\e[$below • Change Password VPS\e[m"
+echo -e "   [\e[$number 08${NC}]\e[$below • Restore Vps          ${NC}[\e[$number 17${NC}]\e[$below • UPDATE SCRIPT\e[m"
+echo -e "   [\e[$number 09${NC}]\e[$below • Install Webmin\e[m"   
+echo -e "\e[$line"
+echo -e "              Press [ x ] To Go Main Menu " | lolcat
 echo -e "\e[$line"
 read -p "    Please Input Number  [1-17 or x] :  "  sys
 echo -e ""
@@ -76,7 +67,7 @@ case $sys in
 add-host
 ;;
 2)
-cert
+certv2ray
 ;;
 3)
 dns
