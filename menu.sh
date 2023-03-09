@@ -13,9 +13,9 @@ IPVPS=$(curl -s ipinfo.io/ip)
 cname=$(awk -F: '/model name/ {name=$2} END {print name}' /proc/cpuinfo)
 cores=$(awk -F: '/model name/ {core++} END {print core}' /proc/cpuinfo)
 freq=$(awk -F: ' /cpu MHz/ {freq=$2} END {print freq}' /proc/cpuinfo)
-tram=$(free -m | awk 'NR==2 {print $2}')
-uram=$(free -m | awk 'NR==2 {print $3}')
-fram=$(free -m | awk 'NR==2 {print $4}')
+#tram=$(free -m | awk 'NR==2 {print $2}')
+#uram=$(free -m | awk 'NR==2 {print $3}')
+#fram=$(free -m | awk 'NR==2 {print $4}')
 clear
 # OS Uptime
 uptime="$(uptime -p | cut -d " " -f 2-10)"
@@ -60,7 +60,9 @@ clear
 load_cpu=$(printf '%-3s' "$(top -bn1 | awk '/Cpu/ { cpu = "" 100 - $8 "%" }; END { print cpu }')")
 daily_usage=$(vnstat -d --oneline | awk -F\; '{print $6}' | sed 's/ //')
 monthly_usage=$(vnstat -m --oneline | awk -F\; '{print $11}' | sed 's/ //')
-
+ram_used=$(free -m | grep Mem: | awk '{print $3}')
+total_ram=$(free -m | grep Mem: | awk '{print $2}')
+ram_usage=$(echo "scale=2; ($ram_used / $total_ram) * 100" | bc | cut -d. -f1)
 # STATUS EXPIRED ACTIVE
 red_font_prefix="\033[32m" && blue_font_prefix="\033[31m" && blue_background_prefix="\033[42;37m" && Red_background_prefix="\033[4$below" && Font_color_suffix="\033[0m"
 Info="${Green_font_prefix}(Active)${Font_color_suffix}"
@@ -124,22 +126,21 @@ banner=$(cat /usr/bin/bannerku)
 ascii=$(cat /usr/bin/test)
 clear
 echo -e "\e[$banner_colour"
-figlet -f $ascii "$banner"
+figlet -f $ascii "$banner" | lolcat
 echo -e " \e[$line ┌──────────────────────────────────────────────────────┐${NC}"
 echo -e " \e[$line │\e[$box	    ───[ Moded Script By JsPhantom ]───          \e[$line│${NC}"
 echo -e " \e[$line └──────────────────────────────────────────────────────┘${NC}"
-echo -e " \e[$text OPERATING SYSTEM        : ${NC}$(hostnamectl | grep "Operating System" | cut -d ' ' -f5-)${NC}"
-echo -e " \e[$text KERNEL	          : ${NC}$(uname -r)${NC}"
-echo -e " \e[$text SYSTEM UPTIME           : ${NC}$uptime${NC}"
-echo -e " \e[$text IP ADDRESS		  : ${NC}$IPVPS${NC}"
-echo -e " \e[$text DOMAIN NAME	          : ${NC}$domain${NC}"
-echo -e " \e[$text PROVIDED BY		  : ${NC}\e[$below$creditt${NC}"
-echo -e " \e[$text STATUS UPDATE		  : ${NC}$stl${NC}"
-echo -e " \e[$text CPU USAGE		  : ${NC}$load_cpu${NC}"
-echo -e " \e[$text USED RAM		  : ${NC}$uram MB${NC}"
-echo -e " \e[$text FREE RAM		  : ${NC}$fram MB${NC}"
-echo -e " \e[$text DAILY DATA USAGE	  : ${NC}$daily_usage${NC}"
-echo -e " \e[$text MONTHLY DATA USAGE	  : ${NC}$monthly_usage${NC}"
+echo -e " \e[$text  OPERATING SYSTEM       : ${NC}$(hostnamectl | grep "Operating System" | cut -d ' ' -f5-)${NC}"
+echo -e " \e[$text  KERNEL	          : ${NC}$(uname -r)${NC}"
+echo -e " \e[$text  SYSTEM UPTIME          : ${NC}$uptime${NC}"
+echo -e " \e[$text  IP ADDRESS		  : ${NC}$IPVPS${NC}"
+echo -e " \e[$text  DOMAIN NAME	          : ${NC}$domain${NC}"
+echo -e " \e[$text  PROVIDED BY		  : ${NC}\e[$below$creditt${NC}"
+echo -e " \e[$text  STATUS UPDATE	  : ${NC}$stl${NC}"
+echo -e " \e[$text  CPU USAGE		  : ${NC}$load_cpu${NC}"
+echo -e " \e[$text  MEMORY USAGE           : ${NC}${ram_used}MB / ${total_ram}MB (${ram_usage}%)${NC}"
+echo -e " \e[$text  DAILY DATA USAGE	  : ${NC}\e[$below$daily_usage${NC}"
+echo -e " \e[$text  MONTHLY DATA USAGE	  : ${NC}\e[$below$monthly_usage${NC}"
 echo -e " \e[$line ┌──────────────────────────────────────────────────────┐${NC}"
 echo -e "   Ssh/Ovpn  V2ray  Vless  Vlessxtls   Troj-Ws   Troj-Tls${NC}"
 echo -e "      \e[$text $total_ssh       $vmess      $vless        $xtls          $trws         $trtls${NC}"
@@ -158,7 +159,7 @@ echo -e " "
 echo -e " \e[$line ┌──────────────────────────────────────────────────────┐${NC}"
 echo -e " \e[$line │\e[$box  •••───[ Moded Script By JsPhantom @ 2023 ]───•••    \e[$line│${NC}"
 echo -e " \e[$line └──────────────────────────────────────────────────────┘${NC}"
-echo -e "                [Ctrl + C] Exit From Script"
+echo -e "                [Ctrl + C] Exit From Script" | lolcat
 echo -e "\e[$below "
 read -p " Select menu :  " menu
 echo -e ""
