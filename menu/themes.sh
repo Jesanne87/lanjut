@@ -73,22 +73,14 @@ menu
 function menu2 () {
 clear
 echo ""
-echo -e "   \e[$line════════════════════════════════════════\e[m"
-echo -e "   \e[$back_text           \e[30m═[\e[$box BANNER COLOUR\e[30m ]═          \e[m"
-echo -e "   \e[$line════════════════════════════════════════\e[m"
-echo -e "   \e[$number (•1)\e[m \e[1;31m Red\e[m"
-echo -e "   \e[$number (•2)\e[m \e[1;32m Green\e[m"
-echo -e "   \e[$number (•3)\e[m \e[1;33m Yellow\e[m"
-echo -e "   \e[$number (•4)\e[m \e[1;34m Blue\e[m"
-echo -e "   \e[$number (•5)\e[m \e[1;35m Magenta\e[m"
-echo -e "   \e[$number (•6)\e[m \e[1;36m Cyan\e[m"
-echo -e "   \e[$number (•7)\e[m \e[1;37m White\e[m"
-echo -e "   \e[$number (•8)\e[m \e[30m Black\e[m"
-echo -e "   \e[$number (•9)\e[m \e[1;30m Grey\e[m"
+echo -e "   \e[$line┌──────────────────────────────────────────────────────┐\e[m"
+echo -e "   \e[$line│                   \e[$box BANNER COLOUR                     \e[$line│\e[m"
+echo -e "   \e[$line└──────────────────────────────────────────────────────┘\e[m"
+echo -e "     [\e[$number 01${NC}]\e[1;31m • Red       ${NC}[\e[$number 04${NC}]\e[1;34m • Blue      ${NC}[\e[$number 07${NC}]\e[1;37m • White\e[m"
+echo -e "     [\e[$number 02${NC}]\e[1;32m • Green     ${NC}[\e[$number 05${NC}]\e[1;35m • Magenta   ${NC}[\e[$number 08${NC}] • Black\e[m"
+echo -e "     [\e[$number 03${NC}]\e[1;33m • Yellow    ${NC}[\e[$number 06${NC}]\e[1;36m • Cyan      ${NC}[\e[$number 09${NC}] • Grey\e[m"
 echo -e ""
-echo -e "   \e[$line════════════════════════════════════════\e[m"
-echo -e "   \e[$back_text \e[$box x) Themes Menu                        \e[m"
-echo -e "   \e[$line════════════════════════════════════════\e[m"
+echo -e "              Press [ x ] To Go Main Menu " | lolcat
 echo -e "\e[$line"
 read -rp "  Please Enter 1-9 or x : " -e bc
 if [[ "$bc" = "1" ]]; then
