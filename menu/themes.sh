@@ -29,6 +29,16 @@ exit 0
 fi
 echo -e "\e[32mloading...\e[0m"
 clear
+# // Export Color & Information
+export WH='\033[1;37m'                   
+export RED='\033[0;31m'
+export GRN='\033[0;32m'
+export YLW='\033[0;33m'
+export BLU='\033[0;34m'
+export PLE='\033[0;35m'
+export CYA='\033[0;36m'
+export LHT='\033[0;37m'
+export NC='\033[0m'
 # PROVIDED
 creditt=$(cat /root/provided)
 # BANNER COLOUR
@@ -156,9 +166,9 @@ fi
 function menu3 () {
 clear
 echo ""
-echo -e " \e[$line════════════════════════════════════════\e[m"
-echo -e " \e[$back_text            \e[30m═[\e[$box BANNER FONT\e[30m ]═           \e[m"
-echo -e " \e[$line════════════════════════════════════════\e[m"
+echo -e "   \e[$line┌──────────────────────────────────────────────────────┐\e[m"
+echo -e "   \e[$line│                     \e[$box BANNER FONT                     \e[$line│\e[m"
+echo -e "   \e[$line└──────────────────────────────────────────────────────┘\e[m"
 figlet -f 3D-ASCII "Premium"
 echo -e "   \e[$number (•1)\e[m \e[1;31m 3D ASCII\e[m"
 echo -e ""
@@ -298,11 +308,9 @@ echo -e ""
 figlet -f Univers "Premium"
 echo -e "   \e[$number (35)\e[m \e[1;30m Univers\e[m"
 echo -e ""
-echo -e " \e[$line════════════════════════════════════════\e[m"
-echo -e " \e[$back_text \e[$box x) Themes Menu                        \e[m"
-echo -e " \e[$line════════════════════════════════════════\e[m"
+echo -e "              Press [ x ] To Go Main Menu " | lolcat
 echo -e "\e[$line"
-read -rp " Please Enter 1-35 or x : " -e b
+read -rp "     Please Enter 1-35 or x : " -e b
 if [[ "$b" = "1" ]]; then
 clear
 echo "3D-ASCII" > /usr/bin/test
@@ -560,24 +568,16 @@ fi
 function menu4 () {
 clear
 echo ""
-echo -e "   \e[$line════════════════════════════════════════\e[m"
-echo -e "   \e[$back_text         \e[30m═[\e[$box COLOUR OF TOP MENU\e[30m ]═       \e[m"
-echo -e "   \e[$line════════════════════════════════════════\e[m"
-echo -e "   \e[$number (•1)\e[m \e[1;31m Red\e[m"
-echo -e "   \e[$number (•2)\e[m \e[1;32m Green\e[m"
-echo -e "   \e[$number (•3)\e[m \e[1;33m Yellow\e[m"
-echo -e "   \e[$number (•4)\e[m \e[1;34m Blue\e[m"
-echo -e "   \e[$number (•5)\e[m \e[1;35m Magenta\e[m"
-echo -e "   \e[$number (•6)\e[m \e[1;36m Cyan\e[m"
-echo -e "   \e[$number (•7)\e[m \e[1;37m White\e[m"
-echo -e "   \e[$number (•8)\e[m \e[30m Black\e[m"
-echo -e "   \e[$number (•9)\e[m \e[1;30m Grey\e[m"
+echo -e "   \e[$line┌──────────────────────────────────────────────────────┐\e[m"
+echo -e "   \e[$line│                \e[$box COLOUR OF TOP MENU                   \e[$line│\e[m"
+echo -e "   \e[$line└──────────────────────────────────────────────────────┘\e[m"
+echo -e "     [\e[$number 01${NC}]\e[1;31m • Red       ${NC}[\e[$number 04${NC}]\e[1;34m • Blue      ${NC}[\e[$number 07${NC}]\e[1;37m • White\e[m"
+echo -e "     [\e[$number 02${NC}]\e[1;32m • Green     ${NC}[\e[$number 05${NC}]\e[1;35m • Magenta   ${NC}[\e[$number 08${NC}] • Black\e[m"
+echo -e "     [\e[$number 03${NC}]\e[1;33m • Yellow    ${NC}[\e[$number 06${NC}]\e[1;36m • Cyan      ${NC}[\e[$number 09${NC}] • Grey\e[m"
 echo -e ""
-echo -e "   \e[$line════════════════════════════════════════\e[m"
-echo -e "   \e[$back_text \e[$box x) Themes Menu                        \e[m"
-echo -e "   \e[$line════════════════════════════════════════\e[m"
+echo -e "               Press [ x ] To Go Main Menu " | lolcat
 echo -e "\e[$line"
-read -rp "  Please Enter 1-9 or x : " -e bc
+read -rp "      Please Enter 1-9 or x : " -e bc
 if [[ "$bc" = "1" ]]; then
 clear
 echo "1;31m" > /etc/text
@@ -653,22 +653,14 @@ fi
 function menu5 () {
 clear
 echo ""
-echo -e "   \e[$line════════════════════════════════════════\e[m"
-echo -e "   \e[$back_text       \e[30m═[\e[$box COLOUR OF BOTTOM MENU\e[30m ]═      \e[m"
-echo -e "   \e[$line════════════════════════════════════════\e[m"
-echo -e "   \e[$number (•1)\e[m \e[1;31m Red\e[m"
-echo -e "   \e[$number (•2)\e[m \e[1;32m Green\e[m"
-echo -e "   \e[$number (•3)\e[m \e[1;33m Yellow\e[m"
-echo -e "   \e[$number (•4)\e[m \e[1;34m Blue\e[m"
-echo -e "   \e[$number (•5)\e[m \e[1;35m Magenta\e[m"
-echo -e "   \e[$number (•6)\e[m \e[1;36m Cyan\e[m"
-echo -e "   \e[$number (•7)\e[m \e[1;37m White\e[m"
-echo -e "   \e[$number (•8)\e[m \e[30m Black\e[m"
-echo -e "   \e[$number (•9)\e[m \e[1;30m Grey\e[m"
+echo -e "   \e[$line┌──────────────────────────────────────────────────────┐\e[m"
+echo -e "   \e[$line│               \e[$box COLOUR OF BOTTOM MENU                 \e[$line│\e[m"
+echo -e "   \e[$line└──────────────────────────────────────────────────────┘\e[m"
+echo -e "     [\e[$number 01${NC}]\e[1;31m • Red       ${NC}[\e[$number 04${NC}]\e[1;34m • Blue      ${NC}[\e[$number 07${NC}]\e[1;37m • White\e[m"
+echo -e "     [\e[$number 02${NC}]\e[1;32m • Green     ${NC}[\e[$number 05${NC}]\e[1;35m • Magenta   ${NC}[\e[$number 08${NC}] • Black\e[m"
+echo -e "     [\e[$number 03${NC}]\e[1;33m • Yellow    ${NC}[\e[$number 06${NC}]\e[1;36m • Cyan      ${NC}[\e[$number 09${NC}] • Grey\e[m"
 echo -e ""
-echo -e "   \e[$line════════════════════════════════════════\e[m"
-echo -e "   \e[$back_text \e[$box x) Themes Menu                        \e[m"
-echo -e "   \e[$line════════════════════════════════════════\e[m"
+echo -e "               Press [ x ] To Go Main Menu " | lolcat
 echo -e "\e[$line"
 read -rp "  Please Enter 1-9 or x : " -e bc
 if [[ "$bc" = "1" ]]; then
@@ -746,24 +738,16 @@ fi
 function menu6 () {
 clear
 echo ""
-echo -e "   \e[$line════════════════════════════════════════\e[m"
-echo -e "   \e[$back_text        \e[30m═[\e[$box COLOUR OF LINE MENU\e[30m ]═       \e[m"
-echo -e "   \e[$line════════════════════════════════════════\e[m"
-echo -e "   \e[$number (•1)\e[m \e[1;31m Red\e[m"
-echo -e "   \e[$number (•2)\e[m \e[1;32m Green\e[m"
-echo -e "   \e[$number (•3)\e[m \e[1;33m Yellow\e[m"
-echo -e "   \e[$number (•4)\e[m \e[1;34m Blue\e[m"
-echo -e "   \e[$number (•5)\e[m \e[1;35m Magenta\e[m"
-echo -e "   \e[$number (•6)\e[m \e[1;36m Cyan\e[m"
-echo -e "   \e[$number (•7)\e[m \e[1;37m White\e[m"
-echo -e "   \e[$number (•8)\e[m \e[30m Black\e[m"
-echo -e "   \e[$number (•9)\e[m \e[1;30m Grey\e[m"
+echo -e "   \e[$line┌──────────────────────────────────────────────────────┐\e[m"
+echo -e "   \e[$line│               \e[$box COLOUR OF LINE MENU                   \e[$line│\e[m"
+echo -e "   \e[$line└──────────────────────────────────────────────────────┘\e[m"
+echo -e "     [\e[$number 01${NC}]\e[1;31m • Red       ${NC}[\e[$number 04${NC}]\e[1;34m • Blue      ${NC}[\e[$number 07${NC}]\e[1;37m • White\e[m"
+echo -e "     [\e[$number 02${NC}]\e[1;32m • Green     ${NC}[\e[$number 05${NC}]\e[1;35m • Magenta   ${NC}[\e[$number 08${NC}] • Black\e[m"
+echo -e "     [\e[$number 03${NC}]\e[1;33m • Yellow    ${NC}[\e[$number 06${NC}]\e[1;36m • Cyan      ${NC}[\e[$number 09${NC}] • Grey\e[m"
 echo -e ""
-echo -e "   \e[$line════════════════════════════════════════\e[m"
-echo -e "   \e[$back_text \e[$box x) Themes Menu                        \e[m"
-echo -e "   \e[$line════════════════════════════════════════\e[m"
+echo -e "              Press [ x ] To Go Main Menu " | lolcat
 echo -e "\e[$line"
-read -rp "  Please Enter 1-9 or x : " -e bc
+read -rp "      Please Enter 1-9 or x : " -e bc
 if [[ "$bc" = "1" ]]; then
 clear
 echo "1;31m" > /etc/line
@@ -839,24 +823,16 @@ fi
 function menu7 () {
 clear
 echo ""
-echo -e "   \e[$line════════════════════════════════════════\e[m"
-echo -e "   \e[$back_text      \e[30m═[\e[$box COLOUR IN THE BOX MENU\e[30m ]═      \e[m"
-echo -e "   \e[$line════════════════════════════════════════\e[m"
-echo -e "   \e[$number (•1)\e[m \e[1;31m Red\e[m"
-echo -e "   \e[$number (•2)\e[m \e[1;32m Green\e[m"
-echo -e "   \e[$number (•3)\e[m \e[1;33m Yellow\e[m"
-echo -e "   \e[$number (•4)\e[m \e[1;34m Blue\e[m"
-echo -e "   \e[$number (•5)\e[m \e[1;35m Magenta\e[m"
-echo -e "   \e[$number (•6)\e[m \e[1;36m Cyan\e[m"
-echo -e "   \e[$number (•7)\e[m \e[1;37m White\e[m"
-echo -e "   \e[$number (•8)\e[m \e[30m Black\e[m"
-echo -e "   \e[$number (•9)\e[m \e[1;30m Grey\e[m"
+echo -e "   \e[$line┌──────────────────────────────────────────────────────┐\e[m"
+echo -e "   \e[$line│              \e[$box COLOUR IN THE BOX MENU                 \e[$line│\e[m"
+echo -e "   \e[$line└──────────────────────────────────────────────────────┘\e[m"
+echo -e "     [\e[$number 01${NC}]\e[1;31m • Red       ${NC}[\e[$number 04${NC}]\e[1;34m • Blue      ${NC}[\e[$number 07${NC}]\e[1;37m • White\e[m"
+echo -e "     [\e[$number 02${NC}]\e[1;32m • Green     ${NC}[\e[$number 05${NC}]\e[1;35m • Magenta   ${NC}[\e[$number 08${NC}] • Black\e[m"
+echo -e "     [\e[$number 03${NC}]\e[1;33m • Yellow    ${NC}[\e[$number 06${NC}]\e[1;36m • Cyan      ${NC}[\e[$number 09${NC}] • Grey\e[m"
 echo -e ""
-echo -e "   \e[$line════════════════════════════════════════\e[m"
-echo -e "   \e[$back_text \e[$box x) Themes Menu                        \e[m"
-echo -e "   \e[$line════════════════════════════════════════\e[m"
+echo -e "              Press [ x ] To Go Main Menu " | lolcat
 echo -e "\e[$line"
-read -rp "  Please Enter 1-9 or x : " -e bc
+read -rp "      Please Enter 1-9 or x : " -e bc
 if [[ "$bc" = "1" ]]; then
 clear
 echo "1;31m" > /etc/box
@@ -932,24 +908,16 @@ fi
 function menu8 () {
 clear
 echo ""
-echo -e "   \e[$line════════════════════════════════════════\e[m"
-echo -e "   \e[$back_text \e[30m═[\e[$box BACKGROUND COLOUR IN THE BOX MENU\e[30m ]═\e[m"
-echo -e "   \e[$line════════════════════════════════════════\e[m"
-echo -e "   \e[$number (•1)\e[m \e[1;31m Red\e[m"
-echo -e "   \e[$number (•2)\e[m \e[1;32m Green\e[m"
-echo -e "   \e[$number (•3)\e[m \e[1;33m Yellow\e[m"
-echo -e "   \e[$number (•4)\e[m \e[1;34m Blue\e[m"
-echo -e "   \e[$number (•5)\e[m \e[1;35m Magenta\e[m"
-echo -e "   \e[$number (•6)\e[m \e[1;36m Cyan\e[m"
-echo -e "   \e[$number (•7)\e[m \e[1;37m White\e[m"
-echo -e "   \e[$number (•8)\e[m \e[1;30m Grey\e[m"
-echo -e "   \e[$number (•9)\e[m \e[1;30m No Colour\e[m"
+echo -e "   \e[$line┌──────────────────────────────────────────────────────┐\e[m"
+echo -e "   \e[$line│         \e[$box BACKGROUND COLOUR IN THE BOX MENU           \e[$line│\e[m"
+echo -e "   \e[$line└──────────────────────────────────────────────────────┘\e[m"
+echo -e "     [\e[$number 01${NC}]\e[1;31m • Red       ${NC}[\e[$number 04${NC}]\e[1;34m • Blue      ${NC}[\e[$number 07${NC}]\e[1;37m • White\e[m"
+echo -e "     [\e[$number 02${NC}]\e[1;32m • Green     ${NC}[\e[$number 05${NC}]\e[1;35m • Magenta   ${NC}[\e[$number 08${NC}] • Grey\e[m"
+echo -e "     [\e[$number 03${NC}]\e[1;33m • Yellow    ${NC}[\e[$number 06${NC}]\e[1;36m • Cyan      ${NC}[\e[$number 09${NC}] • No Colour\e[m"
 echo -e ""
-echo -e "   \e[$line════════════════════════════════════════\e[m"
-echo -e "   \e[$back_text \e[$box x) Themes Menu                        \e[m"
-echo -e "   \e[$line════════════════════════════════════════\e[m"
+echo -e "              Press [ x ] To Go Main Menu " | lolcat
 echo -e "\e[$line"
-read -rp "  Please Enter 1-9 or x : " -e bc
+read -rp "      Please Enter 1-9 or x : " -e bc
 if [[ "$bc" = "1" ]]; then
 clear
 echo "41m" > /etc/back
@@ -1025,24 +993,16 @@ fi
 function menu9 () {
 clear
 echo ""
-echo -e "   \e[$line════════════════════════════════════════\e[m"
-echo -e "   \e[$back_text           \e[30m═[\e[$box NUMBER COLOUR\e[30m ]═          \e[m"
-echo -e "   \e[$line════════════════════════════════════════\e[m"
-echo -e "   \e[$number (•1)\e[m \e[1;31m Red\e[m"
-echo -e "   \e[$number (•2)\e[m \e[1;32m Green\e[m"
-echo -e "   \e[$number (•3)\e[m \e[1;33m Yellow\e[m"
-echo -e "   \e[$number (•4)\e[m \e[1;34m Blue\e[m"
-echo -e "   \e[$number (•5)\e[m \e[1;35m Magenta\e[m"
-echo -e "   \e[$number (•6)\e[m \e[1;36m Cyan\e[m"
-echo -e "   \e[$number (•7)\e[m \e[1;37m White\e[m"
-echo -e "   \e[$number (•8)\e[m \e[30m Black\e[m"
-echo -e "   \e[$number (•9)\e[m \e[1;30m Grey\e[m"
+echo -e "   \e[$line┌──────────────────────────────────────────────────────┐\e[m"
+echo -e "   \e[$line│                    \e[$box NUMBER COLOUR                    \e[$line│\e[m"
+echo -e "   \e[$line└──────────────────────────────────────────────────────┘\e[m"
+echo -e "     [\e[$number 01${NC}]\e[1;31m • Red       ${NC}[\e[$number 04${NC}]\e[1;34m • Blue      ${NC}[\e[$number 07${NC}]\e[1;37m • White\e[m"
+echo -e "     [\e[$number 02${NC}]\e[1;32m • Green     ${NC}[\e[$number 05${NC}]\e[1;35m • Magenta   ${NC}[\e[$number 08${NC}] • Black\e[m"
+echo -e "     [\e[$number 03${NC}]\e[1;33m • Yellow    ${NC}[\e[$number 06${NC}]\e[1;36m • Cyan      ${NC}[\e[$number 09${NC}] • Grey\e[m"
 echo -e ""
-echo -e "   \e[$line════════════════════════════════════════\e[m"
-echo -e "   \e[$back_text \e[$box x) Themes Menu                        \e[m"
-echo -e "   \e[$line════════════════════════════════════════\e[m"
+echo -e "              Press [ x ] To Go Main Menu " | lolcat
 echo -e "\e[$line"
-read -rp "  Please Enter 1-9 or x : " -e bc
+read -rp "      Please Enter 1-9 or x : " -e bc
 if [[ "$bc" = "1" ]]; then
 clear
 echo "1;31m" > /etc/number
@@ -1117,11 +1077,11 @@ fi
 }
 function menu10 () {
 clear
-echo -e "\e[1;32mPlease enter the name of provider"
-read -p "Provider Name : " Name
+echo -e "  \e[1;32mPlease enter the name of provider"
+read -p "  Provider Name : " Name
 echo $Name > /root/provided
-echo -e "Succesfully Changed Provider Name."
-echo -e "\e[0;32mDone\e[0m"
+echo -e "  Succesfully Changed Provider Name."
+echo -e "  \e[0;32mDone\e[0m"
 sleep 0.5
 menu
 }
@@ -1129,28 +1089,26 @@ menu
 function menu11 () {
 clear
 echo ""
-echo -e "   \e[$line════════════════════════════════════════\e[m"
-echo -e "   \e[$back_text           \e[30m═[\e[$box THEME COLOURS\e[30m ]═          \e[m"
-echo -e "   \e[$line════════════════════════════════════════\e[m"
-echo -e "   \e[$number (•1)\e[m \e[1;31m Youtube Style\e[m"
-echo -e "   \e[$number (•2)\e[m \e[1;34m Facebook Style\e[m"
-echo -e "   \e[$number (•3)\e[m \e[1;32m Whatsapp Style\e[m"
-echo -e "   \e[$number (•4)\e[m \e[1;35m Squid Game Style\e[m"
-echo -e "   \e[$number (•5)\e[m \e[1;31m Horror Style\e[m"
-echo -e "   \e[$number (•6)\e[m \e[1;36m Colour Cyan Style\e[m"
-echo -e "   \e[$number (•7)\e[m \e[1;33m Default Theme\e[m"
+echo -e "   \e[$line┌─────────────────────────────────────────────────┐\e[m"
+echo -e "   \e[$line│                  \e[$box THEME COLOURS                 \e[$line│\e[m"
+echo -e "   \e[$line└─────────────────────────────────────────────────┘\e[m"
+echo -e "    [\e[$number 01${NC}]\e[1;31m • Youtube Style\e[m"
+echo -e "    [\e[$number 02${NC}]\e[1;34m • Facebook Style\e[m"
+echo -e "    [\e[$number 03${NC}]\e[1;32m • Whatsapp Style\e[m"
+echo -e "    [\e[$number 04${NC}]\e[1;35m • Squid Game Style\e[m"
+echo -e "    [\e[$number 05${NC}]\e[1;31m • Horror Style\e[m"
+echo -e "    [\e[$number 06${NC}]\e[1;36m • Colour Cyan Style\e[m"
+echo -e "    [\e[$number 07${NC}]\e[1;33m • Default Theme\e[m"
 echo -e ""
-echo -e "   \e[$line════════════════════════════════════════\e[m"
-echo -e "   \e[$back_text \e[$box x) Themes Menu                        \e[m"
-echo -e "   \e[$line════════════════════════════════════════\e[m"
+echo -e "              Press [ x ] To Go Main Menu " | lolcat
 echo -e "\e[$line"
-read -rp "  Please Enter 1-7 or x : " -e bc
+read -rp "     Please Enter 1-7 or x : " -e bc
 if [[ "$bc" = "1" ]]; then
 clear
 # Colour Banner
 echo "1;31m" > /etc/banner
 # Colour in the box menu
-echo "30m" > /etc/box
+echo "\033[1;37m" > /etc/box
 # Colour line menu
 echo "1;31m" > /etc/line
 # Colour top menu
@@ -1174,7 +1132,7 @@ clear
 # Colour Banner
 echo "1;34m" > /etc/banner
 # Colour in the box menu
-echo "1;37m" > /etc/box
+echo "\033[1;37m" > /etc/box
 # Colour line menu
 echo "1;30m" > /etc/line
 # Colour top menu
@@ -1198,7 +1156,7 @@ clear
 # Colour Banner
 echo "1;32m" > /etc/banner
 # Colour in the box menu
-echo "1;37m" > /etc/box
+echo "\033[1;37m" > /etc/box
 # Colour line menu
 echo "1;32m" > /etc/line
 # Colour top menu
@@ -1222,7 +1180,7 @@ clear
 # Colour Banner
 echo "1;35m" > /etc/banner
 # Colour in the box menu
-echo "30m" > /etc/box
+echo "\033[1;37m" > /etc/box
 # Colour line menu
 echo "1;35m" > /etc/line
 # Colour top menu
@@ -1246,7 +1204,7 @@ clear
 # Colour Banner
 echo "1;31m" > /etc/banner
 # Colour in the box menu
-echo "30m" > /etc/box
+echo "\033[1;37m" > /etc/box
 # Colour line menu
 echo "1;31m" > /etc/line
 # Colour top menu
@@ -1270,7 +1228,7 @@ clear
 # Colour Banner
 echo "1;36m" > /etc/banner
 # Colour in the box menu
-echo "30m" > /etc/box
+echo "\033[1;37m" > /etc/box
 # Colour line menu
 echo "1;36m" > /etc/line
 # Colour top menu
@@ -1292,7 +1250,7 @@ menu
 elif [[ "$bc" = "7" ]]; then
 clear
 echo "1;36m" > /etc/banner
-echo "30m" > /etc/box
+echo "\033[1;37m" > /etc/box
 echo "1;31m" > /etc/line
 echo "1;32m" > /etc/text
 echo "1;33m" > /etc/below
@@ -1317,26 +1275,24 @@ fi
 # MENU 
 clear
 echo ""
-echo -e "   \e[$line════════════════════════════════════════\e[m"
-echo -e "   \e[$back_text               \e[30m═[\e[$box THEMES\e[30m ]═             \e[m"
-echo -e "   \e[$line════════════════════════════════════════\e[m"
-echo -e "   \e[$number (•1)\e[m \e[$below Change Banner Name\e[m"
-echo -e "   \e[$number (•2)\e[m \e[$below Change Baner Colour\e[m"
-echo -e "   \e[$number (•3)\e[m \e[$below Change Banner Font\e[m"
-echo -e "   \e[$number (•4)\e[m \e[$below Change Colour Of The Top Menu\e[m"
-echo -e "   \e[$number (•5)\e[m \e[$below Change Colour Of The Bottom Menu\e[m"
-echo -e "   \e[$number (•6)\e[m \e[$below Change Colour Of The Line Menu\e[m"
-echo -e "   \e[$number (•7)\e[m \e[$below Change Text Colour In The Box Menu\e[m"
-echo -e "   \e[$number (•8)\e[m \e[$below Change Backgroud Colour Of The Text Menu\e[m"
-echo -e "   \e[$number (•9)\e[m \e[$below Change Colour Of The Number Menu\e[m"
-echo -e "   \e[$number (10)\e[m \e[$below Change Vps Provider Name\e[m"
-echo -e "   \e[$number (11)\e[m \e[$below Change Theme Style\e[m"
+echo -e "   \e[$line┌─────────────────────────────────────────────────┐\e[m"
+echo -e "   \e[$line│                     \e[$box THEMES                     \e[$line│\e[m"
+echo -e "   \e[$line└─────────────────────────────────────────────────┘\e[m"
+echo -e "   [\e[$number 01${NC}]\e[$below • Change Banner Name\e[m"
+echo -e "   [\e[$number 02${NC}]\e[$below • Change Baner Colour\e[m"
+echo -e "   [\e[$number 03${NC}]\e[$below • Change Banner Font\e[m"
+echo -e "   [\e[$number 04${NC}]\e[$below • Change Colour Of The Top Menu\e[m"
+echo -e "   [\e[$number 05${NC}]\e[$below • Change Colour Of The Bottom Menu\e[m"
+echo -e "   [\e[$number 06${NC}]\e[$below • Change Colour Of The Line Menu\e[m"
+echo -e "   [\e[$number 07${NC}]\e[$below • Change Text Colour In The Box Menu\e[m"
+echo -e "   [\e[$number 08${NC}]\e[$below • Change Backgroud Colour Of The Text Menu\e[m"
+echo -e "   [\e[$number 09${NC}]\e[$below • Change Colour Of The Number Menu\e[m"
+echo -e "   [\e[$number 10${NC}]\e[$below • Change Vps Provider Name\e[m"
+echo -e "   [\e[$number 11${NC}]\e[$below • Change Theme Style\e[m"
 echo -e ""
-echo -e "   \e[$line════════════════════════════════════════\e[m"
-echo -e "   \e[$back_text \e[$box x) Main Menu                          \e[m"
-echo -e "   \e[$line════════════════════════════════════════\e[m"
+echo -e "              Press [ x ] To Go Main Menu " | lolcat
 echo -e "\e[$line"
-read -rp "  Please Enter 1-11 or x : " -e num
+read -rp "     Please Enter 1-11 or x : " -e num
 if [[ "$num" = "1" ]]; then
 menu1
 elif [[ "$num" = "2" ]]; then
