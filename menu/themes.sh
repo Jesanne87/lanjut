@@ -62,8 +62,8 @@ clear
 # FUCTION
 function menu1 () {
 clear
-echo -e "\e[1;32mPlease enter the name of the menu banner"
-read -p "Banner Name : " Name
+echo -e "   \e[1;32mPlease enter the name of the menu banner"
+read -p "    Banner Name : " Name
 echo $Name > /usr/bin/bannerku
 echo -e "Succesfully Customize Menu."
 echo -e "\e[0;32mDone\e[0m"
