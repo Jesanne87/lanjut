@@ -70,11 +70,11 @@ fi
 function menu1 () {
 clear
 export xtr="$(cat ~/log-install.txt | grep -w "Trojan Tcp Tls" | cut -d: -f2|sed 's/ //g')"
-echo -e   "  \e[$line═══════════════════════════════════════════════════════\e[m"
-echo -e   "  \e[$back_text          \e[30m[\e[$box CREATE USER XRAY TROJAN TCP TLS\e[30m ]\e[1m          \e[m"
-echo -e   "  \e[$line═══════════════════════════════════════════════════════\e[m"
+echo -e "\e[$line┌──────────────────────────────────────────────────────┐\e[m"
+echo -e "\e[$line│\e[$box          CREATE USER XRAY TROJAN TCP TLS             \e[$line│\e[m"
+echo -e "\e[$line└──────────────────────────────────────────────────────┘\e[m"
 until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${user_EXISTS} == '0' ]]; do
-		read -rp "   Password: " -e user
+		read -rp "Password: " -e user
 		user_EXISTS=$(grep -w $user /usr/local/etc/xray/akunxtr.conf | wc -l)
 
 		if [[ ${user_EXISTS} == '1' ]]; then
@@ -83,9 +83,9 @@ until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${user_EXISTS} == '0' ]]; do
 			exit 1
 		fi
 	done
-read -p "   Bug Address (Example: www.google.com) : " address
-read -p "   Bug SNI (Example : m.facebook.com) : " sni
-read -p "   Expired (days) : " masaaktif
+read -p "Bug Address (Example: www.google.com) : " address
+read -p "Bug SNI (Example : m.facebook.com) : " sni
+read -p "Expired (days) : " masaaktif
 
 export bug_addr=${address}.
 export bug_addr2=$address
@@ -108,32 +108,21 @@ export trojanlink="trojan://${user}@${sts}${domain}:${xtr}?sni=$sni#${user}"
 
 clear
 echo -e ""
-echo -e "\e[$line════════[XRAY TROJAN TCP]════════\e[m"
-echo -e "Remarks       : ${user}"
-echo -e "Domain        : ${domain}"
-echo -e "IP/Host       : ${MYIP}"
-echo -e "Port          : ${xtr}"
-echo -e "Key           : ${user}"
-echo -e "Network       : TCP"
-echo -e "allowInsecure : True/allow"
-echo -e "\e[$line═════════════════════════════════\e[m"
-echo -e "Pantang Larang $creditt Shop"
-echo -e "‼️Aktiviti Berikut Adalah Dilarang(ID akan di ban tanpa notis & tiada refund)"
-echo -e "\e[31m❌ Torrent (p2p, streaming p2p)"
-echo -e "\e[31m❌ PS4"
-echo -e "\e[31m❌ Porn"
-echo -e "\e[31m❌ Spam Bug"
-echo -e "\e[31m❌ Ddos Server"
-echo -e "\e[31m❌ Mining Bitcoins"
-echo -e "\e[31m❌ Abuse Usage"
-echo -e "\e[31m❌ Multi-Login ID"
-echo -e "\e[31m❌ Sharing Premium Config\e[m"
-echo -e "\e[$line═════════════════════════════════\e[m"
-echo -e "Link Trojan : ${trojanlink}"
-echo -e "\e[$line═════════════════════════════════\e[m"
-echo -e "Created : $harini"
-echo -e "Expired : $exp"
-echo -e "Script By $creditt"
+echo -e "\e[$line┌──────────────────────────────────────────────────────┐\e[m"
+echo -e "\e[$line│\e[$box                     XRAY TROJAN TCP                  \e[$line│\e[m"
+echo -e "\e[$line└──────────────────────────────────────────────────────┘\e[m"
+echo -e "Remarks          : ${user}"
+echo -e "Domain           : ${domain}"
+echo -e "IP/Host          : ${MYIP}"
+echo -e "Port             : ${xtr}"
+echo -e "Key              : ${user}"
+echo -e "Network          : TCP"
+echo -e "allowInsecure    : True/allow"
+echo -e "\e[$line•────────────────•\e[m"
+echo -e "Link Trojan      : ${trojanlink}"
+echo -e "\e[$line•────────────────•\e[m"
+echo -e "Created          : $harini"
+echo -e "Expired          : $exp"
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu Trojan"
 trojaan
@@ -143,9 +132,9 @@ trojaan
 function menu2 () {
 clear
 export xtr="$(cat ~/log-install.txt | grep -w "Trojan Tcp Tls" | cut -d: -f2|sed 's/ //g')"
-echo -e   "  \e[$line═══════════════════════════════════════════════════════\e[m"
-echo -e   "  \e[$back_text          \e[30m[\e[$box TRIAL USER XRAY TROJAN TCP TLS\e[30m ]\e[1m           \e[m"
-echo -e   "  \e[$line═══════════════════════════════════════════════════════\e[m"
+echo -e "\e[$line┌──────────────────────────────────────────────────────┐\e[m"
+echo -e "\e[$line│\e[$box            TRIAL USER XRAY TROJAN TCP TLS            \e[$line│\e[m"
+echo -e "\e[$line└──────────────────────────────────────────────────────┘\e[m"
 
 # // Create Expried 
 export masaaktif="1"
@@ -154,8 +143,8 @@ export exp=$(date -d "$masaaktif days" +"%Y-%m-%d")
 # // Make Random Username 
 export user=Trial`</dev/urandom tr -dc X-Z0-9 | head -c4`
 
-read -p "   Bug Address (Example: www.google.com) : " address
-read -p "   Bug SNI (Example : m.facebook.com) : " sni
+read -p "Bug Address (Example: www.google.com) : " address
+read -p "Bug SNI (Example : m.facebook.com) : " sni
 
 bug_addr=${address}.
 bug_addr2=$address
@@ -178,32 +167,21 @@ export trojanlink="trojan://${user}@${sts}${domain}:${xtr}?sni=$sni#${user}"
 
 clear
 echo -e ""
-echo -e "\e[$line═════[TRIAL XRAY TROJAN TCP]═════\e[m"
-echo -e "Remarks       : ${user}"
-echo -e "Domain        : ${domain}"
-echo -e "IP/Host       : ${MYIP}"
-echo -e "Port          : ${xtr}"
-echo -e "Key           : ${user}"
-echo -e "Network       : TCP"
-echo -e "allowInsecure : True/allow"
-echo -e "\e[$line═════════════════════════════════\e[m"
-echo -e "Pantang Larang $creditt Shop"
-echo -e "‼️Aktiviti Berikut Adalah Dilarang(ID akan di ban tanpa notis & tiada refund)"
-echo -e "\e[31m❌ Torrent (p2p, streaming p2p)"
-echo -e "\e[31m❌ PS4"
-echo -e "\e[31m❌ Porn"
-echo -e "\e[31m❌ Spam Bug"
-echo -e "\e[31m❌ Ddos Server"
-echo -e "\e[31m❌ Mining Bitcoins"
-echo -e "\e[31m❌ Abuse Usage"
-echo -e "\e[31m❌ Multi-Login ID"
-echo -e "\e[31m❌ Sharing Premium Config\e[m"
-echo -e "\e[$line═════════════════════════════════\e[m"
-echo -e "Link Trojan : ${trojanlink}"
-echo -e "\e[$line═════════════════════════════════\e[m"
-echo -e "Created : $harini"
-echo -e "Expired : $exp"
-echo -e "Script By $creditt"
+echo -e "\e[$line┌──────────────────────────────────────────────────────┐\e[m"
+echo -e "\e[$line│\e[$box                  TRIAL XRAY TROJAN TCP               \e[$line│\e[m"
+echo -e "\e[$line└──────────────────────────────────────────────────────┘\e[m"
+echo -e "Remarks          : ${user}"
+echo -e "Domain           : ${domain}"
+echo -e "IP/Host          : ${MYIP}"
+echo -e "Port             : ${xtr}"
+echo -e "Key              : ${user}"
+echo -e "Network          : TCP"
+echo -e "allowInsecure    : True/allow"
+echo -e "\e[$line•────────────────•\e[m"
+echo -e "Link Trojan      : ${trojanlink}"
+echo -e "\e[$line•────────────────•\e[m"
+echo -e "Created          : $harini"
+echo -e "Expired          : $exp"
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu Trojan"
 trojaan
@@ -213,16 +191,17 @@ function menu3 () {
 clear
 NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/usr/local/etc/xray/akunxtr.conf")
 	if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
-		echo ""
 		echo "You have no existing clients!"
-		exit 1
+    echo ""
+read -n 1 -s -r -p "Press any key to back on menu Trojan"
+trojaan
 	fi
 
 	echo ""
 	echo " DELETE XRAY TROJAN TCP"
 	echo " Select the existing client you want to remove"
 	echo " Press CTRL+C to return"
-	echo " ==============================="
+	echo " •───────────────────────────────•" | lolcat
 	echo "     No  Expired   User"
 	grep -E "^### " "/usr/local/etc/xray/akunxtr.conf" | cut -d ' ' -f 2-3 | nl -s ') '
 	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
@@ -246,10 +225,10 @@ service cron restart
 
 clear
 echo " Xray Trojan TCP Account Deleted Successfully"
-echo " =========================="
+echo " •───────────────────────────────•"
 echo " Client Name : $user"
 echo " Expired On  : $exp"
-echo " =========================="
+echo " •───────────────────────────────•"
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu Trojan"
 trojaan
@@ -260,9 +239,10 @@ clear
 NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/usr/local/etc/xray/akunxtr.conf")
 	if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
 		clear
-		echo ""
 		echo "You have no existing clients!"
-		exit 1
+    echo ""
+read -n 1 -s -r -p "Press any key to back on menu Trojan"
+trojaan
 	fi
 
 	clear
@@ -270,7 +250,7 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/usr/local/etc/xray/akunxtr.conf")
 	echo "Renew User Xray Trojan Tcp"
 	echo "Select the existing client you want to renew"
 	echo " Press CTRL+C to return"
-	echo -e "==============================="
+	echo -e "•───────────────────────────────•" | lolcat
 	grep -E "^### " "/usr/local/etc/xray/akunxtr.conf" | cut -d ' ' -f 2-3 | nl -s ') '
 	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
 		if [[ ${CLIENT_NUMBER} == '1' ]]; then
@@ -303,10 +283,10 @@ service cron restart
 clear
 echo ""
 echo " XRAY TROJAN TCP Account Was Successfully Renewed"
-echo " =========================="
+echo " •───────────────────────────────•"
 echo " Client Name : $user"
 echo " Expired On  : $exp4"
-echo " =========================="
+echo " •───────────────────────────────•"
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu Trojan"
 trojaan
@@ -318,9 +298,10 @@ clear
 NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/usr/local/etc/xray/akunxtr.conf")
 	if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
 		clear
-		echo ""
 		echo "You have no existing clients!"
-		exit 1
+    echo ""
+read -n 1 -s -r -p "Press any key to back on menu Trojan"
+trojaan
 	fi
 
 	clear
@@ -328,7 +309,7 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/usr/local/etc/xray/akunxtr.conf")
 	echo "SHOW USER XRAY TROJAN TCP TLS"
 	echo "Select the existing client you want to renew"
 	echo " Press CTRL+C to return"
-	echo -e "==============================="
+	echo -e "•───────────────────────────────•" | lolcat
 	grep -E "^### " "/usr/local/etc/xray/akunxtr.conf" | cut -d ' ' -f 2-3 | nl -s ') '
 	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
 		if [[ ${CLIENT_NUMBER} == '1' ]]; then
@@ -347,32 +328,21 @@ export trojanlink="trojan://${user}@${domain}:${xtr}?sni=bug.com#${user}"
 
 clear
 echo -e ""
-echo -e "\e[$line════════[XRAY TROJAN TCP]════════\e[m"
-echo -e "Remarks        : ${user}"
-echo -e "Domain         : ${domain}"
-echo -e "IP/Host        : ${MYIP}"
-echo -e "Port           : ${xtr}"
-echo -e "Key            : ${user}"
-echo -e "Network        : TCP"
-echo -e "allowInsecure  : True"
-echo -e "\e[$line═════════════════════════════════\e[m"
-echo -e "Pantang Larang $creditt Shop"
-echo -e "‼️Aktiviti Berikut Adalah Dilarang(ID akan di ban tanpa notis & tiada refund)"
-echo -e "\e[31m❌ Torrent (p2p, streaming p2p)"
-echo -e "\e[31m❌ PS4"
-echo -e "\e[31m❌ Porn"
-echo -e "\e[31m❌ Spam Bug"
-echo -e "\e[31m❌ Ddos Server"
-echo -e "\e[31m❌ Mining Bitcoins"
-echo -e "\e[31m❌ Abuse Usage"
-echo -e "\e[31m❌ Multi-Login ID"
-echo -e "\e[31m❌ Sharing Premium Config\e[m"
-echo -e "\e[$line═════════════════════════════════\e[m"
-echo -e "Link Trojan  : ${trojanlink}"
-echo -e "\e[$line═════════════════════════════════\e[m"
-echo -e "Created  : $harini"
-echo -e "Expired  : $exp"
-echo -e "Script By $creditt"
+echo -e "\e[$line┌──────────────────────────────────────────────────────┐\e[m"
+echo -e "\e[$line│\e[$box                    XRAY TROJAN TCP                   \e[$line│\e[m"
+echo -e "\e[$line└──────────────────────────────────────────────────────┘\e[m"
+echo -e "Remarks          : ${user}"
+echo -e "Domain           : ${domain}"
+echo -e "IP/Host          : ${MYIP}"
+echo -e "Port             : ${xtr}"
+echo -e "Key              : ${user}"
+echo -e "Network          : TCP"
+echo -e "allowInsecure    : True"
+echo -e "\e[$line•────────────────•\e[m"
+echo -e "Link Trojan      : ${trojanlink}"
+echo -e "\e[$line•────────────────•\e[m"
+echo -e "Created          : $harini"
+echo -e "Expired          : $exp"
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu Trojan"
 trojaan
@@ -382,9 +352,9 @@ function menu6 () {
 clear
 echo -n > /tmp/other.txt
 data=( `cat /usr/local/etc/xray/config.json | grep '^#trx' | cut -d ' ' -f 2`);
-echo -e "\033[0;34m══════════════════════════════════════════\033[0m"
-echo -e "\\E[0;44;37m    ⇱ XRAY Trojan Tcp Tls User Login  ⇲   \E[0m"
-echo -e "\033[0;34m══════════════════════════════════════════\033[0m"
+echo -e "\e[$line┌──────────────────────────────────────────────────────┐\e[m"
+echo -e "\e[$line│\e[$box            XRAY Trojan Tcp Tls User Login            \e[$line│\e[m"
+echo -e "\e[$line└──────────────────────────────────────────────────────┘\e[m"
 for akun in "${data[@]}"
 do
 if [[ -z "$akun" ]]; then
@@ -411,13 +381,13 @@ jum2=$(cat /tmp/iptrojan.txt | nl)
 echo "user : $akun";
 echo "$jum2";
 echo ""
-echo -e "\033[0;34m══════════════════════════════════════════\033[0m"
+echo -e "\033[0;34m•───────────────────────────────•\033[0m"
 fi
 rm -rf /tmp/iptrojan.txt
 rm -rf /tmp/other.txt
 done
 echo ""
-read -n 1 -s -r -p "Press any key to back on menu Trojan"
+read -n 1 -s -r -p "      Press any key to back on menu Trojan"
 trojaan
 }
 
@@ -426,11 +396,11 @@ function menu7 () {
 clear
 trnone="$(cat ~/log-install.txt | grep -w "Xray Trojan Ws None Tls" | cut -d: -f2|sed 's/ //g')"
 trws="$(cat ~/log-install.txt | grep -w "Trojan Ws Tls" | cut -d: -f2|sed 's/ //g')"
-echo -e   "  \e[$line═══════════════════════════════════════════════════════\e[m"
-echo -e   "  \e[$back_text          \e[30m[\e[$box CREATE USER XRAY TROJAN WS TLS\e[30m ]\e[1m          \e[m"
-echo -e   "  \e[$line═══════════════════════════════════════════════════════\e[m"
+echo -e "\e[$line┌──────────────────────────────────────────────────────┐\e[m"
+echo -e "\e[$line│\e[$box            CREATE USER XRAY TROJAN WS TLS            \e[$line│\e[m"
+echo -e "\e[$line└──────────────────────────────────────────────────────┘\e[m"
 until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${user_EXISTS} == '0' ]]; do
-		read -rp "   Password: " -e user
+		read -rp "Password: " -e user
 		user_EXISTS=$(grep -w $user /usr/local/etc/xray/trojan.json | wc -l)
 
 		if [[ ${user_EXISTS} == '1' ]]; then
@@ -441,9 +411,9 @@ until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${user_EXISTS} == '0' ]]; do
 	done
 export patchtls=/JsPhantom-trojanwstls
 export patchnone=/JsPhantom-trojanwsntls
-read -p "   Bug Address (Example: www.google.com) : " address
-read -p "   Bug SNI (Example : m.facebook.com) : " sni
-read -p "   Expired (days) : " masaaktif
+read -p "Bug Address (Example: www.google.com) : " address
+read -p "Bug SNI (Example : m.facebook.com) : " sni
+read -p "Expired (days) : " masaaktif
 
 bug_addr=${address}.
 bug_addr2=$address
@@ -471,42 +441,31 @@ export trojanlink3="trojan://${user}@onlinepayment.celcom.com.my:443?path=wss://
 
 clear
 echo -e ""
-echo -e "\e[$line════════[XRAY TROJAN WS TLS]════════\e[m"
-echo -e "Remarks       : ${user}"
-echo -e "Domain        : ${domain}"
-echo -e "IP/Host       : ${MYIP}"
-echo -e "Port Tls      : ${trws}"
-echo -e "Port None     : ${trnone}"
-echo -e "Key           : ${user}"
-echo -e "Security      : Auto"
-echo -e "Network       : Websocket"
-echo -e "Path Tls      : $patchtls"
-echo -e "Path Ntls     : $patchnone"
-echo -e "allowInsecure : True/allow"
-echo -e "\e[$line═════════════════════════════════\e[m"
-echo -e "Pantang Larang $creditt Shop"
-echo -e "‼️Aktiviti Berikut Adalah Dilarang(ID akan di ban tanpa notis & tiada refund)"
-echo -e "\e[31m❌ Torrent (p2p, streaming p2p)"
-echo -e "\e[31m❌ PS4"
-echo -e "\e[31m❌ Porn"
-echo -e "\e[31m❌ Spam Bug"
-echo -e "\e[31m❌ Ddos Server"
-echo -e "\e[31m❌ Mining Bitcoins"
-echo -e "\e[31m❌ Abuse Usage"
-echo -e "\e[31m❌ Multi-Login ID"
-echo -e "\e[31m❌ Sharing Premium Config\e[m"
-echo -e "\e[$line═════════════════════════════════\e[m"
-echo -e "Link TLS        : ${trojanlink1}"
-echo -e "\e[$line═════════════════════════════════\e[m"
-echo -e "Link None TLS   : ${trojanlink}"
-echo -e "\e[$line═════════════════════════════════\e[m"
-echo -e "Link (Maxis)    : ${trojanlink2}"
-echo -e "\e[$line═════════════════════════════════\e[m"
-echo -e "Link (Celcom)   : ${trojanlink3}"
-echo -e "\e[$line═════════════════════════════════\e[m"
+echo -e "\e[$line┌──────────────────────────────────────────────────────┐\e[m"
+echo -e "\e[$line│\e[$box                   XRAY TROJAN WS TLS                 \e[$line│\e[m"
+echo -e "\e[$line└──────────────────────────────────────────────────────┘\e[m"
+echo -e "Remarks          : ${user}"
+echo -e "Domain           : ${domain}"
+echo -e "IP/Host          : ${MYIP}"
+echo -e "Port Tls         : ${trws}"
+echo -e "Port None        : ${trnone}"
+echo -e "Key              : ${user}"
+echo -e "Security         : Auto"
+echo -e "Network          : Websocket"
+echo -e "Path Tls         : $patchtls"
+echo -e "Path Ntls        : $patchnone"
+echo -e "allowInsecure    : True/allow"
+echo -e "\e[$line•────────────────•\e[m"
+echo -e "Link TLS         : ${trojanlink1}"
+echo -e "\e[$line•────────────────•\e[m"
+echo -e "Link None TLS    : ${trojanlink}"
+echo -e "\e[$line•────────────────•\e[m"
+echo -e "Link (Maxis)     : ${trojanlink2}"
+echo -e "\e[$line•────────────────•\e[m"
+echo -e "Link (Celcom)    : ${trojanlink3}"
+echo -e "\e[$line•────────────────•\e[m"
 echo -e "Created : $harini"
 echo -e "Expired : $exp"
-echo -e "Script By $creditt"
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu Trojan"
 trojaan
@@ -517,10 +476,9 @@ function menu8 () {
 clear
 trws="$(cat ~/log-install.txt | grep -w "Trojan Ws Tls" | cut -d: -f2|sed 's/ //g')"
 trnone="$(cat ~/log-install.txt | grep -w "Xray Trojan Ws None Tls" | cut -d: -f2|sed 's/ //g')"
-echo -e   "  \e[$line═══════════════════════════════════════════════════════\e[m"
-echo -e   "  \e[$back_text          \e[30m[\e[$box TRIAL USER XRAY TROJAN WS TLS\e[30m ]\e[1m           \e[m"
-echo -e   "  \e[$line═══════════════════════════════════════════════════════\e[m"
-
+echo -e "\e[$line┌──────────────────────────────────────────────────────┐\e[m"
+echo -e "\e[$line│\e[$box            TRIAL USER XRAY TROJAN WS TLS             \e[$line│\e[m"
+echo -e "\e[$line└──────────────────────────────────────────────────────┘\e[m"
 # // Make Random Username && Date
 export masaaktif="1"
 export exp=$(date -d "$masaaktif days" +"%Y-%m-%d")
@@ -529,8 +487,8 @@ export user=Trial`</dev/urandom tr -dc X-Z0-9 | head -c4`
 export patchtls=/JsPhantom-trojanwstls
 export patchnone=/JsPhantom-trojanwsntls
 
-read -p "   Bug Address (Example: www.google.com) : " address
-read -p "   Bug SNI (Example : m.facebook.com) : " sni
+read -p "Bug Address (Example: www.google.com) : " address
+read -p "Bug SNI (Example : m.facebook.com) : " sni
 
 bug_addr=${address}.
 bug_addr2=$address
@@ -557,42 +515,31 @@ export trojanlink3="trojan://${user}@onlinepayment.celcom.com.my:443?path=wss://
 
 clear
 echo -e ""
-echo -e "\e[$line═════[TRIAL XRAY TROJAN WS TLS]═════\e[m"
-echo -e "Remarks       : ${user}"
-echo -e "Domain        : ${domain}"
-echo -e "IP/Host       : ${MYIP}"
-echo -e "Port Tls      : ${trws}"
-echo -e "Port None     : ${trnone}"
-echo -e "Key           : ${user}"
-echo -e "Security      : Auto"
-echo -e "Network       : Websocket"
-echo -e "Path Tls      : $patchtls"
-echo -e "Path Ntls     : $patchnone"
-echo -e "allowInsecure : True/allow"
-echo -e "\e[$line═════════════════════════════════\e[m"
-echo -e "Pantang Larang $creditt Shop"
-echo -e "‼️Aktiviti Berikut Adalah Dilarang(ID akan di ban tanpa notis & tiada refund)"
-echo -e "\e[31m❌ Torrent (p2p, streaming p2p)"
-echo -e "\e[31m❌ PS4"
-echo -e "\e[31m❌ Porn"
-echo -e "\e[31m❌ Spam Bug"
-echo -e "\e[31m❌ Ddos Server"
-echo -e "\e[31m❌ Mining Bitcoins"
-echo -e "\e[31m❌ Abuse Usage"
-echo -e "\e[31m❌ Multi-Login ID"
-echo -e "\e[31m❌ Sharing Premium Config\e[m"
-echo -e "\e[$line═════════════════════════════════\e[m"
-echo -e "Link TLS        : ${trojanlink1}"
-echo -e "\e[$line═════════════════════════════════\e[m"
-echo -e "Link None TLS   : ${trojanlink}"
-echo -e "\e[$line═════════════════════════════════\e[m"
-echo -e "Link (Maxis)    : ${trojanlink2}"
-echo -e "\e[$line═════════════════════════════════\e[m"
-echo -e "Link (Celcom)   : ${trojanlink3}"
-echo -e "\e[$line═════════════════════════════════\e[m"
+echo -e "\e[$line┌──────────────────────────────────────────────────────┐\e[m"
+echo -e "\e[$line│\e[$box             TRIAL XRAY TROJAN WS TLS                 \e[$line│\e[m"
+echo -e "\e[$line└──────────────────────────────────────────────────────┘\e[m"
+echo -e "Remarks          : ${user}"
+echo -e "Domain           : ${domain}"
+echo -e "IP/Host          : ${MYIP}"
+echo -e "Port Tls         : ${trws}"
+echo -e "Port None        : ${trnone}"
+echo -e "Key              : ${user}"
+echo -e "Security         : Auto"
+echo -e "Network          : Websocket"
+echo -e "Path Tls         : $patchtls"
+echo -e "Path Ntls        : $patchnone"
+echo -e "allowInsecure    : True/allow"
+echo -e "\e[$line•────────────────•\e[m"
+echo -e "Link TLS         : ${trojanlink1}"
+echo -e "\e[$line•────────────────•\e[m"
+echo -e "Link None TLS    : ${trojanlink}"
+echo -e "\e[$line•────────────────•\e[m"
+echo -e "Link (Maxis)     : ${trojanlink2}"
+echo -e "\e[$line•────────────────•\e[m"
+echo -e "Link (Celcom)    : ${trojanlink3}"
+echo -e "\e[$line•────────────────•\e[m"
 echo -e "Created : $harini"
 echo -e "Expired : $exp"
-echo -e "Script By $creditt"
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu Trojan"
 trojaan
@@ -602,16 +549,17 @@ function menu9 () {
 clear
 NUMBER_OF_CLIENTS=$(grep -c -E "^#trws " "/usr/local/etc/xray/trojan.json")
 	if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
-		echo ""
 		echo "You have no existing clients!"
-		exit 1
+    echo ""
+read -n 1 -s -r -p "Press any key to back on menu Trojan"
+trojaan
 	fi
 
 	echo ""
 	echo " DELETE XRAY TROJAN WS TLS"
 	echo " Select the existing client you want to remove"
 	echo " Press CTRL+C to return"
-	echo " ==============================="
+	echo " •───────────────────────────────•" | lolcat
 	echo "     No  Expired   User"
 	grep -E "^#trws " "/usr/local/etc/xray/trojan.json" | cut -d ' ' -f 2-3 | nl -s ') '
 	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
@@ -636,10 +584,10 @@ service cron restart
 
 clear
 echo " Xray Trojan WS TLS Account Deleted Successfully"
-echo " =========================="
+echo " •───────────────────────────────•"
 echo " Client Name : $user"
 echo " Expired On  : $exp"
-echo " =========================="
+echo " •───────────────────────────────•"
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu Trojan"
 trojaan
@@ -650,9 +598,10 @@ clear
 NUMBER_OF_CLIENTS=$(grep -c -E "^#trws " "/usr/local/etc/xray/trojan.json")
 	if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
 		clear
-		echo ""
 		echo "You have no existing clients!"
-		exit 1
+    echo ""
+read -n 1 -s -r -p "Press any key to back on menu Trojan"
+trojaan
 	fi
 
 	clear
@@ -660,7 +609,7 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^#trws " "/usr/local/etc/xray/trojan.json")
 	echo "Renew User Xray Trojan Ws Tls"
 	echo "Select the existing client you want to renew"
 	echo " Press CTRL+C to return"
-	echo -e "==============================="
+	echo -e "•───────────────────────────────•" | lolcat
 	grep -E "^#trws " "/usr/local/etc/xray/trojan.json" | cut -d ' ' -f 2-3 | nl -s ') '
 	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
 		if [[ ${CLIENT_NUMBER} == '1' ]]; then
@@ -689,10 +638,10 @@ service cron restart
 clear
 echo ""
 echo " XRAY TROJAN WS TLS Account Was Successfully Renewed"
-echo " =========================="
+echo " •───────────────────────────────•"
 echo " Client Name : $user"
 echo " Expired On  : $exp4"
-echo " =========================="
+echo " •───────────────────────────────•"
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu Trojan"
 trojaan
@@ -705,9 +654,10 @@ trws="$(cat ~/log-install.txt | grep -w "Trojan Ws Tls" | cut -d: -f2|sed 's/ //
 NUMBER_OF_CLIENTS=$(grep -c -E "^#trws " "/usr/local/etc/xray/trojan.json")
 	if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
 		clear
-		echo ""
 		echo "You have no existing clients!"
-		exit 1
+    echo ""
+read -n 1 -s -r -p "Press any key to back on menu Trojan"
+trojaan
 	fi
 
 	clear
@@ -715,7 +665,7 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^#trws " "/usr/local/etc/xray/trojan.json")
 	echo "SHOW USER XRAY TROJAN TCP TLS"
 	echo "Select the existing client you want to renew"
 	echo " Press CTRL+C to return"
-	echo -e "==============================="
+	echo -e "•───────────────────────────────•" | lolcat
 	grep -E "^#trws " "/usr/local/etc/xray/trojan.json" | cut -d ' ' -f 2-3 | nl -s ') '
 	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
 		if [[ ${CLIENT_NUMBER} == '1' ]]; then
@@ -738,42 +688,31 @@ export trojanlink3="trojan://${user}@onlinepayment.celcom.com.my:443?path=wss://
 
 clear
 echo -e ""
-echo -e "\e[$line════════[XRAY TROJAN WS TLS]════════\e[m"
-echo -e "Remarks       : ${user}"
-echo -e "Domain        : ${domain}"
-echo -e "IP/Host       : ${MYIP}"
-echo -e "Port Tls      : ${trws}"
-echo -e "Port None     : ${trnone}"
-echo -e "Key           : ${user}"
-echo -e "Security      : Auto"
-echo -e "Network       : Websocket"
-echo -e "Path Tls      : $patchtls"
-echo -e "Path Ntls     : $patchnone"
-echo -e "allowInsecure : True/allow"
-echo -e "\e[$line═════════════════════════════════\e[m"
-echo -e "Pantang Larang $creditt Shop"
-echo -e "‼️Aktiviti Berikut Adalah Dilarang(ID akan di ban tanpa notis & tiada refund)"
-echo -e "\e[31m❌ Torrent (p2p, streaming p2p)"
-echo -e "\e[31m❌ PS4"
-echo -e "\e[31m❌ Porn"
-echo -e "\e[31m❌ Spam Bug"
-echo -e "\e[31m❌ Ddos Server"
-echo -e "\e[31m❌ Mining Bitcoins"
-echo -e "\e[31m❌ Abuse Usage"
-echo -e "\e[31m❌ Multi-Login ID"
-echo -e "\e[31m❌ Sharing Premium Config\e[m"
-echo -e "\e[$line═════════════════════════════════\e[m"
-echo -e "Link TLS        : ${trojanlink1}"
-echo -e "\e[$line═════════════════════════════════\e[m"
-echo -e "Link None TLS   : ${trojanlink}"
-echo -e "\e[$line═════════════════════════════════\e[m"
-echo -e "Link (Maxis)    : ${trojanlink2}"
-echo -e "\e[$line═════════════════════════════════\e[m"
-echo -e "Link (Celcom)   : ${trojanlink3}"
-echo -e "\e[$line═════════════════════════════════\e[m"
-echo -e "Created : $harini"
-echo -e "Expired : $exp"
-echo -e "Script By $creditt"
+echo -e "\e[$line┌──────────────────────────────────────────────────────┐\e[m"
+echo -e "\e[$line│\e[$box                  XRAY TROJAN WS TLS                  \e[$line│\e[m"
+echo -e "\e[$line└──────────────────────────────────────────────────────┘\e[m"
+echo -e "Remarks          : ${user}"
+echo -e "Domain           : ${domain}"
+echo -e "IP/Host          : ${MYIP}"
+echo -e "Port Tls         : ${trws}"
+echo -e "Port None        : ${trnone}"
+echo -e "Key              : ${user}"
+echo -e "Security         : Auto"
+echo -e "Network          : Websocket"
+echo -e "Path Tls         : $patchtls"
+echo -e "Path Ntls        : $patchnone"
+echo -e "allowInsecure    : True/allow"
+echo -e "\e[$line•────────────────•\e[m"
+echo -e "Link TLS         : ${trojanlink1}"
+echo -e "\e[$line•────────────────•\e[m"
+echo -e "Link None TLS    : ${trojanlink}"
+echo -e "\e[$line•────────────────•\e[m"
+echo -e "Link (Maxis)     : ${trojanlink2}"
+echo -e "\e[$line•────────────────•\e[m"
+echo -e "Link (Celcom)    : ${trojanlink3}"
+echo -e "\e[$line•────────────────•\e[m"
+echo -e "Created          : $harini"
+echo -e "Expired          : $exp"
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu Trojan"
 trojaan
@@ -783,9 +722,9 @@ function menu12 () {
 clear
 echo -n > /tmp/other.txt
 data=( `cat /usr/local/etc/xray/trojan.json | grep '^#trws' | cut -d ' ' -f 2`);
-echo -e "\033[0;34m══════════════════════════════════════════\033[0m"
-echo -e "\\E[0;44;37m      ⇱ XRAY Trojan WS User Login  ⇲      \E[0m"
-echo -e "\033[0;34m══════════════════════════════════════════\033[0m"
+echo -e "\e[$line┌──────────────────────────────────────────────────────┐\e[m"
+echo -e "\e[$line│\e[$box              XRAY Trojan WS User Login               \e[$line│\e[m"
+echo -e "\e[$line└──────────────────────────────────────────────────────┘\e[m"
 for akun in "${data[@]}"
 do
 if [[ -z "$akun" ]]; then
@@ -812,44 +751,43 @@ jum2=$(cat /tmp/iptrojan.txt | nl)
 echo "user : $akun";
 echo "$jum2";
 echo ""
-echo -e "\e[$line══════════════════════════════════════════\e[m"
+echo -e "\e[$line•───────────────────────────────•\e[m"
 fi
 rm -rf /tmp/iptrojan.txt
 rm -rf /tmp/other.txt
 done
 echo ""
-read -n 1 -s -r -p "Press any key to back on menu Trojan"
+read -n 1 -s -r -p "        Press any key to back on menu Trojan"
 trojaan
 }
 
 # MENU TROJAN
 clear
 echo -e ""
-echo -e "   \e[$line════════════════════════════════════════\e[m"
-echo -e "   \e[$back_text          \e[30m═[\e[$box TROJAN TCP TLS\e[30m ]═          \e[m"
-echo -e "   \e[$line════════════════════════════════════════\e[m"
-echo -e "   \e[$number (•1)\e[m \e[$below Create Trojan TCP TLS Account\e[m"
-echo -e "   \e[$number (•2)\e[m \e[$below Trial Trojan TCP TLS Account\e[m"
-echo -e "   \e[$number (•3)\e[m \e[$below Deleting Trojan TCP TLS Account\e[m"
-echo -e "   \e[$number (•4)\e[m \e[$below Renew Xray Trojan TCP TLS Account\e[m"
-echo -e "   \e[$number (•5)\e[m \e[$below Show Config Trojan TCP TLS Account\e[m"
-echo -e "   \e[$number (•6)\e[m \e[$below Check User Login Trojan TCP TLS\e[m"
+echo -e "   \e[$line┌──────────────────────────────────────────────────────┐\e[m"
+echo -e "   \e[$line│\e[$box                    TROJAN TCP TLS                    \e[$line│\e[m"
+echo -e "   \e[$line└──────────────────────────────────────────────────────┘\e[m"
+echo -e "      [\e[$number 01${NC}]\e[$below • Create Trojan TCP TLS Account\e[m"
+echo -e "      [\e[$number 02${NC}]\e[$below • Trial Trojan TCP TLS Account\e[m"
+echo -e "      [\e[$number 03${NC}]\e[$below • Deleting Trojan TCP TLS Account\e[m"
+echo -e "      [\e[$number 04${NC}]\e[$below • Renew Xray Trojan TCP TLS Account\e[m"
+echo -e "      [\e[$number 05${NC}]\e[$below • Show Config Trojan TCP TLS Account\e[m"
+echo -e "      [\e[$number 06${NC}]\e[$below • Check User Login Trojan TCP TLS\e[m"
 echo -e ""
 echo -e "   \e[$number    >> Total :\e[m \e[$below ${total} Client\e[m"
-echo -e "   \e[$line════════════════════════════════════════\e[m"
-echo -e "   \e[$back_text          \e[30m═[\e[$box TROJAN WS TLS\e[30m ]═           \e[m"
-echo -e "   \e[$line════════════════════════════════════════\e[m"
-echo -e "   \e[$number (•7)\e[m \e[$below Create Trojan WS TLS Account\e[m"
-echo -e "   \e[$number (•8)\e[m \e[$below Trial Trojan WS TLS Account\e[m"
-echo -e "   \e[$number (•9)\e[m \e[$below Deleting Trojan WS TLS Account\e[m"
-echo -e "   \e[$number (10)\e[m \e[$below Renew Xray Trojan WS TLS Account\e[m"
-echo -e "   \e[$number (11)\e[m \e[$below Show Config Trojan WS TLS Account\e[m"
-echo -e "   \e[$number (12)\e[m \e[$below Check User Login Trojan WS TLS\e[m"
+echo -e "   \e[$line┌──────────────────────────────────────────────────────┐\e[m"
+echo -e "   \e[$line│\e[$box                    TROJAN WS TLS                     \e[$line│\e[m"
+echo -e "   \e[$line└──────────────────────────────────────────────────────┘\e[m"
+echo -e "      [\e[$number 07${NC}]\e[$below • Create Trojan WS TLS Account\e[m"
+echo -e "      [\e[$number 08${NC}]\e[$below • Trial Trojan WS TLS Account\e[m"
+echo -e "      [\e[$number 09${NC}]\e[$below • Deleting Trojan WS TLS Account\e[m"
+echo -e "      [\e[$number 10${NC}]\e[$below • Renew Xray Trojan WS TLS Account\e[m"
+echo -e "      [\e[$number 11${NC}]\e[$below • Show Config Trojan WS TLS Account\e[m"
+echo -e "      [\e[$number 12${NC}]\e[$below • Check User Login Trojan WS TLS\e[m"
 echo -e ""
 echo -e "   \e[$number    >> Total :\e[m \e[$below ${total2} Client\e[m"
-echo -e "   \e[$line════════════════════════════════════════\e[m"
-echo -e "   \e[$back_text \e[$box x)   MENU                             \e[m"
-echo -e "   \e[$line════════════════════════════════════════\e[m"
+echo -e "\e[$line"
+echo -e "                 Press [ x ] To Go Main Menu " | lolcat
 echo -e "\e[$line"
 read -rp "      Please Input Number  [1-12 or x] :  "  num
 echo -e ""
