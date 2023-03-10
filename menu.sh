@@ -3,7 +3,6 @@
 GitUser="Jesanne87"
 #IZIN SCRIPT
 MYIP=$(curl -sS ipv4.icanhazip.com)
-clear
 #Domain
 domain=$(cat /usr/local/etc/xray/domain)
 ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10)
@@ -128,25 +127,24 @@ clear
 echo -e "\e[$banner_colour"
 figlet -f $ascii "$banner" | lolcat
 echo -e " \e[$line ┌──────────────────────────────────────────────────────┐${NC}"
-echo -e " \e[$line │\e[$box	    ───[ Moded Script By JsPhantom ]───          \e[$line│${NC}"
+echo -e " \e[$line │\e[$box	       ───[ Server Information ]───              \e[$line│${NC}"
 echo -e " \e[$line └──────────────────────────────────────────────────────┘${NC}"
 echo -e " \e[$text  OPERATING SYSTEM       : ${NC}$(hostnamectl | grep "Operating System" | cut -d ' ' -f5-)${NC}"
 echo -e " \e[$text  KERNEL	          : ${NC}$(uname -r)${NC}"
 echo -e " \e[$text  SYSTEM UPTIME          : ${NC}$uptime${NC}"
 echo -e " \e[$text  IP ADDRESS		  : ${NC}$IPVPS${NC}"
-echo -e " \e[$text  DOMAIN NAME	          : ${NC}$domain${NC}"
-echo -e " \e[$text  PROVIDED BY		  : ${NC}\e[$below$creditt${NC}"
+echo -e " \e[$text  DOMAIN NAME	          : ${PLE}$domain${NC}"
+echo -e " \e[$text  PROVIDED BY		  : ${YLW}$creditt${NC}"
 echo -e " \e[$text  STATUS UPDATE	  : ${NC}$stl${NC}"
 echo -e " \e[$text  CPU USAGE		  : ${NC}$load_cpu${NC}"
-echo -e " \e[$text  MEMORY USAGE           : ${NC}${ram_used}MB / ${total_ram}MB (${ram_usage}%)${NC}"
-echo -e " \e[$text  DAILY DATA USAGE	  : ${NC}\e[$below$daily_usage${NC}"
-echo -e " \e[$text  MONTHLY DATA USAGE	  : ${NC}\e[$below$monthly_usage${NC}"
+echo -e " \e[$text  MEMORY USAGE           : ${NC}${ram_used}MB/${total_ram}MB (${ram_usage}%)${NC}"
+echo -e " \e[$text  BANDWIDTH DATA USAGE	  : ${WH}$daily_usage Daily/${YLW}$monthly_usage Monthly${NC}"
 echo -e " \e[$line ┌──────────────────────────────────────────────────────┐${NC}"
 echo -e "   Ssh/Ovpn  V2ray  Vless  Vlessxtls   Troj-Ws   Troj-Tls${NC}"
 echo -e "      \e[$text $total_ssh       $vmess      $vless        $xtls          $trws         $trtls${NC}"
 echo -e " \e[$line └──────────────────────────────────────────────────────┘${NC}"	
 echo -e " \e[$line ┌──────────────────────────────────────────────────────┐${NC}"
-echo -e " \e[$line │\e[$box               ───[ SERVER MENU ]───                  \e[$line│${NC}"
+echo -e " \e[$line │\e[$box                 ───[ SERVER MENU ]───                \e[$line│${NC}"
 echo -e " \e[$line └──────────────────────────────────────────────────────┘${NC}"
 echo -e "  "
 echo -e "    [\e[$number 01${NC}]\e[$below • Xray Vmess & Vless ${NC}      [\e[$number 07${NC}]\e[$below • Reboot ${NC}"
@@ -157,7 +155,7 @@ echo -e "    [\e[$number 05${NC}]\e[$below • Check Running ${NC}           [\e
 echo -e "    [\e[$number 06${NC}]\e[$below • Change Port ${NC}             [\e[$number 12${NC}]\e[$below • Exit ${NC}"
 echo -e " "
 echo -e " \e[$line ┌──────────────────────────────────────────────────────┐${NC}"
-echo -e " \e[$line │\e[$box  •••───[ Moded Script By JsPhantom @ 2023 ]───•••    \e[$line│${NC}"
+echo -e " \e[$line │\e[$box   •••───[ Moded Script By JsPhantom @ 2023 ]───•••   \e[$line│${NC}"
 echo -e " \e[$line └──────────────────────────────────────────────────────┘${NC}"
 echo -e "                [Ctrl + C] Exit From Script" | lolcat
 echo -e "\e[$below "
