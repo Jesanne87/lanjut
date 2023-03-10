@@ -74,9 +74,9 @@ function menu1 () {
 clear
 tls="$(cat ~/log-install.txt | grep -w "Vmess Ws Tls" | cut -d: -f2|sed 's/ //g')"
 none="$(cat ~/log-install.txt | grep -w "Vmess Ws None Tls" | cut -d: -f2|sed 's/ //g')"
-echo -e   "  \e[$line═══════════════════════════════════════════════════════\e[m"
-echo -e   "  \e[$back_text           \e[30m[\e[$box CREATE USER XRAY VMESS WS TLS\e[30m ]\e[1m           \e[m"
-echo -e   "  \e[$line═══════════════════════════════════════════════════════\e[m"
+echo -e   "  \e[$line┌──────────────────────────────────────────────────────┐\e[m"
+echo -e   " \e[$line │           \e[$box CREATE USER XRAY VMESS WS TLS             \e[$line│  \e[m"
+echo -e   "  \e[$line└──────────────────────────────────────────────────────┘\e[m"
 until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 		read -rp "   Username: " -e user
 		CLIENT_EXISTS=$(grep -w $user /usr/local/etc/xray/vmess.json | wc -l)
@@ -244,43 +244,30 @@ service cron restart
 
 clear
 echo -e ""
-echo -e "\e[$line═════════════════════════════════\e[m"
-echo -e "\e[$back_text      \e[30m[\e[$box XRAY VMESS WS\e[30m ]\e[1m          \e[m"
-echo -e "\e[$line═════════════════════════════════\e[m"
-echo -e "Remarks        : ${user}"
-echo -e "Domain         : ${domain}"
-echo -e "IP/Host        : $MYIP"
-echo -e "Port TLS       : ${tls}"
-echo -e "Port None TLS  : ${none}"
-echo -e "User ID        : ${uuid}"
-echo -e "Security       : Auto"
-echo -e "Network        : Websocket"
-echo -e "Path Tls       : $patchtls"
-echo -e "Path None Tls  : $patchnontls"
-echo -e "allowInsecure  : True/allow"
-echo -e "Support Yaml   : YES"
-echo -e "\e[$line═════════════════════════════════\e[m"
-echo -e "Pantang Larang $creditt Shop"
-echo -e "‼️Aktiviti Berikut Adalah Dilarang(ID akan di ban tanpa notis & tiada refund)"
-echo -e "\e[31m❌ Torrent (p2p, streaming p2p)"
-echo -e "\e[31m❌ PS4"
-echo -e "\e[31m❌ Porn"
-echo -e "\e[31m❌ Spam Bug"
-echo -e "\e[31m❌ Ddos Server"
-echo -e "\e[31m❌ Mining Bitcoins"
-echo -e "\e[31m❌ Abuse Usage"
-echo -e "\e[31m❌ Multi-Login ID"
-echo -e "\e[31m❌ Sharing Premium Config\e[m"
-echo -e "\e[$line═════════════════════════════════\e[m"
-echo -e "Link TLS       : ${vmesslink1}"
-echo -e "\e[$line═════════════════════════════════\e[m"
-echo -e "Link None TLS  : ${vmesslink2}"
-echo -e "\e[$line═════════════════════════════════\e[m"
-echo -e "Link Yaml  : http://$MYIP:81/$user-clash-for-android.yaml"
-echo -e "\e[$line═════════════════════════════════\e[m"
-echo -e "Created   : $harini"
-echo -e "Expired   : $exp"
-echo -e "Script By $creditt"
+echo -e "\e[$line┌──────────────────────────────────────────────────────┐\e[m"
+echo -e "\e[$line│                  \e[$box XRAY VMESS WS                     \e[$line │ \e[m"
+echo -e "\e[$line└──────────────────────────────────────────────────────┘\e[m"
+echo -e "Remarks          : ${user}"
+echo -e "Domain           : ${domain}"
+echo -e "IP/Host          : $MYIP"
+echo -e "Port TLS         : ${tls}"
+echo -e "Port None TLS    : ${none}"
+echo -e "User ID          : ${uuid}"
+echo -e "Security         : Auto"
+echo -e "Network          : Websocket"
+echo -e "Path Tls         : $patchtls"
+echo -e "Path None Tls    : $patchnontls"
+echo -e "allowInsecure    : True/allow"
+echo -e "Support Yaml     : YES"
+echo -e "\e[$line•───────────────────────────────•\e[m"
+echo -e "Link TLS         : ${vmesslink1}"
+echo -e "\e[$line•───────────────────────────────•\e[m"
+echo -e "Link None TLS    : ${vmesslink2}"
+echo -e "\e[$line•───────────────────────────────•\e[m"
+echo -e "Link Yaml        : http://$MYIP:81/$user-clash-for-android.yaml"
+echo -e "\e[$line•───────────────────────────────•\e[m"
+echo -e "Created          : $harini"
+echo -e "Expired          : $exp"
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu xray"
 xraay
@@ -291,7 +278,7 @@ function menu2 () {
 clear
 tls="$(cat ~/log-install.txt | grep -w "Vmess Ws Tls" | cut -d: -f2|sed 's/ //g')"
 none="$(cat ~/log-install.txt | grep -w "Vmess Ws None Tls" | cut -d: -f2|sed 's/ //g')"
-echo -e   "  \e[$line═══════════════════════════════════════════════════════\e[m"
+echo -e   "  \e[$line┌──────────────────────────────────────────────────────┐\e[m"
 echo -e   "  \e[$back_text           \e[30m[\e[$box TRIAL USER XRAY VMESS WS TLS\e[30m ]\e[1m            \e[m"
 echo -e   "  \e[$line═══════════════════════════════════════════════════════\e[m"
 
@@ -456,7 +443,7 @@ service cron restart
 
 clear
 echo -e ""
-echo -e "\e[$line═════════════════════════════════\e[m"
+echo -e "\e[$line┌──────────────────────────────────────────────────────┐\e[m"
 echo -e "\e[$back_text     \e[30m[\e[$box TRIAL XRAY VMESS WS\e[30m ]\e[1m     \e[m"
 echo -e "\e[$line═════════════════════════════════\e[m"
 echo -e "Remarks        : ${user}"
@@ -471,28 +458,15 @@ echo -e "Path Tls       : $patchtls"
 echo -e "Path None Tls  : $patchnontls"
 echo -e "allowInsecure  : True/allow"
 echo -e "Support Yaml   : YES"
-echo -e "\e[$line═════════════════════════════════\e[m"
-echo -e "Pantang Larang $creditt Shop"
-echo -e "‼️Aktiviti Berikut Adalah Dilarang(ID akan di ban tanpa notis & tiada refund)"
-echo -e "\e[31m❌ Torrent (p2p, streaming p2p)"
-echo -e "\e[31m❌ PS4"
-echo -e "\e[31m❌ Porn"
-echo -e "\e[31m❌ Spam Bug"
-echo -e "\e[31m❌ Ddos Server"
-echo -e "\e[31m❌ Mining Bitcoins"
-echo -e "\e[31m❌ Abuse Usage"
-echo -e "\e[31m❌ Multi-Login ID"
-echo -e "\e[31m❌ Sharing Premium Config\e[m"
-echo -e "\e[$line═════════════════════════════════\e[m"
+echo -e "\e[$line•───────────────────────────────•\e[m"
 echo -e "Link TLS       : ${vmesslink1}"
-echo -e "\e[$line═════════════════════════════════\e[m"
+echo -e "\e[$line•───────────────────────────────•\e[m"
 echo -e "Link None TLS  : ${vmesslink2}"
-echo -e "\e[$line═════════════════════════════════\e[m"
+echo -e "\e[$line•───────────────────────────────•\e[m"
 echo -e "Link Yaml  : http://$MYIP:81/$user-clash-for-android.yaml"
-echo -e "\e[$line═════════════════════════════════\e[m"
+echo -e "\e[$line•───────────────────────────────•\e[m"
 echo -e "Created   : $harini"
 echo -e "Expired   : $exp"
-echo -e "Script By $creditt"
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu xray"
 xraay
@@ -512,7 +486,7 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^#vms " "/usr/local/etc/xray/vmess.json")
 	echo " Delete User Xray Vmess Ws"
 	echo " Select the existing client you want to remove"
 	echo " Press CTRL+C to return"
-	echo " ==============================="
+	echo " •───────────────────────────────•"
 	echo "     No  Expired   User"
 	grep -E "^#vms " "/usr/local/etc/xray/vmess.json" | cut -d ' ' -f 2-3 | nl -s ') '
 	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
@@ -540,10 +514,10 @@ systemctl restart xray@vmessnone
 
 clear
 echo " XRAY VMESS WS Account Deleted Successfully"
-echo " =========================="
+echo " •───────────────────────────────•"
 echo " Client Name : $user"
 echo " Expired On  : $exp"
-echo " =========================="
+echo " •───────────────────────────────•"
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu xray"
 xraay
@@ -563,7 +537,7 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^#vms " "/usr/local/etc/xray/vmess.json")
 	echo "Renew User Xray Vmess Ws"
 	echo "Select the existing client you want to renew"
 	echo " Press CTRL+C to return"
-	echo -e "==============================="
+	echo -e "•───────────────────────────────•"
 	grep -E "^#vms " "/usr/local/etc/xray/vmess.json" | cut -d ' ' -f 2-3 | nl -s ') '
 	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
 		if [[ ${CLIENT_NUMBER} == '1' ]]; then
@@ -594,10 +568,10 @@ service cron restart
 clear
 echo ""
 echo " VMESS WS & Clash Account Was Successfully Renewed"
-echo " =========================="
+echo " •───────────────────────────────•"
 echo " Client Name : $user"
 echo " Expired On  : $exp4"
-echo " =========================="
+echo " •───────────────────────────────•"
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu xray"
 xraay
@@ -621,7 +595,7 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^#vms " "/usr/local/etc/xray/vmess.json")
 	echo "SHOW USER XRAY VMESS WS"
 	echo "Select the existing client you want to renew"
 	echo " Press CTRL+C to return"
-	echo -e "==============================="
+	echo -e "•───────────────────────────────•"
 	grep -E "^#vms " "/usr/local/etc/xray/vmess.json" | cut -d ' ' -f 2-3 | nl -s ') '
 	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
 		if [[ ${CLIENT_NUMBER} == '1' ]]; then
@@ -763,7 +737,7 @@ export vmesslink2="vmess://$(base64 -w 0 /usr/local/etc/xray/$user-none.json)"
 
 clear
 echo -e ""
-echo -e "\e[$line═════════════════════════════════\e[m"
+echo -e "\e[$line┌──────────────────────────────────────────────────────┐\e[m"
 echo -e "\e[$back_text      \e[30m[\e[$box XRAY VMESS WS\e[30m ]\e[1m          \e[m"
 echo -e "\e[$line═════════════════════════════════\e[m"
 echo -e "Remarks        : ${user}"
@@ -778,28 +752,15 @@ echo -e "Path Tls       : $patchtls"
 echo -e "Path None Tls  : $patchnontls"
 echo -e "allowInsecure  : True/allow"
 echo -e "Support Yaml   : YES"
-echo -e "\e[$line═════════════════════════════════\e[m"
-echo -e "Pantang Larang $creditt Shop"
-echo -e "‼️Aktiviti Berikut Adalah Dilarang(ID akan di ban tanpa notis & tiada refund)"
-echo -e "\e[31m❌ Torrent (p2p, streaming p2p)"
-echo -e "\e[31m❌ PS4"
-echo -e "\e[31m❌ Porn"
-echo -e "\e[31m❌ Spam Bug"
-echo -e "\e[31m❌ Ddos Server"
-echo -e "\e[31m❌ Mining Bitcoins"
-echo -e "\e[31m❌ Abuse Usage"
-echo -e "\e[31m❌ Multi-Login ID"
-echo -e "\e[31m❌ Sharing Premium Config\e[m"
-echo -e "\e[$line═════════════════════════════════\e[m"
+echo -e "\e[$line•───────────────────────────────•\e[m"
 echo -e "Link TLS       : ${vmesslink1}"
-echo -e "\e[$line═════════════════════════════════\e[m"
+echo -e "\e[$line•───────────────────────────────•\e[m"
 echo -e "Link None TLS  : ${vmesslink2}"
-echo -e "\e[$line═════════════════════════════════\e[m"
+echo -e "\e[$line•───────────────────────────────•\e[m"
 echo -e "Link Yaml  : http://$MYIP:81/$user-clash-for-android.yaml"
-echo -e "\e[$line═════════════════════════════════\e[m"
+echo -e "\e[$line•───────────────────────────────•\e[m"
 echo -e "Created   : $harini"
 echo -e "Expired   : $exp"
-echo -e "Script By $creditt"
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu xray"
 xraay
@@ -810,7 +771,7 @@ function menu6 () {
 clear
 echo -n > /tmp/other.txt
 data=( `cat /usr/local/etc/xray/vmess.json | grep '^#vms' | cut -d ' ' -f 2`); 
-echo -e "\033[0;34m══════════════════════════════════════════\033[0m"
+echo -e "\033[0;34m┌──────────────────────────────────────────────────────┐\033[0m"
 echo -e "\\E[0;44;37m      ⇱ XRAY Vmess WS User Login  ⇲       \E[0m"
 echo -e "\033[0;34m══════════════════════════════════════════\033[0m"
 for akun in "${data[@]}"
@@ -854,7 +815,7 @@ function menu7 () {
 clear
 tls="$(cat ~/log-install.txt | grep -w "Vless Ws Tls" | cut -d: -f2|sed 's/ //g')"
 none="$(cat ~/log-install.txt | grep -w "Vless Ws None Tls" | cut -d: -f2|sed 's/ //g')"
-echo -e   "  \e[$line═══════════════════════════════════════════════════════\e[m"
+echo -e   "  \e[$line┌──────────────────────────────────────────────────────┐\e[m"
 echo -e   "  \e[$back_text           \e[30m[\e[$box CREATE USER XRAY VLESS WS TLS\e[30m ]\e[1m           \e[m"
 echo -e   "  \e[$line═══════════════════════════════════════════════════════\e[m"
 until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
@@ -899,7 +860,7 @@ systemctl restart xray@vlessnone
 
 clear
 echo -e ""
-echo -e "\e[$line═════════════════════════════════\e[m"
+echo -e "\e[$line┌──────────────────────────────────────────────────────┐\e[m"
 echo -e "\e[$back_text      \e[30m[\e[$box XRAY VLESS WS\e[30m ]\e[1m          \e[m"
 echo -e "\e[$line═════════════════════════════════\e[m"
 echo -e "Remarks          : ${user}"
@@ -913,26 +874,13 @@ echo -e "Network          : WebSocket"
 echo -e "Path Tls         : $patchtls"
 echo -e "Path None Tls    : $patchnontls"
 echo -e "allowInsecure    : True/allow"
-echo -e "\e[$line═════════════════════════════════\e[m"
-echo -e "Pantang Larang $creditt Shop"
-echo -e "‼️Aktiviti Berikut Adalah Dilarang(ID akan di ban tanpa notis & tiada refund)"
-echo -e "\e[31m❌ Torrent (p2p, streaming p2p)"
-echo -e "\e[31m❌ PS4"
-echo -e "\e[31m❌ Porn"
-echo -e "\e[31m❌ Spam Bug"
-echo -e "\e[31m❌ Ddos Server"
-echo -e "\e[31m❌ Mining Bitcoins"
-echo -e "\e[31m❌ Abuse Usage"
-echo -e "\e[31m❌ Multi-Login ID"
-echo -e "\e[31m❌ Sharing Premium Config\e[m"
-echo -e "\e[$line═════════════════════════════════\e[m"
+echo -e "\e[$line•───────────────────────────────•\e[m"
 echo -e "Link TLS         : ${vlesslink1}"
-echo -e "\e[$line═════════════════════════════════\e[m"
+echo -e "\e[$line•───────────────────────────────•\e[m"
 echo -e "Link None TLS    : ${vlesslink2}"
-echo -e "\e[$line═════════════════════════════════\e[m"
+echo -e "\e[$line•───────────────────────────────•\e[m"
 echo -e "Created   : $harini"
 echo -e "Expired   : $exp"
-echo -e "Script By $creditt"
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu xray"
 xraay
@@ -943,7 +891,7 @@ function menu8 () {
 clear
 tls="$(cat ~/log-install.txt | grep -w "Vless Ws Tls" | cut -d: -f2|sed 's/ //g')"
 none="$(cat ~/log-install.txt | grep -w "Vless Ws None Tls" | cut -d: -f2|sed 's/ //g')"
-echo -e   "  \e[$line═══════════════════════════════════════════════════════\e[m"
+echo -e   "  \e[$line┌──────────────────────────────────────────────────────┐\e[m"
 echo -e   "  \e[$back_text           \e[30m[\e[$box TRIAL USER XRAY VLESS WS TLS\e[30m ]\e[1m            \e[m"
 echo -e   "  \e[$line═══════════════════════════════════════════════════════\e[m"
 
@@ -984,7 +932,7 @@ systemctl restart xray@vlessnone
 
 clear
 echo -e ""
-echo -e "\e[$line═════════════════════════════════\e[m"
+echo -e "\e[$line┌──────────────────────────────────────────────────────┐\e[m"
 echo -e "\e[$back_text     \e[30m[\e[$box TRIAL XRAY VLESS WS\e[30m ]\e[1m     \e[m"
 echo -e "\e[$line═════════════════════════════════\e[m"
 echo -e "Remarks          : ${user}"
@@ -998,26 +946,13 @@ echo -e "Network          : WebSocket"
 echo -e "Path Tls         : $patchtls"
 echo -e "Path None Tls    : $patchnontls"
 echo -e "allowInsecure    : True/allow"
-echo -e "\e[$line═════════════════════════════════\e[m"
-echo -e "Pantang Larang $creditt Shop"
-echo -e "‼️Aktiviti Berikut Adalah Dilarang(ID akan di ban tanpa notis & tiada refund)"
-echo -e "\e[31m❌ Torrent (p2p, streaming p2p)"
-echo -e "\e[31m❌ PS4"
-echo -e "\e[31m❌ Porn"
-echo -e "\e[31m❌ Spam Bug"
-echo -e "\e[31m❌ Ddos Server"
-echo -e "\e[31m❌ Mining Bitcoins"
-echo -e "\e[31m❌ Abuse Usage"
-echo -e "\e[31m❌ Multi-Login ID"
-echo -e "\e[31m❌ Sharing Premium Config\e[m"
-echo -e "\e[$line═════════════════════════════════\e[m"
+echo -e "\e[$line•───────────────────────────────•\e[m"
 echo -e "Link TLS         : ${vlesslink1}"
-echo -e "\e[$line═════════════════════════════════\e[m"
+echo -e "\e[$line•───────────────────────────────•\e[m"
 echo -e "Link None TLS    : ${vlesslink2}"
-echo -e "\e[$line═════════════════════════════════\e[m"
+echo -e "\e[$line•───────────────────────────────•\e[m"
 echo -e "Created   : $harini"
 echo -e "Expired   : $exp"
-echo -e "Script By $creditt"
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu xray"
 xraay
@@ -1060,10 +995,10 @@ systemctl restart xray@vlessnone
 
 clear
 echo " Xray Vless Ws Account Deleted Successfully"
-echo " =========================="
+echo " •───────────────────────────────•"
 echo " Client Name : $user"
 echo " Expired On  : $exp"
-echo " =========================="
+echo " •───────────────────────────────•"
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu xray"
 xraay
@@ -1084,7 +1019,7 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^#vls " "/usr/local/etc/xray/vless.json")
 	echo "Renew User Xray Vless Ws"
 	echo "Select the existing client you want to renew"
 	echo " Press CTRL+C to return"
-	echo -e "==============================="
+	echo -e "•───────────────────────────────•"
 	grep -E "^#vls " "/usr/local/etc/xray/vless.json" | cut -d ' ' -f 2-3 | nl -s ') '
 	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
 		if [[ ${CLIENT_NUMBER} == '1' ]]; then
@@ -1115,10 +1050,10 @@ service cron restart
 clear
 echo ""
 echo " VLESS WS Account Was Successfully Renewed"
-echo " =========================="
+echo " •───────────────────────────────•"
 echo " Client Name : $user"
 echo " Expired On  : $exp4"
-echo " =========================="
+echo " •───────────────────────────────•"
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu xray"
 xraay
@@ -1142,7 +1077,7 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^#vls " "/usr/local/etc/xray/vless.json")
 	echo "SHOW USER XRAY VLESS WS"
 	echo "Select the existing client you want to renew"
 	echo " Press CTRL+C to return"
-	echo -e "==============================="
+	echo -e "•───────────────────────────────•"
 	grep -E "^#vls " "/usr/local/etc/xray/vless.json" | cut -d ' ' -f 2-3 | nl -s ') '
 	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
 		if [[ ${CLIENT_NUMBER} == '1' ]]; then
@@ -1163,7 +1098,7 @@ export vlesslink2="vless://${uuid}@${sts}${domain}:$none?path=$patchnontls&encry
 
 clear
 echo -e ""
-echo -e "\e[$line═════════════════════════════════\e[m"
+echo -e "\e[$line┌──────────────────────────────────────────────────────┐\e[m"
 echo -e "\e[$back_text      \e[30m[\e[$box XRAY VLESS WS\e[30m ]\e[1m          \e[m"
 echo -e "\e[$line═════════════════════════════════\e[m"
 echo -e "Remarks          : ${user}"
@@ -1177,26 +1112,13 @@ echo -e "Network          : WebSocket"
 echo -e "Path Tls         : $patchtls"
 echo -e "Path None Tls    : $patchnontls"
 echo -e "allowInsecure    : True/allow"
-echo -e "\e[$line═════════════════════════════════\e[m"
-echo -e "Pantang Larang $creditt Shop"
-echo -e "‼️Aktiviti Berikut Adalah Dilarang(ID akan di ban tanpa notis & tiada refund)"
-echo -e "\e[31m❌ Torrent (p2p, streaming p2p)"
-echo -e "\e[31m❌ PS4"
-echo -e "\e[31m❌ Porn"
-echo -e "\e[31m❌ Spam Bug"
-echo -e "\e[31m❌ Ddos Server"
-echo -e "\e[31m❌ Mining Bitcoins"
-echo -e "\e[31m❌ Abuse Usage"
-echo -e "\e[31m❌ Multi-Login ID"
-echo -e "\e[31m❌ Sharing Premium Config\e[m"
-echo -e "\e[$line═════════════════════════════════\e[m"
+echo -e "\e[$line•───────────────────────────────•\e[m"
 echo -e "Link TLS         : ${vlesslink1}"
-echo -e "\e[$line═════════════════════════════════\e[m"
+echo -e "\e[$line•───────────────────────────────•\e[m"
 echo -e "Link None TLS    : ${vlesslink2}"
-echo -e "\e[$line═════════════════════════════════\e[m"
+echo -e "\e[$line•───────────────────────────────•\e[m"
 echo -e "Created   : $harini"
 echo -e "Expired   : $exp"
-echo -e "Script By $creditt"
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu xray"
 xraay
@@ -1207,9 +1129,9 @@ function menu12 () {
 clear
 echo -n > /tmp/other.txt
 data=( `cat /usr/local/etc/xray/vless.json | grep '^#vls' | cut -d ' ' -f 2`);
-echo -e "\033[0;34m══════════════════════════════════════════\033[0m"
-echo -e "\\E[0;44;37m      ⇱ XRAY Vless WS User Login ⇲        \E[0m"
-echo -e "\033[0;34m══════════════════════════════════════════\033[0m"
+echo -e "\e[$line┌──────────────────────────────────────────────────────┐\e[m"
+echo -e "\e[$line│\e[$box                                  XRAY Vless WS User Login                   \e[$line│\e[m"
+echo -e "\e[$line└──────────────────────────────────────────────────────┘ \e[m"
 for akun in "${data[@]}"
 do
 if [[ -z "$akun" ]]; then
@@ -1236,7 +1158,7 @@ jum2=$(cat /tmp/ipvless.txt | nl)
 echo "user : $akun";
 echo "$jum2";
 echo ""
-echo -e "\e[$line══════════════════════════════════════════\e[m"
+echo -e "\e[$line•───────────────────────────────•\e[m"
 fi
 rm -rf /tmp/ipvmess.txt
 rm -rf /tmp/other.txt
@@ -1250,9 +1172,9 @@ xraay
 function menu13 () {
 clear
 xtls="$(cat ~/log-install.txt | grep -w "Vless Tcp Xtls" | cut -d: -f2|sed 's/ //g')"
-echo -e   "  \e[$line═══════════════════════════════════════════════════════\e[m"
-echo -e   "  \e[$back_text            \e[30m[\e[$box CREATE USER XRAY VLESS XTLS\e[30m ]\e[1m            \e[m"
-echo -e   "  \e[$line═══════════════════════════════════════════════════════\e[m"
+echo -e "\e[$line┌──────────────────────────────────────────────────────┐\e[m"
+echo -e "\e[$line│\e[$box                                  CREATE USER XRAY VLESS XTLS                   \e[$line│\e[m"
+echo -e "\e[$line└──────────────────────────────────────────────────────┘ \e[m"
 until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 		read -rp "   Username: " -e user
 		CLIENT_EXISTS=$(grep -w $user /usr/local/etc/xray/config.json | wc -l)
@@ -1264,9 +1186,9 @@ until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 		fi
 	done
 export uuid=$(cat /proc/sys/kernel/random/uuid)
-read -p "   Bug Address (Example: www.google.com) : " address
-read -p "   Bug SNI/Host (Example : m.facebook.com) : " sni
-read -p "   Expired (days) : " masaaktif
+read -p "Bug Address (Example: www.google.com) : " address
+read -p "Bug SNI/Host (Example : m.facebook.com) : " sni
+read -p "Expired (days) : " masaaktif
 
 bug_addr=${address}.
 bug_addr2=$address
@@ -1289,9 +1211,9 @@ systemctl restart xray.service
 
 clear
 echo -e ""
-echo -e "\e[$line═════════════════════════════════\e[m"
-echo -e "\e[$back_text     \e[30m[\e[$box XRAY VLESS XTLS\e[30m ]\e[1m         \e[m"
-echo -e "\e[$line═════════════════════════════════\e[m"
+echo -e "\e[$line┌──────────────────────────────────────────────────────┐\e[m"
+echo -e "\e[$line│\e[$box                                  XRAY VLESS XTLS                   \e[$line│\e[m"
+echo -e "\e[$line└──────────────────────────────────────────────────────┘ \e[m"
 echo -e "Remarks        : ${user}"
 echo -e "Domain         : ${domain}"
 echo -e "Ip/Host        : ${MYIP}"
@@ -1301,26 +1223,13 @@ echo -e "Encryption     : None"
 echo -e "Network        : TCP"
 echo -e "Flow           : Direct & Splice"
 echo -e "allowInsecure  : True"
-echo -e "\e[$line═════════════════════════════════\e[m"
-echo -e "Pantang Larang $creditt Shop"
-echo -e "‼️Aktiviti Berikut Adalah Dilarang(ID akan di ban tanpa notis & tiada refund)"
-echo -e "\e[31m❌ Torrent (p2p, streaming p2p)"
-echo -e "\e[31m❌ PS4"
-echo -e "\e[31m❌ Porn"
-echo -e "\e[31m❌ Spam Bug"
-echo -e "\e[31m❌ Ddos Server"
-echo -e "\e[31m❌ Mining Bitcoins"
-echo -e "\e[31m❌ Abuse Usage"
-echo -e "\e[31m❌ Multi-Login ID"
-echo -e "\e[31m❌ Sharing Premium Config\e[m"
-echo -e "\e[$line═════════════════════════════════\e[m"
+echo -e "\e[$line•────────────────•\e[m"
 echo -e "Link Xtls Direct  : ${vlesslink1}"
-echo -e "\e[$line═════════════════════════════════\e[m"
+echo -e "\e[$line•────────────────•\e[m"
 echo -e "Link Xtls Splice  : ${vlesslink2}"
-echo -e "\e[$line═════════════════════════════════\e[m"
+echo -e "\e[$line•────────────────•\e[m"
 echo -e "Created  : $harini"
 echo -e "Expired  : $exp"
-echo -e "Script By $creditt"
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu xray"
 xraay
@@ -1330,9 +1239,9 @@ xraay
 function menu14 () {
 clear
 xtls="$(cat ~/log-install.txt | grep -w "Vless Tcp Xtls" | cut -d: -f2|sed 's/ //g')"
-echo -e   "  \e[$line═══════════════════════════════════════════════════════\e[m"
-echo -e   "  \e[$back_text            \e[30m[\e[$box TRIAL USER XRAY VLESS XTLS\e[30m ]\e[1m             \e[m"
-echo -e   "  \e[$line═══════════════════════════════════════════════════════\e[m"
+echo -e "\e[$line┌──────────────────────────────────────────────────────┐\e[m"
+echo -e "\e[$line│\e[$box             TRIAL USER XRAY VLESS XTLS               \e[$line│\e[m"
+echo -e "\e[$line└──────────────────────────────────────────────────────┘ \e[m"
 
 # // Create Expried 
 export masaaktif="1"
@@ -1342,8 +1251,8 @@ export exp=$(date -d "$masaaktif days" +"%Y-%m-%d")
 export user=Trial`</dev/urandom tr -dc X-Z0-9 | head -c4`
 export uuid=$(cat /proc/sys/kernel/random/uuid)
 
-read -p "   Bug Address (Example: www.google.com) : " address
-read -p "   Bug SNI/Host (Example : m.facebook.com) : " sni
+read -p "Bug Address (Example: www.google.com) : " address
+read -p "Bug SNI/Host (Example : m.facebook.com) : " sni
 
 bug_addr=${address}.
 bug_addr2=$address
@@ -1365,9 +1274,9 @@ systemctl restart xray.service
 
 clear
 echo -e ""
-echo -e "\e[$line═════════════════════════════════\e[m"
-echo -e "\e[$back_text    \e[30m[\e[$box TRIAL XRAY VLESS XTLS\e[30m ]\e[1m    \e[m"
-echo -e "\e[$line═════════════════════════════════\e[m"
+echo -e "\e[$line┌──────────────────────────────────────────────────────┐\e[m"
+echo -e "\e[$line│\e[$box                TRIAL XRAY VLESS XTLS                 \e[$line│\e[m"
+echo -e "\e[$line└──────────────────────────────────────────────────────┘ \e[m"
 echo -e "Remarks        : ${user}"
 echo -e "Domain         : ${domain}"
 echo -e "Ip/Host        : ${MYIP}"
@@ -1377,26 +1286,13 @@ echo -e "Encryption     : None"
 echo -e "Network        : TCP"
 echo -e "Flow           : Direct & Splice"
 echo -e "allowInsecure  : True"
-echo -e "\e[$line═════════════════════════════════\e[m"
-echo -e "Pantang Larang $creditt Shop"
-echo -e "‼️Aktiviti Berikut Adalah Dilarang(ID akan di ban tanpa notis & tiada refund)"
-echo -e "\e[31m❌ Torrent (p2p, streaming p2p)"
-echo -e "\e[31m❌ PS4"
-echo -e "\e[31m❌ Porn"
-echo -e "\e[31m❌ Spam Bug"
-echo -e "\e[31m❌ Ddos Server"
-echo -e "\e[31m❌ Mining Bitcoins"
-echo -e "\e[31m❌ Abuse Usage"
-echo -e "\e[31m❌ Multi-Login ID"
-echo -e "\e[31m❌ Sharing Premium Config\e[m"
-echo -e "\e[$line═════════════════════════════════\e[m"
+echo -e "\e[$line•────────────────•\e[m"
 echo -e "Link Xtls Direct  : ${vlesslink1}"
-echo -e "\e[$line═════════════════════════════════\e[m"
+echo -e "\e[$line•────────────────•\e[m"
 echo -e "Link Xtls Splice  : ${vlesslink2}"
-echo -e "\e[$line═════════════════════════════════\e[m"
+echo -e "\e[$line•────────────────•\e[m"
 echo -e "Created  : $harini"
 echo -e "Expired  : $exp"
-echo -e "Script By $creditt"
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu xray"
 xraay
@@ -1407,9 +1303,12 @@ function menu15 () {
 clear
 NUMBER_OF_CLIENTS=$(grep -c -E "^#vxtls " "/usr/local/etc/xray/config.json")
 	if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
-		echo ""
+		clear
+    echo ""
 		echo "You have no existing clients!"
-		exit 1
+    echo ""
+    read -n 1 -s -r -p "Press any key to back on menu xray"
+xraay
 	fi
 
 	clear
@@ -1417,7 +1316,7 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^#vxtls " "/usr/local/etc/xray/config.json")
 	echo " Delete User Xray Vless Tcp Xtls"
 	echo " Select the existing client you want to remove"
 	echo " Press CTRL+C to return"
-	echo " ==============================="
+	echo " •───────────────────────────────•" | lolcat
 	echo "     No  Expired   User"
 	grep -E "^#vxtls " "/usr/local/etc/xray/config.json" | cut -d ' ' -f 2-3 | nl -s ') '
 	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
@@ -1438,10 +1337,10 @@ systemctl restart xray.service
 
 clear
 echo " Xray Vless Tcp Xtls Account Deleted Successfully"
-echo " =========================="
+echo " •───────────────────────────────•"
 echo " Client Name : $user"
 echo " Expired On  : $exp"
-echo " =========================="
+echo " •───────────────────────────────•"
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu xray"
 xraay
@@ -1455,7 +1354,9 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^#vxtls " "/usr/local/etc/xray/config.json")
 		clear
 		echo ""
 		echo "You have no existing clients!"
-		exit 1
+		echo ""
+    read -n 1 -s -r -p "Press any key to back on menu xray"
+xraay
 	fi
 
 	clear
@@ -1463,7 +1364,7 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^#vxtls " "/usr/local/etc/xray/config.json")
 	echo "Renew User Xray Vless Tcp Xtls"
 	echo "Select the existing client you want to renew"
 	echo " Press CTRL+C to return"
-	echo -e "==============================="
+	echo -e "•───────────────────────────────•" | lolcat
 	grep -E "^#vxtls " "/usr/local/etc/xray/config.json" | cut -d ' ' -f 2-3 | nl -s ') '
 	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
 		if [[ ${CLIENT_NUMBER} == '1' ]]; then
@@ -1492,10 +1393,10 @@ service cron restart
 clear
 echo ""
 echo " Xray Vless Tcp Xtls Account Was Successfully Renewed"
-echo " =========================="
+echo " •───────────────────────────────•"
 echo " Client Name : $user"
 echo " Expired On  : $exp4"
-echo " =========================="
+echo " •───────────────────────────────•"
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu xray"
 xraay
@@ -1510,7 +1411,9 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^#vxtls " "/usr/local/etc/xray/config.json")
 		clear
 		echo ""
 		echo "You have no existing clients!"
-		exit 1
+    echo ""
+    read -n 1 -s -r -p "Press any key to back on menu xray"
+xraay
 	fi
 
 	clear
@@ -1518,7 +1421,7 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^#vxtls " "/usr/local/etc/xray/config.json")
 	echo "SHOW USER XRAY VLESS XTLS"
 	echo "Select the existing client you want to renew"
 	echo " Press CTRL+C to return"
-	echo -e "==============================="
+	echo -e "•───────────────────────────────•" | lolcat
 	grep -E "^#vxtls " "/usr/local/etc/xray/config.json" | cut -d ' ' -f 2-3 | nl -s ') '
 	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
 		if [[ ${CLIENT_NUMBER} == '1' ]]; then
@@ -1537,9 +1440,9 @@ export vlesslink2="vless://${uuid}@${domain}:$xtls?security=xtls&encryption=none
 
 clear
 echo -e ""
-echo -e "\e[$line═════════════════════════════════\e[m"
-echo -e "\e[$back_text     \e[30m[\e[$box XRAY VLESS XTLS\e[30m ]\e[1m         \e[m"
-echo -e "\e[$line═════════════════════════════════\e[m"
+echo -e "\e[$line┌──────────────────────────────────────────────────────┐\e[m"
+echo -e "\e[$line│\e[$box                    XRAY VLESS XTLS                   \e[$line│\e[m"
+echo -e "\e[$line└──────────────────────────────────────────────────────┘ \e[m"
 echo -e "Remarks          : ${user}"
 echo -e "Domain           : ${domain}"
 echo -e "Ip/Host          : ${MYIP}"
@@ -1549,26 +1452,13 @@ echo -e "Encryption       : None"
 echo -e "Network          : TCP"
 echo -e "Flow             : Direct & Splice"
 echo -e "allowInsecure    : True"
-echo -e "\e[$line═════════════════════════════════\e[m"
-echo -e "Pantang Larang $creditt Shop"
-echo -e "‼️Aktiviti Berikut Adalah Dilarang(ID akan di ban tanpa notis & tiada refund)"
-echo -e "\e[31m❌ Torrent (p2p, streaming p2p)"
-echo -e "\e[31m❌ PS4"
-echo -e "\e[31m❌ Porn"
-echo -e "\e[31m❌ Spam Bug"
-echo -e "\e[31m❌ Ddos Server"
-echo -e "\e[31m❌ Mining Bitcoins"
-echo -e "\e[31m❌ Abuse Usage"
-echo -e "\e[31m❌ Multi-Login ID"
-echo -e "\e[31m❌ Sharing Premium Config\e[m"
-echo -e "\e[$line═════════════════════════════════\e[m"
+echo -e "\e[$line•────────────────•\e[m"
 echo -e "Link Xtls Direct : ${vlesslink1}"
-echo -e "\e[$line═════════════════════════════════\e[m"
+echo -e "\e[$line•────────────────•\e[m"
 echo -e "Link Xtls Splice : ${vlesslink2}"
-echo -e "\e[$line•───────────────────────────────•\e[m"
+echo -e "\e[$line•────────────────•\e[m"
 echo -e "Created    : $harini"
 echo -e "Expired    : $exp"
-echo -e "Script By $creditt"
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu xray"
 xraay
@@ -1579,9 +1469,9 @@ function menu18 () {
 clear
 echo -n > /tmp/other.txt
 data=( `cat /usr/local/etc/xray/config.json | grep '^#vxtls' | cut -d ' ' -f 2`);
-echo -e "\033[0;34m══════════════════════════════════════════\033[0m"
-echo -e "\\E[0;44;37m     ⇱ XRAY Vless Xtls User Login ⇲       \E[0m"
-echo -e "\033[0;34m══════════════════════════════════════════\033[0m"
+echo -e "   \e[$line┌──────────────────────────────────────────────────────┐\e[m"
+echo -e "   \e[$line│\e[$box            XRAY Vless Xtls User Login                \e[$line│\e[m"
+echo -e "   \e[$line└──────────────────────────────────────────────────────┘ \e[m"
 for akun in "${data[@]}"
 do
 if [[ -z "$akun" ]]; then
@@ -1614,7 +1504,7 @@ rm -rf /tmp/ipxray.txt
 rm -rf /tmp/other.txt
 done
 echo ""
-read -n 1 -s -r -p "Press any key to back on menu xray"
+read -n 1 -s -r -p "          Press any key to back on menu xray"
 xraay
 }
 
@@ -1654,9 +1544,8 @@ echo -e "      [\e[$number 17${NC}]\e[$below • Show Config Vless Xtls Account\
 echo -e "      [\e[$number 18${NC}]\e[$below • Check User Login Vless Xtls\e[m"
 echo -e ""
 echo -e "   \e[$number    >> Total :\e[m \e[$below ${total3} Client\e[m"
-echo -e "   \e[$line┌──────────────────────────────────────────────────────┐\e[m"
-echo -e "   \e[$line│\e[$box                 x) Go To Main Menu                   \e[$line│ \e[m"
-echo -e "   \e[$line└──────────────────────────────────────────────────────┘\e[m"
+echo -e "\e[$line"
+echo -e "                 Press [ x ] To Go Main Menu " | lolcat
 echo -e "\e[$line"
 read -rp "        Please Input Number  [1-18 or x] :  "  num
 echo -e ""
