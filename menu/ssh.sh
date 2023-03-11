@@ -45,28 +45,26 @@ NC='\e[0m'
 MYIP=$(wget -qO- ifconfig.me/ip);
 
 echo -e ""
-echo -e "   \e[$line══════════════════════════════════════════\e[m"
-echo -e "   \e[$back_text         \e[30m═[\e[$box SSH & OpenVPN Menu\e[30m ]═         \e[m"
-echo -e "   \e[$line══════════════════════════════════════════\e[m"
-echo -e "    \e[$number (•1)\e[m \e[$below Create SSH & OpenVPN Account\e[m"
-echo -e "    \e[$number (•2)\e[m \e[$below Trial Account SSH & OpenVPN\e[m"
-echo -e "    \e[$number (•3)\e[m \e[$below Renew SSH & OpenVPN Account\e[m"
-echo -e "    \e[$number (•4)\e[m \e[$below Delete SSH & OpenVPN Account\e[m"
-echo -e "    \e[$number (•5)\e[m \e[$below Check User Login SSH & OpenVPN\e[m"
-echo -e "    \e[$number (•6)\e[m \e[$below List Member SSH & OpenVPN\e[m"
-echo -e "    \e[$number (•7)\e[m \e[$below Delete User Expired SSH & OpenVPN\e[m"
-echo -e "    \e[$number (•8)\e[m \e[$below Set up Autokill SSH\e[m"
-echo -e "    \e[$number (•9)\e[m \e[$below Cek Users Who Do Multi Login SSH\e[m"
-echo -e "    \e[$number (10)\e[m \e[$below User List\e[m"
-echo -e "    \e[$number (11)\e[m \e[$below User Lock\e[m"
-echo -e "    \e[$number (12)\e[m \e[$below User Unlock\e[m"
-echo -e "    \e[$number (13)\e[m \e[$below User Password\e[m"
-echo -e "    \e[$number (14)\e[m \e[$below Restart Service Dropbear, Squid3,\e[m"
-echo -e "          \e[$below OpenVPN & SSH\e[m"
+echo -e "   \e[$line┌──────────────────────────────────────────────────────┐\e[m"
+echo -e "   \e[$line│                  \e[$box SSH & OpenVPN Menu                 \e[$line│\e[m"
+echo -e "   \e[$line└──────────────────────────────────────────────────────┘\e[m"
+echo -e "      [\e[$number 01${NC}]\e[$below • Create SSH & OpenVPN Account\e[m"
+echo -e "      [\e[$number 02${NC}]\e[$below • Trial Account SSH & OpenVPN\e[m"
+echo -e "      [\e[$number 03${NC}]\e[$below • Renew SSH & OpenVPN Account\e[m"
+echo -e "      [\e[$number 04${NC}]\e[$below • Delete SSH & OpenVPN Account\e[m"
+echo -e "      [\e[$number 05${NC}]\e[$below • Check User Login SSH & OpenVPN\e[m"
+echo -e "      [\e[$number 06${NC}]\e[$below • List Member SSH & OpenVPN\e[m"
+echo -e "      [\e[$number 07${NC}]\e[$below • Delete User Expired SSH & OpenVPN\e[m"
+echo -e "      [\e[$number 08${NC}]\e[$below • Set up Autokill SSH\e[m"
+echo -e "      [\e[$number 09${NC}]\e[$below • Cek Users Who Do Multi Login SSH\e[m"
+echo -e "      [\e[$number 10${NC}]\e[$below • User List\e[m"
+echo -e "      [\e[$number 11${NC}]\e[$below • User Lock\e[m"
+echo -e "      [\e[$number 12${NC}]\e[$below • User Unlock\e[m"
+echo -e "      [\e[$number 13${NC}]\e[$below • User Password\e[m"
+echo -e "      [\e[$number 14${NC}]\e[$below • Restart Service Dropbear, Squid3,\e[m"
+echo -e "              \e[$below OpenVPN & SSH\e[m"
 echo -e ""
-echo -e "   \e[$line══════════════════════════════════════════\e[m"
-echo -e "   \e[$back_text \e[$box x)   MENU                               \e[m"
-echo -e "   \e[$line══════════════════════════════════════════\e[m"
+echo -e "              Press [ x ] To Go Main Menu " | lolcat
 echo -e "\e[$line"
 read -p "       Please Input Number  [1-14 or x] :  "  ssh
 echo -e ""
@@ -118,5 +116,7 @@ menu
 ;;
 *)
 echo "Please enter an correct number"
+sleep 1
+ssh
 ;;
 esac
