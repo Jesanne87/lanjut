@@ -2,15 +2,15 @@
 #wget https://github.com/${GitUser}/
 GitUser="Jesanne87"
 #IZIN SCRIPT
+# LINE COLOUR
+line=$(cat /etc/line)
 MYIP=$(curl -sS ipv4.icanhazip.com)
 echo -e "\e[32mloading...\e[0m"
 clear
-echo -e "\e[32mloading...\e[0m"
-clear
-read -p " Username :  " User
+read -p "Username   :  " User
 egrep "^$User" /etc/passwd >/dev/null
 if [ $? -eq 0 ]; then
-read -p "         Day Extend     :  " Days
+read -p "Day Extend:  " Days
 Today=`date +%s`
 Days_Detailed=$(( $Days * 86400 ))
 Expire_On=$(($Today + $Days_Detailed))
@@ -22,19 +22,26 @@ egrep "^$User" /etc/passwd >/dev/null
 echo -e "$Pass\n$Pass\n"|passwd $User &> /dev/null
 clear
 echo -e ""
-echo -e "========================================"
+echo -e "\e[$line•─────────────────────────────────•\e[m"
 echo -e ""
 echo -e "    Username        :  $User"
 echo -e "    Days Added      :  $Days Days"
 echo -e "    Expires on      :  $Expiration_Display"
 echo -e ""
-echo -e "========================================"
+echo -e "\e[$line•─────────────────────────────────•\e[m"
 else
 clear
 echo -e ""
-echo -e "======================================"
+echo -e "\e[$line•─────────────────────────────────•\e[m"
 echo -e ""
 echo -e "        Username Doesnt Exist         "
 echo -e ""
-echo -e "======================================"
+echo -e "\e[$line•─────────────────────────────────•\e[m"
+echo ""
 fi
+echo ""
+read -n1 -r -p "Press any key to continue..."
+    sleep 1
+    ssh
+
+    
