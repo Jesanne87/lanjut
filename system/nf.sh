@@ -1,9 +1,5 @@
 #!/bin/bash
 shell_version="3.0";
-colornow=$(cat /etc/JsPhantom/theme/color.conf) 
-export COLOR1="$(cat /etc/JsPhantom/theme/$colornow | grep -w "TEXT" | cut -d: -f2|sed 's/ //g')"
-export COLBG1="$(cat /etc/JsPhantom/theme/$colornow | grep -w "BG" | cut -d: -f2|sed 's/ //g')" 
-###########- END COLOR CODE -##########
 Font_Black="\033[30m"
 Font_Red="\033[31m"
 Font_Green="\033[32m"
