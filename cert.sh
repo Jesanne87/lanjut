@@ -14,7 +14,7 @@ NC='\e[0m'
 source /var/lib/premium-script/ipvps.conf
 domain=$(cat /root/domain)
 clear
-echo -e "[ ${green}INFO${NC} ] Renew Certificate In Progress ~" 
+echo -e "${NC}[ ${green}INFO${NC} ] Renew Certificate In Progress ~" 
 sleep 0.5
 systemctl stop nginx
 systemctl stop xray.service
