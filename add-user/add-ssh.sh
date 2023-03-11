@@ -18,13 +18,13 @@ export line=$(cat /etc/line)
 export back_text=$(cat /etc/back)
 
 clear
-echo -e   "  \e[$line═══════════════════════════════════════════════════════\e[m"
-echo -e   "  \e[$back_text           \e[30m[\e[$box CREATE USER SSH & OPENVPN\e[30m ]\e[1m               \e[m"
-echo -e   "  \e[$line═══════════════════════════════════════════════════════\e[m"
-read -p "   Username : " Login
-read -p "   Password : " Pass
-read -p "   Bug SNI/Host (Example : m.facebook.com) : " sni
-read -p "   Expired (days): " masaaktif
+echo -e "   \e[$line┌──────────────────────────────────────────────────────┐\e[m"
+echo -e "   \e[$line│             \e[$box CREATE USER SSH & OPENVPN               \e[$line│\e[m"
+echo -e "   \e[$line└──────────────────────────────────────────────────────┘\e[m"
+read -p "    Username : " Login
+read -p "    Password : " Pass
+read -p "    Bug SNI/Host (Example : m.facebook.com) : " sni
+read -p "    Expired (days): " masaaktif
 
 IP=$(wget -qO- icanhazip.com);
 source /var/lib/premium-script/ipvps.conf
@@ -67,14 +67,14 @@ export exp1=`date -d "$masaaktif days" +"%Y-%m-%d"`
 
 echo -e "$Pass\n$Pass\n"|passwd $Login &> /dev/null
 echo -e ""
-echo -e "\e[$line═══════════════════════════════════════════════════════\e[m"
-echo -e "\e[$back_text         \e[30m[\e[$box Informasi Account SSH & OpenVPN\e[30m ]\e[1m           \e[m"
-echo -e "\e[$line═══════════════════════════════════════════════════════\e[m"
+echo -e "\e[$line┌──────────────────────────────────────────────────────┐\e[m"
+echo -e "\e[$line│         \e[$box Informasi Account SSH & OpenVPN             \e[$line│\e[m"
+echo -e "\e[$line└──────────────────────────────────────────────────────┘\e[m"
 echo -e "Username         : $Login"
 echo -e "Password         : $Pass"
 echo -e "Created          : $harini"
 echo -e "Expired          : $exp1"
-echo -e "\e[$line═══════════════════════════════════════════════════════\e[m"
+echo -e "\e[$line•─────────────────────────────────────────────────•\e[m"
 echo -e "Domain           : $domain"
 echo -e "IP/Host          : $MYIP"
 echo -e "OpenSSH          : 22"
@@ -88,18 +88,22 @@ echo -e "OHP OpenSSH      : $ohpssh"
 echo -e "OHP OpenVPN      : $ovpn3"
 echo -e "Port Squid       :$sqd"
 echo -e "Badvpn(UDPGW)    : 7100-7300"
-echo -e "\e[$line═══════════════════════════════════════════════════════\e[m"
+echo -e "\e[$line•─────────────────────────────────────────────────•\e[m"
 echo -e "CONFIG OPENVPN"
-echo -e "--------------"
-echo -e "OpenVPN TCP : $ovpn http://$MYIP:81/client-tcp-$ovpn.ovpn"
-echo -e "OpenVPN UDP : $ovpn2 http://$MYIP:81/client-udp-$ovpn2.ovpn"
-echo -e "OpenVPN SSL : $ovpn4 http://$MYIP:81/client-tcp-ssl.ovpn"
-echo -e "OpenVPN OHP : $ovpn3 http://$MYIP:81/client-tcp-ohp1194.ovpn"
-echo -e "\e[$line═══════════════════════════════════════════════════════\e[m"
+echo -e "\e[$line•────────────•\e[m"
+echo -e "OpenVPN TCP     : $ovpn http://$MYIP:81/client-tcp-$ovpn.ovpn"
+echo -e "OpenVPN UDP     : $ovpn2 http://$MYIP:81/client-udp-$ovpn2.ovpn"
+echo -e "OpenVPN SSL     : $ovpn4 http://$MYIP:81/client-tcp-ssl.ovpn"
+echo -e "OpenVPN OHP     : $ovpn3 http://$MYIP:81/client-tcp-ohp1194.ovpn"
+echo -e "\e[$line•─────────────────────────────────────────────────•\e[m"
 echo -e "PAYLOAD WS HTTP      : GET / HTTP/1.1[crlf]Host: sshws.$domain[crlf]Upgrade: websocket[crlf][crlf]"
-echo -e "\e[$line═══════════════════════════════════════════════════════\e[m"
+echo -e "\e[$line•─────────────────────────────────────────────────•\e[m"
 echo -e "PAYLOAD WS HTTPS     : GET wss://$sni/ HTTP/1.1[crlf]Host: sshws.$domain[crlf]Upgrade: websocket[crlf]Connection: Keep-Alive[crlf][crlf]"
-echo -e "\e[$line═══════════════════════════════════════════════════════\e[m"
+echo -e "\e[$line•─────────────────────────────────────────────────•\e[m"
 echo -e "PAYLOAD WS OVPN HTTP : GET wss://$sni/ HTTP/1.1[crlf]Host: sshws.$domain[crlf]Upgrade: websocket[crlf]Connection: Keep-Alive[crlf][crlf]"
-echo -e "\e[$line═══════════════════════════════════════════════════════\e[m"
-echo -e "Script By $creditt"
+echo -e "\e[$line•─────────────────────────────────────────────────•\e[m"
+echo ""
+echo ""
+read -n1 -r -p "Press any key to continue..."
+    sleep 1
+    ssh
