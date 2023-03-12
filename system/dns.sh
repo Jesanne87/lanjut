@@ -1,6 +1,15 @@
 #!/bin/bash
 clear -x
-
+# LINE COLOUR
+line=$(cat /etc/line)
+# TEXT COLOUR BELOW
+below=$(cat /etc/below)
+# BACKGROUND TEXT COLOUR
+back_text=$(cat /etc/back)
+# NUMBER COLOUR
+number=$(cat /etc/number)
+# TEXT ON BOX COLOUR
+box=$(cat /etc/box)
 if ! command -v resolvconf >/dev/null; then
     echo "Installing resolvconf"
     sudo apt install resolvconf -y >/dev/null
@@ -13,14 +22,13 @@ function menu1 () {
 clear -x
 sudo systemctl enable resolvconf.service > /dev/null && clear -x && sudo systemctl start resolvconf.service > /dev/nul
 clear -x
-echo " "
 read -p "KEY IN IP DNS: " ip1
 
 echo "nameserver $ip1" > /etc/resolv.conf && systemctl start resolvconf.service
 clear -x
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu"
-menu
+system
 }
 # PERMANENTLY
 function menu2 () {
@@ -41,25 +49,25 @@ clear -x
 cat /etc/resolv.conf
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu"
-menu
+system
 }
 # menu depan
 function menu3 () {
 clear -x
-menu
+system
 }
 # MENU XRAY VMESS & VLESS
 clear
-echo -e "\033[0;34m╒════════════════════════════════════════════╕\033[0m"
-echo -e " \\E[0;41;36m                DNS CHANGER                 \E[0m"
-echo -e "\033[0;34m╘════════════════════════════════════════════╛\033[0m"
-echo "DNS Changer"
+echo -e "\e[$line┌──────────────────────────────────────────────────────┐\e[m"
+echo -e "\e[$line│                     \e[$box DNS CHANGER\e[30m                     \e[$line│\e[m"
+echo -e "\e[$line└──────────────────────────────────────────────────────┘\e[m"
+echo -e "[ Info ] \e[$below REBOOT VPS TO RETURN INITIAL DNS\e[m"
 echo -e ""
-echo -e " [\e[36m•1 \e[0m] INPUT DNS TEMPORARY.REBOOT VPS FOR RETURN TO INITIAL DNS"
-echo -e " [\e[36m•2 \e[0m] INPUT DNS PERMANENTLY"
-echo -e " [\e[36m•3 \e[0m] BACK TO MAIN MENU"
+echo -e " [\e[$number 01${NC}]\e[$below • INPUT DNS TEMPORARY\e[m"
+echo -e " [\e[$number 02${NC}]\e[$below • INPUT DNS PERMANENTLY\e[m"
+echo -e " [\e[$number 03${NC}]\e[$below • BACK TO MAIN MENU\e[m"
 echo -e ""
-echo  "Press [ Ctrl+C ] • To-Exit-Script"
+echo -e "                [Ctrl + C] Exit From Script" | lolcat
 echo -e ""
 read -p  "Select From Options [ 1 - 3 ] :" num
 echo -e ""
