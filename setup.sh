@@ -14,17 +14,18 @@ BLUE='\033[0;34m'
 PURPLE='\033[0;35m'
 CYAN='\033[0;36m'
 NC='\033[0;37m'
+red='\e[1;31m'
+green='\e[0;32m'
+NC='\e[0m'
+export WH='\033[1;37m' 
 # ===================
-echo ''
-clear
-echo ''
-echo "                                                              "
-echo -e "${NC}[ ${green}INFO${NC} ] \e[93mPreparing the install file"
 apt install git curl -y >/dev/null 2>&1
+clear
+echo -e "${NC}[ ${green}INFO${NC} ] \e[93mPreparing the install file"
 echo -e "${NC}[ ${green}INFO${NC} ] \e[93mAlright good ... installation file is ready"
 sleep 2
 echo -ne "${NC}[ ${green}INFO${NC} ] \e[93mCheck permission... "
-sleep 6
+sleep 3
 clear
 if [ "${EUID}" -ne 0 ]; then
 		echo "You need to run this script as root"
@@ -34,9 +35,6 @@ if [ "$(systemd-detect-virt)" == "openvz" ]; then
 		echo "OpenVZ is not supported"
 		exit 1
 fi
-red='\e[1;31m'
-green='\e[0;32m'
-NC='\e[0m'
 #IZIN SCRIPT
 MYIP=$(curl -sS ipv4.icanhazip.com)
 echo -e "\e[32mloading...\e[0m"
@@ -84,17 +82,17 @@ mkdir /var/lib/premium-script;
 default_email=$( curl https://raw.githubusercontent.com/${GitUser}/email/main/default.conf )
 clear
 #Nama penyedia script
-echo -e "\e[1;32m════════════════════════════════════════════════════════════\e[0m"
-echo ""
-echo -e "   \e[1;32mPlease Enter the name of the Script Provider"
+echo -e "${PURPLE}════════════════════════════════════════════════════════════\e[0m"
+echo -e ""
+echo -e "   \e[93mPlease Enter the name of the Script Provider\e[0m"
 read -p "   Name : " nm
 echo $nm > /root/provided
-echo ""
-#Email domain
-echo -e "\e[1;32m════════════════════════════════════════════════════════════\e[0m"
 echo -e ""
-echo -e "   \e[1;32mPlease enter your email Domain/Cloudflare."
-echo -e "   \e[1;31m(Press ENTER for default email)\e[0m"
+#Email domain
+echo -e "${PURPLE}════════════════════════════════════════════════════════════\e[0m"
+echo -e ""
+echo -e "   \e[93mPlease enter your email Domain/Cloudflare\e[0m"
+echo -e "   \e[93m(Press ENTER for default email)\e[0m"
 read -p "   Email : " email
 default=${default_email}
 new_email=$email
@@ -108,14 +106,14 @@ mkdir -p /usr/local/etc/xray/
 touch /usr/local/etc/xray/email
 echo $sts > /usr/local/etc/xray/email
 echo ""
-echo -e "\e[1;32m════════════════════════════════════════════════════════════\e[0m"
+echo -e "${PURPLE}════════════════════════════════════════════════════════════\e[0m"
 echo ""
-echo -e "   ╔══════════════════════════════════╗"
-echo -e "   ║\e[1;32mPlease select a domain type below \e[0m║"
-echo -e "   ╚══════════════════════════════════╝"
-echo -e "     \e[1;32m1)\e[0m Enter your Subdomain"
-echo -e "     \e[1;32m2)\e[0m Use a random Subdomain"
-echo -e "   ════════════════════════════════════"
+echo -e "   ${PURPLE}╔══════════════════════════════════╗\e[0m"
+echo -e "   ${PURPLE}║\e[93mPlease select a domain type below ${PURPLE}║\e[0m"
+echo -e "   ${PURPLE}╚══════════════════════════════════╝\e[0m"
+echo -e "     \e[1;32m1)\e[0m \e[93mEnter your Subdomain\e[0m"
+echo -e "     \e[1;32m2)\e[0m \e[93mUse a random Subdomain\e[0m"
+echo -e "   ${PURPLE}════════════════════════════════════\e[0m"
 read -p "   Please select numbers 1-2 or Any Button(Random) : " host
 echo ""
 if [[ $host == "1" ]]; then
@@ -187,13 +185,13 @@ wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/${GitUser}
 rm -f /root/ssh-vpn.sh
 rm -f /root/ins-xray.sh
 rm -f /root/ohp.sh
-#rm -f /root/ohp-dropbear.sh
-#rm -f /root/ohp-ssh.sh
+rm -f /root/ohp-dropbear.sh
+rm -f /root/ohp-ssh.sh
 rm -f /root/websocket.sh
 rm -f /root/set-br.sh
 # Colour Default
 echo "1;36m" > /etc/banner
-echo "30m" > /etc/box
+echo "\033[1;37m" > /etc/box
 echo "1;31m" > /etc/line
 echo "1;32m" > /etc/text
 echo "1;33m" > /etc/below
@@ -206,9 +204,10 @@ history -c
 echo "$ver" > /home/ver
 clear
 echo " "
-echo "Installation has been completed!!"
+echo -e  "\e[93mInstallation has been completed!!\e[0m"
 echo " "
-echo -e "\e[1;32m══════════════════Autoscript PREMIUM══════════════════\e[0m" | tee -a log-install.txt
+echo -e "\e[1;32m══════════════════\e[93mAutoscript PREMIUM\e[1;32m══════════════════\e[0m" | tee -a log-install.txt
+echo ""
 echo ""  | tee -a log-install.txt
 echo "   >>> Service & Port"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
@@ -264,16 +263,17 @@ echo "   - Auto Delete Expired Account" | tee -a log-install.txt
 echo "   - Full Orders For Various Services" | tee -a log-install.txt
 echo "   - White Label" | tee -a log-install.txt
 echo "   - Installation Log --> /root/log-install.txt"  | tee -a log-install.txt
-echo -e "\e[1;32m══════════════════Autoscript By JSphantom══════════════════\e[0m" | tee -a log-install.txt
-sleep 7
+echo ""
+echo -e "\e[1;32m══════════════════\e[93mAutoscript By JSphantom\e[1;32m══════════════════\e[0m" | tee -a log-install.txt
+sleep 5
 clear
 echo ""
-echo -e "    \e[1;32m.------------------------------------------.\e[0m"
-echo -e "    \e[1;32m|     SUCCESFULLY INSTALLED THE SCRIPT     |\e[0m"
-echo -e "    \e[1;32m|         PREMIUM BY INFOANDROID          |\e[0m"
-echo -e "    \e[1;32m'------------------------------------------'\e[0m"
+echo -e "    \e[1;32m╔══════════════════════════════════════════════════════╗|\e[0m"
+echo -e "    \e[1;32m║       \e[93m SUCCESFULLY INSTALLED MODED SCRIPT            \e[1;32m║|\e[0m"
+echo -e "    \e[1;32m║                  \e[93m BY JsPhantom                       \e[1;32m║|\e[0m"
+echo -e "    \e[1;32m╚══════════════════════════════════════════════════════╝|\e[0m"
 echo ""
-echo -e "   \e[1;32mYour VPS Will Be Automatical Reboot In 5 seconds\e[0m"
+echo -e "   \e[93mYour VPS Will Be Automatical Reboot In 3 seconds\e[0m"
 rm -r setup.sh
-sleep 5
+sleep 3
 reboot
