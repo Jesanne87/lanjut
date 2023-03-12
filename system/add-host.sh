@@ -4,7 +4,18 @@ export RED='\e[1;31m'
 export GREEN='\e[0;32m'
 export BLUE='\e[0;34m'
 export NC='\e[0m'
-
+# TEXT ON BOX COLOUR
+box=$(cat /etc/box)
+# LINE COLOUR
+line=$(cat /etc/line)
+# TEXT COLOUR ON TOP
+text=$(cat /etc/text)
+# TEXT COLOUR BELOW
+below=$(cat /etc/below)
+# BACKGROUND TEXT COLOUR
+back_text=$(cat /etc/back)
+# NUMBER COLOUR
+number=$(cat /etc/number)
 #wget https://github.com/${GitUser}/
 GitUser="Jesanne87"
 
@@ -42,9 +53,9 @@ export emailcf=$(cat /usr/local/etc/xray/email)
 
 clear
 echo ""
-echo -e "\033[0;34m══════════════════════════════════════════\033[0m"
-echo -e "\E[44;1;39m                Add Domain                \E[0m"
-echo -e "\033[0;34m══════════════════════════════════════════\033[0m"
+echo -e "\e[$line┌──────────────────────────────────────────────────────┐${NC}"
+echo -e "\e[$line│\e[$box                      Add Domain                      \e[$line│${NC}"
+echo -e "\e[$line└──────────────────────────────────────────────────────┘${NC}"
 echo ""
 
 echo "Please Input Your Pointing Domain In Cloudflare "
@@ -60,7 +71,7 @@ rm -f /etc/xray/domain;
 echo "$host" > /etc/xray/domain
 
 echo ""
-echo -e "\e[1;32m════════════════════════════════════════════════════════════\e[0m"
+echo -e "\\e[$line•————————————————————————————————————————————————————————•\e[0m"
 echo ""
 echo -e "   \e[1;32mPlease enter your email Domain/Cloudflare."
 echo -e "   \e[1;31m(Press ENTER for default email)\e[0m"
@@ -105,9 +116,9 @@ systemctl restart xray@none
 
 clear
 echo -e ""
-echo -e "\033[0;34m══════════════════════════════════════════\033[0m"
-echo -e "\E[44;1;39m        PERTUKARAN DOMAIN SELESAI         \E[0m"
-echo -e "\033[0;34m══════════════════════════════════════════\033[0m"
+echo -e "\e[$line┌──────────────────────────────────────────────────────┐${NC}"
+echo -e "\e[$line│\e[$box              PERTUKARAN DOMAIN SELESAI               \e[$line│${NC}"
+echo -e "\e[$line└──────────────────────────────────────────────────────┘${NC}"
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu"
-menu
+system
