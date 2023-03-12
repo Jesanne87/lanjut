@@ -5,6 +5,8 @@ GitUser="Jesanne87"
 MYIP=$(curl -sS ipv4.icanhazip.com)
 echo -e "\e[32mloading...\e[0m"
 clear
+# // LINE COLOUR
+export line=$(cat /etc/line)
 # Valid Script
 VALIDITY () {
     today=`date -d "0 days" +"%Y-%m-%d"`
@@ -35,14 +37,15 @@ if [ $? -eq 0 ]; then
 # proses mengganti passwordnya
 passwd -l $username
 clear
-  echo " "
-  echo " "
-  echo " "
-  echo "-----------------------------------------------"
+echo -e "\e[$line•──────────────────────────────────────•\e[m"
   echo -e "Username ${blue}$username${NC} successfully ${red}LOCKED!${NC}."
   echo -e "Access Login to username ${blue}$username${NC} has been locked."
-  echo "-----------------------------------------------"
+echo -e "\e[$line•──────────────────────────────────────•\e[m"
+read -n1 -r -p "Press any key to continue..."
+    sleep 1
+    ssh
 else
 echo "Username not found on your server."
-    exit 1
-fi
+    sleep 2
+    ssh
+    fi
