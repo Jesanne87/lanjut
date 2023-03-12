@@ -28,25 +28,21 @@ exit 0
 fi
 echo -e "\e[32mloading...\e[0m"
 clear
-echo " "
-echo " "
-echo " "
 read -p "Input USERNAME to unlock: " username
 egrep "^$username" /etc/passwd >/dev/null
 if [ $? -eq 0 ]; then
 # proses mengganti passwordnya
 passwd -u $username
 clear
-  echo " "
-  echo " "
-  echo " "
-  echo "-------------------------------------------"
+echo -e "\e[$line•──────────────────────────────────────•\e[m"
   echo -e "Username ${blue}$username${NC} successfully ${green}UNLOCKED${NC}."
   echo -e "Access for Username ${blue}$username${NC} has been restored"
-  echo "-------------------------------------------"
+echo -e "\e[$line•──────────────────────────────────────•\e[m"
+read -n1 -r -p "Press any key to continue..."
+    sleep 1
+    ssh
 else
-echo " "
-echo -e "Username ${red}$username${NC} not found in your server."
-echo " "    
-	exit 1
+echo -e "Username ${red}$username${NC} not found in your server."   
+	sleep 1
+ ssh
 fi
