@@ -3,6 +3,16 @@ GitUser="Jesanne87"
 #IZIN SCRIPT
 MYIP=$(curl -sS ipv4.icanhazip.com)
 # Valid Script
+# LINE COLOUR
+line=$(cat /etc/line)
+# TEXT COLOUR BELOW
+below=$(cat /etc/below)
+# BACKGROUND TEXT COLOUR
+back_text=$(cat /etc/back)
+# NUMBER COLOUR
+number=$(cat /etc/number)
+# TEXT ON BOX COLOUR
+box=$(cat /etc/box)
 VALIDITY () {
     today=`date -d "0 days" +"%Y-%m-%d"`
     Exp1=$(curl https://raw.githubusercontent.com/${GitUser}/allow/main/ipvps.conf | grep $MYIP | awk '{print $4}')
@@ -77,15 +87,16 @@ else
 sts="${Error}"
 fi
 clear
-echo -e " =============================="
-echo -e "           Webmin Menu         "
-echo -e " =============================="
+echo -e "\e[$line┌──────────────────────────────────────────────────────┐\e[m"
+echo -e "\e[$line│                     \e[$box Webmin Menu\e[30m                     \e[$line│\e[m"
+echo -e "\e[$line└──────────────────────────────────────────────────────┘\e[m"
 echo -e " Status $sts"
-echo -e "  1. Install Webmin"
-echo -e "  2. Restart Webmin"
-echo -e "  3. Uninstall Webmin"
-echo -e " AutoScriptVPS"
-echo -e " Press CTRL+C to return"
+echo -e "${NC}[\e[$number 01${NC}]\e[$below • Install Webmin${NC}"
+echo -e "[\e[$number 02${NC}]\e[$below • Restart Webmin${NC}"
+echo -e "[\e[$number 03${NC}]\e[$below • Uninstall Webmin${NC}"
+echo -e " "
+echo -e "                [Ctrl + C] Exit From Script" | lolcat
+echo -e " "
 read -rp " Please Enter The Correct Number : " -e num
 if [[ "$num" = "1" ]]; then
 install
@@ -96,5 +107,5 @@ uninstall
 else
 clear
 echo " You Entered The Wrong Number"
-menu
+system
 fi
