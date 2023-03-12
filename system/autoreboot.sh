@@ -71,6 +71,8 @@ echo "59 * * * * root /sbin/reboot" > /etc/cron.d/reboot
 echo "start1" > /home/autoreboot
 echo -e "Auto-Reboot has been set every an hour"
 echo -e "\e[0;32mDone\e[0m"
+read -n 1 -s -r -p "Press any key to back on menu"
+				autoreboot
 }
 function every_6_hours () {
 rm -f /etc/cron.d/reboot
@@ -78,6 +80,8 @@ echo "0 */6 * * * root /sbin/reboot" > /etc/cron.d/reboot
 echo "start2" > /home/autoreboot
 echo -e "Auto-Reboot has been successfully set every 6 hours"
 echo -e "\e[0;32mDone\e[0m"
+read -n 1 -s -r -p "Press any key to back on menu"
+				autoreboot
 }
 function every_12_hours () {
 rm -f /etc/cron.d/reboot
@@ -85,6 +89,8 @@ echo "0 */12 * * * root /sbin/reboot" > /etc/cron.d/reboot
 echo "start3" > /home/autoreboot
 echo -e "Auto-Reboot has been successfully set every 12 hours"
 echo -e "\e[0;32mDone\e[0m"
+read -n 1 -s -r -p "Press any key to back on menu"
+				autoreboot
 }
 function set_once_a_day () {
 rm -f /etc/cron.d/reboot
@@ -92,6 +98,8 @@ echo "0 0 * * * root /sbin/reboot" > /etc/cron.d/reboot
 echo "start4" > /home/autoreboot
 echo -e "Auto-Reboot has been successfully set once a day"
 echo -e "\e[0;32mDone\e[0m"
+read -n 1 -s -r -p "Press any key to back on menu"
+				autoreboot
 }
 function set_once_a_week () {
 rm -f /etc/cron.d/reboot
@@ -99,6 +107,8 @@ echo "0 0 */7 * * root /sbin/reboot" > /etc/cron.d/reboot
 echo "start5" > /home/autoreboot
 echo -e "Auto-Reboot has been successfully set once a week"
 echo -e "\e[0;32mDone\e[0m"
+read -n 1 -s -r -p "Press any key to back on menu"
+				autoreboot
 }
 function once_a_month () {
 rm -f /etc/cron.d/reboot
@@ -106,6 +116,8 @@ echo "0 0 * 1 * root /sbin/reboot" > /etc/cron.d/reboot
 echo "start6" > /home/autoreboot
 echo -e "Auto-Reboot has been successfully set once a month"
 echo -e "\e[0;32mDone\e[0m"
+read -n 1 -s -r -p "Press any key to back on menu"
+				autoreboot
 }
 function set_every_00 () {
 rm -f /etc/cron.d/reboot
@@ -113,6 +125,8 @@ echo "0 0 * * * root /sbin/reboot" > /etc/cron.d/reboot
 echo "start7" > /home/autoreboot
 echo -e "Auto-Reboot has been successfully set Every 00.00am"
 echo -e "\e[0;32mDone\e[0m"
+read -n 1 -s -r -p "Press any key to back on menu"
+				autoreboot
 }
 function set_every_02 () {
 rm -f /etc/cron.d/reboot
@@ -120,6 +134,8 @@ echo "0 2 * * * root /sbin/reboot" > /etc/cron.d/reboot
 echo "start8" > /home/autoreboot
 echo -e "Auto-Reboot has been successfully set Every 02.00am"
 echo -e "\e[0;32mDone\e[0m"
+read -n 1 -s -r -p "Press any key to back on menu"
+				autoreboot
 }
 function set_every_04 () {
 rm -f /etc/cron.d/reboot
@@ -127,17 +143,24 @@ echo "0 4 * * * root /sbin/reboot" > /etc/cron.d/reboot
 echo "start9" > /home/autoreboot
 echo -e "Auto-Reboot has been successfully set Every 04.00am"
 echo -e "\e[0;32mDone\e[0m"
+read -n 1 -s -r -p "Press any key to back on menu"
+				autoreboot
 }
 function stop () {
 rm -f /etc/cron.d/reboot
-sleep 0]5
+sleep 0.5
 echo > /home/autoreboot
 echo -e "Auto-Reboot has been successfully Turn Off"
 echo -e "\e[0;32mDone\e[0m"
+echo ""
+read -n 1 -s -r -p "Press any key to back on menu"
+				autoreboot
 }
 function deleted () {
 echo "" > /root/log-reboot]txt
 echo "Auto Reboot Log successfully deleted!"
+read -n 1 -s -r -p "Press any key to back on menu"
+				autoreboot
 }
 
 #Status Auto Reboot
@@ -165,26 +188,26 @@ fi
 clear
 
 # Echo Shell
-echo -e "\e[${line}════════════════════════════════════════════"$NC
-echo -e "\e[${back_text}         \e[30m•\e[$box Auto Reboot Server\e[30m •             \e[m"
-echo -e "\e[${line}════════════════════════════════════════════"$NC
+echo -e "\e[$line┌──────────────────────────────────────────────────────┐${NC}"
+echo -e "\e[$line│\e[$box                 Auto Reboot Server                   \e[$line│${NC}"
+echo -e "\e[$line└──────────────────────────────────────────────────────┘${NC}"
 echo -e "\e[${text} STATUS :\e[0m  $sts"
 echo -e ""
-echo -e " \e[${number} [•1] $NC \e[${below} Set Auto-Reboot Every 1 Hour"$NC
-echo -e " \e[${number} [•2] $NC \e[${below} Set Auto-Reboot Every 6 Hours"$NC
-echo -e " \e[${number} [•3] $NC \e[${below} Set Auto-Reboot Every 12 Hours"$NC
-echo -e " \e[${number} [•4] $NC \e[${below} Set Auto-Reboot Once 1 Day"$NC
-echo -e " \e[${number} [•5] $NC \e[${below} Set Auto-Reboot Once 1 Week"$NC
-echo -e " \e[${number} [•6] $NC \e[${below} Set Auto-Reboot Once 1 Month"$NC
-echo -e " \e[${number} [•7] $NC \e[${below} Set Auto-Reboot Every 00.00 AM"$NC
-echo -e " \e[${number} [•8] $NC \e[${below} Set Auto-Reboot Every 2.00 AM"$NC
-echo -e " \e[${number} [•9] $NC \e[${below} Set Auto-Reboot Every 4.00 AM"$NC
-echo -e " \e[${number} [10] $NC \e[${below} Turn off Auto-Reboot Server"$NC
-echo -e " \e[${number} [11] $NC \e[${below} View reboot log"$NC
-echo -e " \e[${number} [12] $NC \e[${below} Remove reboot log"$NC
-echo -e "\e[${line}════════════════════════════════════════════"$NC
+echo -e " [\e[$number 01${NC}]\e[$below • Set Auto-Reboot Every 1 Hour"$NC
+echo -e " [\e[$number 02${NC}]\e[$below • Set Auto-Reboot Every 6 Hours"$NC
+echo -e " [\e[$number 03${NC}]\e[$below • Set Auto-Reboot Every 12 Hours"$NC
+echo -e " [\e[$number 04${NC}]\e[$below • Set Auto-Reboot Once 1 Day"$NC
+echo -e " [\e[$number 05${NC}]\e[$below • Set Auto-Reboot Once 1 Week"$NC
+echo -e " [\e[$number 06${NC}]\e[$below • Set Auto-Reboot Once 1 Month"$NC
+echo -e " [\e[$number 07${NC}]\e[$below • Set Auto-Reboot Every 00.00 AM"$NC
+echo -e " [\e[$number 08${NC}]\e[$below • Set Auto-Reboot Every 2.00 AM"$NC
+echo -e " [\e[$number 09${NC}]\e[$below • Set Auto-Reboot Every 4.00 AM"$NC
+echo -e " [\e[$number 10${NC}]\e[$below • Turn off Auto-Reboot Server"$NC
+echo -e " [\e[$number 11${NC}]\e[$below • View reboot log"$NC
+echo -e " [\e[$number 12${NC}]\e[$below • Remove reboot log"$NC
 echo -e ""
-echo -e "\e[${below}Press CTRL+C to Return/Exit"
+echo -e "              [Ctrl + C] Exit From Script" | lolcat
+echo -e ""
 read -rp "Please Enter The Correct Number : " -e num
 if [[ "$num" = "1" ]]; then
 every_an_hour
@@ -209,15 +232,26 @@ stop
 elif [[ "$num" = "11" ]]; then
 if [ ! -e /root/log-reboot]txt ]; then
 	echo "No reboot activity found"
-	else 
-	echo -e "\e[1;36mLOG REBOOT\e[0m"
-	echo -e "\e[1;33m----------\e[0m"
+echo "" 
+read -n 1 -s -r -p "Press any key to back on menu"
+				autoreboot
+  else 
+	echo -e "\e[$belowLOG REBOOT\e[0m"
+	echo -e "\e[$line─────────────\e[0m"
 	cat /root/log-reboot]txt
+ echo "" 
+read -n 1 -s -r -p "Press any key to back on menu"
+				autoreboot
 fi
 elif [[ "$num" = "12" ]]; then
 echo "" > /root/log-reboot]txt
 echo -e "${GREEN}Auto Reboot Log successfully deleted!${NC}"
+echo ""
+read -n 1 -s -r -p "Press any key to back on menu"
+				autoreboot
 else
 clear
 echo -e "\e[1;31mYou Entered The Wrong Number, Please Try Again!\e[0m"
+    sleep 1
+    autoreboot
 fi
