@@ -44,21 +44,17 @@ bl='\e[36;1m'
 gl='\e[32;1m'
 BLUE='\e[0;34m'
 clear
+echo -e "\e[$line┌──────────────────────────────────────────────────────┐\e[m"
+echo -e "\e[$line│                 \e[$box CHANGE PORT MENU\e[30m                    \e[$line│\e[m"
+echo -e "\e[$line└──────────────────────────────────────────────────────┘\e[m"
+echo -e " [\e[$number 01${NC}]\e[$below • Change Port Stunnel\e[m"
+echo -e " [\e[$number 02${NC}]\e[$below • Change Port OpenVPN\e[m"
+echo -e " [\e[$number 03${NC}]\e[$below • Change Port OHP SSH\e[m"
+echo -e " [\e[$number 04${NC}]\e[$below • Change Port Websocket SSH\e[m"
+echo -e " [\e[$number 05${NC}]\e[$below • Change Port Xray Core\e[m"
+echo -e " [\e[$number 06${NC}]\e[$below • Change Port Squid Proxy\e[m"
 echo -e ""
-echo -e "   \e[$line════════════════════════════════════════\e[m"
-echo -e "   \e[$back_text         \e[30m═[\e[$box CHANGE PORT MENU\e[30m ]═         \e[m"
-echo -e "   \e[$line════════════════════════════════════════\e[m"
-echo -e "\e[$number   >>\e[$number Please select an option below :\e[0m"
-echo -e "   \e[$number (•1)\e[m \e[$below Change Port Stunnel\e[m"
-echo -e "   \e[$number (•2)\e[m \e[$below Change Port OpenVPN\e[m"
-echo -e "   \e[$number (•3)\e[m \e[$below Change Port OHP SSH\e[m"
-echo -e "   \e[$number (•4)\e[m \e[$below Change Port Websocket SSH\e[m"
-echo -e "   \e[$number (•5)\e[m \e[$below Change Port Xray Core\e[m"
-echo -e "   \e[$number (•6)\e[m \e[$below Change Port Squid Proxy\e[m"
-echo -e ""
-echo -e "   \e[$line═══════════════════════════════════════\e[m"
-echo -e "   \e[$back_text \e[$box x)  MENU                             \e[m"
-echo -e "   \e[$line═══════════════════════════════════════\e[m"
+echo -e "              Press [ x ] To Go Main Menu " | lolcat
 echo -e ""
 read -p "     Select From Options [1-8 or x] :  " port
 echo -e ""
@@ -87,5 +83,7 @@ menu
 ;;
 *)
 echo "Please enter an correct number"
+sleep 1
+change-port
 ;;
 esac
