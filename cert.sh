@@ -40,6 +40,7 @@ sleep 1
 echo -e "[ ${green}INFO${NC} ] Restart All Service" 
 sleep 1
 echo $domain > /usr/local/etc/xray/domain
+echo $domain > /root/domain
 systemctl restart nginx
 systemctl restart xray.service
 systemctl restart xray@none.service
