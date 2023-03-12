@@ -10,6 +10,16 @@ cyan='\e[0;36m'
 yellow='\e[0;33m'
 NC='\e[0m'
 clear
+# // TEXT ON BOX COLOUR
+export box=$(cat /etc/box)
+# NUMBER COLOUR
+number=$(cat /etc/number)
+# // LINE COLOUR
+export line=$(cat /etc/line)
+# TEXT COLOUR BELOW
+below=$(cat /etc/below)
+# // BACKGROUND TEXT COLOUR
+export back_text=$(cat /etc/back)
 #IZIN SCRIPT
 MYIP=$(curl -sS ipv4.icanhazip.com)
 # Valid Script
@@ -36,24 +46,23 @@ fi
 echo -e "\e[32mloading...\e[0m"
 clear
 echo -e ""
-echo -e "${blue}══════════════════════════════════════${NC}"
-echo -e "\\E[0;46;30m         RESTART VPN SERVICE          \e[0m"
-echo -e "${blue}══════════════════════════════════════${NC}"
-echo -e "  $green[${white}1${green}] ${green} Restart All Services$NC"
-echo -e "  $green[${white}2${green}] ${green} Restart OpenSSH$NC"
-echo -e "  $green[${white}3${green}] ${green} Restart Dropbear$NC"
-echo -e "  $green[${white}4${green}] ${green} Restart Stunnel4$NC"
-echo -e "  $green[${white}5${green}] ${green} Restart OpenVPN$NC"
-echo -e "  $green[${white}6${green}] ${green} Restart Squid$NC"
-echo -e "  $green[${white}7${green}] ${green} Restart Restart Nginx$NC"
-echo -e "  $green[${white}8${green}] ${green} Restart Xray Core$NC"
-echo -e "  $green[${white}9${green}] ${green} Restart Trojan Ws & Tcp Tls$NC"
-echo -e "  $green[${white}10${green}] ${green}Restart Badvpn$NC"
-echo -e "  $green[${white}11${green}] ${green}Restart OHP $NC"
-echo -e "  $green[${white}12${green}] ${green}Restart WebSocket$NC"
-echo -e "${blue}══════════════════════════════════════${NC}"
-echo -e "\\E[0;46;30m        x)   MENU                     ${NC}"
-echo -e "${blue}══════════════════════════════════════${NC}"
+echo -e "   \e[$line┌──────────────────────────────────────────────────────┐\e[m"
+echo -e "   \e[$line│                 \e[$box RESTART VPN SERVICE\e[30m                 \e[$line│\e[m"
+echo -e "   \e[$line└──────────────────────────────────────────────────────┘\e[m"
+echo -e "      [\e[$number 01${NC}]\e[$below • Restart All Services$NC"
+echo -e "      [\e[$number 02${NC}]\e[$below • Restart OpenSSH$NC"
+echo -e "      [\e[$number 03${NC}]\e[$below • Restart Dropbear$NC"
+echo -e "      [\e[$number 04${NC}]\e[$below • Restart Stunnel4$NC"
+echo -e "      [\e[$number 05${NC}]\e[$below • Restart OpenVPN$NC"
+echo -e "      [\e[$number 06${NC}]\e[$below • Restart Squid$NC"
+echo -e "      [\e[$number 07${NC}]\e[$below • Restart Restart Nginx$NC"
+echo -e "      [\e[$number 08${NC}]\e[$below • Restart Xray Core$NC"
+echo -e "      [\e[$number 09${NC}]\e[$below • Restart Trojan Ws & Tcp Tls$NC"
+echo -e "      [\e[$number 10${NC}]\e[$below • Restart Badvpn$NC"
+echo -e "      [\e[$number 11${NC}]\e[$below • Restart OHP $NC"
+echo -e "      [\e[$number 12${NC}]\e[$below • Restart WebSocket$NC"
+echo -e "\e[$line"
+echo -e "              Press [ x ] To Go Main Menu " | lolcat
 echo -e ""
 read -p "    Select From Options [1-12 or x] :" Restart
 echo -e ""
@@ -91,53 +100,53 @@ case $Restart in
                 screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 1000
                 screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300 --max-clients 1000
                 echo -e ""
-                echo -e "======================================"
+                echo -e "\e[$line•──────────────────────────────────────•\e[m"
                 echo -e ""
                 echo -e "          \e[0;32mALL Service Restarted\e[0m         "
                 echo -e ""
-                echo -e "======================================"
+                echo -e "\e[$line•──────────────────────────────────────•\e[m"
 				echo ""
 				read -n 1 -s -r -p "Press any key to back on menu"
-				menu
+				ssh
                 ;;
                 2)
                 clear
                 /etc/init.d/ssh restart
                 echo -e ""
-                echo -e "======================================"
+                echo -e "\e[$line•──────────────────────────────────────•\e[m"
                 echo -e ""
                 echo -e "        \e[0;32mSSH Service Restarted\e[0m       "
                 echo -e ""
-                echo -e "======================================"
+                echo -e "\e[$line•──────────────────────────────────────•\e[m"
 				echo ""
 				read -n 1 -s -r -p "Press any key to back on menu"
-				menu
+				ssh
                 ;;
                 3)
                 clear
                 /etc/init.d/dropbear restart
                 echo -e ""
-                echo -e "======================================"
+                echo -e "\e[$line•──────────────────────────────────────•\e[m"
                 echo -e ""
                 echo -e "       \e[0;32mDropbear Service Restarted\e[0m     "
                 echo -e ""
-                echo -e "======================================"
+                echo -e "\e[$line•──────────────────────────────────────•\e[m"
 				echo ""
 				read -n 1 -s -r -p "Press any key to back on menu"
-				menu
+				ssh
                 ;;
                 4)
                 clear
                 /etc/init.d/stunnel4 restart
                 echo -e ""
-                echo -e "======================================"
+                echo -e "\e[$line•──────────────────────────────────────•\e[m"
                 echo -e ""
                 echo -e "        \e[0;32mStunnel4 Service Restarted\e[0m    "
                 echo -e ""
-                echo -e "======================================"
+                echo -e "\e[$line•──────────────────────────────────────•\e[m"
 				echo ""
 				read -n 1 -s -r -p "Press any key to back on menu"
-				menu
+				ssh
                 ;;
                 5)
                 clear
@@ -145,40 +154,40 @@ case $Restart in
                 systemctl restart --now openvpn-server@server-tcp-1194
                 systemctl restart --now openvpn-server@server-udp-2200
                 echo -e ""
-                echo -e "======================================"
+                echo -e "\e[$line•──────────────────────────────────────•\e[m"
                 echo -e ""
                 echo -e "       \e[0;32mOpenVPN Service Restarted\e[0m      "
                 echo -e ""
-                echo -e "======================================"
+                echo -e "\e[$line•──────────────────────────────────────•\e[m"
 				echo ""
 				read -n 1 -s -r -p "Press any key to back on menu"
-				menu
+				ssh
                 ;;
                 6)
                 clear
                 /etc/init.d/squid restart
                 echo -e ""
-                echo -e "======================================"
+                echo -e "\e[$line•──────────────────────────────────────•\e[m"
                 echo -e ""
                 echo -e "        \e[0;32mSquid3 Service Restarted\e[0m      "
                 echo -e ""
-                echo -e "======================================"
+                echo -e "\e[$line•──────────────────────────────────────•\e[m"
 				echo ""
 				read -n 1 -s -r -p "Press any key to back on menu"
-				menu
+				ssh
                 ;;
                 7)
                 clear
                 /etc/init.d/nginx restart
                 echo -e ""
-                echo -e "======================================"
+                echo -e "\e[$line•──────────────────────────────────────•\e[m"
                 echo -e ""
                 echo -e "         \e[0;32mNginx Service Restarted\e[0m      "
                 echo -e ""
-                echo -e "======================================"
+                echo -e "\e[$line•──────────────────────────────────────•\e[m"
 				echo ""
 				read -n 1 -s -r -p "Press any key to back on menu"
-				menu
+				ssh
                 ;;
 				8)
                 clear
@@ -189,14 +198,14 @@ case $Restart in
 				systemctl restart xray@vmess
 				systemctl restart xray@vmessnone
                 echo -e ""
-                echo -e "======================================"
+                echo -e "\e[$line•──────────────────────────────────────•\e[m"
                 echo -e ""
                 echo -e "         \e[0;32mXray Service Restart\e[0m         "
                 echo -e ""
-                echo -e "======================================"
+                echo -e "\e[$line•──────────────────────────────────────•\e[m"
 				echo ""
 				read -n 1 -s -r -p "Press any key to back on menu"
-				menu
+				ssh
                 ;;
 				9)
 				clear
@@ -204,14 +213,14 @@ case $Restart in
 				systemctl restart xray@trojan
 				systemctl restart xray@trojannone
                 echo -e ""
-                echo -e "======================================"
+                echo -e "\e[$line•──────────────────────────────────────•\e[m"
                 echo -e ""
                 echo -e "      \e[0;32mAll Trojan Service Restart\e[0m      "
                 echo -e ""
-                echo -e "======================================"
+                echo -e "\e[$line•──────────────────────────────────────•\e[m"
 				echo ""
 				read -n 1 -s -r -p "Press any key to back on menu"
-				menu
+				ssh
                 ;;
                 10)
                 clear
@@ -225,14 +234,14 @@ case $Restart in
                 screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7800 --max-clients 500
                 screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7900 --max-clients 500
                 echo -e ""
-                echo -e "======================================"
+                echo -e "\e[$line•──────────────────────────────────────•\e[m"
                 echo -e ""
                 echo -e "       \e[0;32mBadvpn Service Restarted\e[0m     "
                 echo -e ""
-                echo -e "======================================"
+                echo -e "\e[$line•──────────────────────────────────────•\e[m"
 				echo ""
 				read -n 1 -s -r -p "Press any key to back on menu"
-				menu
+				ssh
                 ;;
 				11)
 				clear
@@ -240,14 +249,14 @@ case $Restart in
 				systemctl restart ohpd
 				systemctl restart ohps
                 echo -e ""
-                echo -e "======================================"
+                echo -e "\e[$line•──────────────────────────────────────•\e[m"
                 echo -e ""
                 echo -e "         \e[0;32mOHP Service Restarted\e[0m     "
                 echo -e ""
-                echo -e "======================================"
+                echo -e "\e[$line•──────────────────────────────────────•\e[m"
 				echo ""
 				read -n 1 -s -r -p "Press any key to back on menu"
-				menu
+				ssh
 				;;
 				12)
 				clear
@@ -257,17 +266,22 @@ case $Restart in
 				systemctl restart cdn-ovpn
 				systemctl restart cdn-ssl
                 echo -e ""
-                echo -e "======================================"
+                echo -e "\e[$line•──────────────────────────────────────•\e[m"
                 echo -e ""
                 echo -e "      \e[0;32mWebSocket Service Restarted\e[0m     "
                 echo -e ""
-	            echo -e "======================================"
+	            echo -e "\e[$line•──────────────────────────────────────•\e[m"
 				echo ""
 				read -n 1 -s -r -p "Press any key to back on menu"
-				menu
+				ssh
                 ;;
+            
                 x)
                 clear
-                menu
+                ssh
                 ;;
-                esac
+*)
+echo "Please enter an correct number"
+sleep 1
+ssh
+esac  
