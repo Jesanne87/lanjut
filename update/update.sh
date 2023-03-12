@@ -60,21 +60,19 @@ clear
 
 # Echo Shell
 echo ""
+echo -e "\e[$line┌──────────────────────────────────────────────────────┐\e[m"
+echo -e "\e[$line│                 \e[$box UPDATE SCRIPT MENU\e[30m                  \e[$line│\e[m"
+echo -e "\e[$line└──────────────────────────────────────────────────────┘\e[m"
 echo ""
-echo -e "   \e[$line--------------------------------------------------------\e[m"
-echo -e "   \e[$back_text                 \e[30m[\e[$box UPDATE SCRIPT MENU\e[30m ]                 \e[m"
-echo -e "   \e[$line--------------------------------------------------------\e[m"
-echo -e "   \e[$below VERSION NOW >> $Info1"
-echo -e "   \e[$below STATUS UPDATE >> $sts"
+echo -e "\e[$below VERSION NOW >> $Info1"
+echo -e "\e[$below STATUS UPDATE >> $sts"
 echo -e ""
-echo -e "     \e[$number 1.\e[m \e[$below Change Banner SSH\e[m"
-echo -e "     \e[$number 2.\e[m \e[$below Check Update/New Version Script\e[m"
+echo -e " [\e[$number 01${NC}]\e[$below • Change Banner SSH\e[m"
+echo -e " [\e[$number 02${NC}]\e[$below • Check Update/New Version Script\e[m"
 echo -e ""
-echo -e "   \e[$line--------------------------------------------------------\e[m"
-echo -e "   \e[$back_text \e[$box x)   MENU                                             \e[m"
-echo -e "   \e[$line--------------------------------------------------------\e[m"
+echo -e "       Press [ x ] To Go Main Menu " | lolcat
 echo -e "\e[$line"
-read -p "     Select From Options [1-3 or x] :  " port
+read -p "Select From Options [1-3 or x] :  " port
 echo -e ""
 case $port in
 1)
@@ -85,12 +83,12 @@ run-update
 ;;
 x)
 clear
-menu
+system
 ;;
 *)
 clear
 echo -e "\e[1;31mPlease enter an correct number, Try again.\e[0m"
-sleep 2
+sleep 1
 update
 ;;
 esac
