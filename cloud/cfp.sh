@@ -79,12 +79,12 @@ RESULT=$(curl -sLX PUT "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_r
 clear
 echo ""
 echo -e " \e[1;36mSuccesfully Add your Subdomain\e[0m"
-echo -e " \e[0;34m======================================\e[0m"
+echo -e " e[$line───────────────────────────────────\e[m"
 echo -e " \e[0;33mDomain Name        :\e[0m $DOMAIN"
 echo -e " \e[0;33mSubdomain Name     :\e[0m ${sub}"
 echo -e " \e[0;33mYour IP Pointing   :\e[0m ${IP}"
 echo -e " \e[0;33mSub + Domain (Used):\e[0m ${sub}.$DOMAIN"
-echo -e " \e[0;34m======================================\e[0m"
+echo -e " e[$line───────────────────────────────────\e[m"
 echo ""
 echo -e "\e[0;32mDONE...!\e[0m"
 
