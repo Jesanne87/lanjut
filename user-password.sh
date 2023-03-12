@@ -5,6 +5,8 @@ GitUser="Jesanne87"
 MYIP=$(curl -sS ipv4.icanhazip.com)
 echo -e "\e[32mloading...\e[0m"
 clear
+# // LINE COLOUR
+export line=$(cat /etc/line)
 # Valid Script
 VALIDITY () {
     today=`date -d "0 days" +"%Y-%m-%d"`
@@ -28,9 +30,6 @@ exit 0
 fi
 echo -e "\e[32mloading...\e[0m"
 clear
-echo " "
-echo " "
-echo " "
 read -p "Input USERNAME to change password: " username
 egrep "^$username" /etc/passwd >/dev/null
 if [ $? -eq 0 ]; then
@@ -44,20 +43,15 @@ sleep 0.5
   egrep "^$username" /etc/passwd >/dev/null
   echo -e "$password\n$password" | passwd $username
   clear
-  echo " "
-  echo " "
-  echo " "
-  echo "-------------------------------------------"
+echo -e "\e[$line•──────────────────────────────────────•\e[m"
   echo -e "Password for user ${blue}$username${NC} successfully changed."
   echo -e "The new Password for user ${blue}$username${NC} is ${red}$password${NC}"
-  echo "-------------------------------------------"
-  echo " "
-  echo " "
-  echo " "
-
+echo -e "\e[$line•──────────────────────────────────────•\e[m"
+read -n1 -r -p "Press any key to continue..."
+    sleep 1
+    ssh
 else
-echo " "
 echo -e "Username ${red}$username${NC} not found in your VPS"
-echo " "
-exit 0
+sleep 1
+ssh
 fi
