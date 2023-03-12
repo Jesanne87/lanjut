@@ -49,7 +49,6 @@ echo > /var/log/syslog
 echo > /var/log/btmp
 echo > /var/log/messages
 echo > /var/log/debug
-echo -e "Script By JSphantom"
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu"
 menu
