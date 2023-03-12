@@ -37,21 +37,20 @@ else
 sts="${Error}"
 fi
 clear
-echo ""
-echo -e "   \e[$line--------------------------------------------------------\e[m"
-echo -e "   \e[$back_text                 \e[30m[\e[$box CHECK NEW UPDATE\e[30m ]                   \e[m"
-echo -e "   \e[$line--------------------------------------------------------\e[m"
-echo -e "   \e[$below VERSION NOW >> $Info1"
-echo -e "   \e[$below STATUS UPDATE >> $sts"
+echo -e "\e[$line┌──────────────────────────────────────────────────────┐\e[m"
+echo -e "\e[$line│                 \e[$box CHECK NEW UPDATE\e[30m                  \e[$line│\e[m"
+echo -e "\e[$line└──────────────────────────────────────────────────────┘\e[m"
+echo -e "\e[$below VERSION NOW >> $Info1"
+echo -e "\e[$below STATUS UPDATE >> $sts"
 echo -e ""
 echo -e "       \e[1;31mWould you like to proceed?\e[0m"
 echo ""
 echo -e "            \e[0;32m[ Select Option ]\033[0m"
-echo -e "     \e[$number [1]\e[m \e[$below Check Script Update Now\e[m"
-echo -e "     \e[$number [x]\e[m \e[$below Back To Update Menu\e[m"
-echo -e "     \e[$number [y]\e[m \e[$below Back To Main Menu\e[m"
+echo -e "[\e[$number 01${NC}]\e[$below • Check Script Update Now\e[m"
+echo -e "[\e[$number 02${NC}]\e[$below • Back To Update Menu\e[m"
+echo -e "[\e[$number 03${NC}]\e[$below • Back To Main Menu\e[m"
 echo -e ""
-echo -e "   \e[$line--------------------------------------------------------\e[m"
+echo -e "\e[$line--------------------------------------------------------\e[m"
 echo -e "\e[$line"
 read -p "Please Choose 1 or x & y : " option2
 case $option2 in
@@ -150,21 +149,20 @@ cd
 echo "$ver" > /home/ver
 rm -f update.sh
 clear
-echo ""
-echo -e "\033[0;34m----------------------------------------\033[0m"
-echo -e "\E[44;1;39m            SCRIPT UPDATED              \E[0m"
-echo -e "\033[0;34m----------------------------------------\033[0m"
+echo -e "\e[$line┌──────────────────────────────────────────────────────┐\e[m"
+echo -e "\e[$line│                 \e[$box SCRIPT UPDATED\e[30m                  \e[$line│\e[m"
+echo -e "\e[$line└──────────────────────────────────────────────────────┘\e[m"
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu"
 menu
 ;;
-x)
+2)
 clear
 update
 ;;
-y)
+3)
 clear
-menu
+system
 ;;
 *)
 clear
