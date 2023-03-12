@@ -12,10 +12,10 @@ ver=$VERSION_ID
 
 # // detail nama perusahaan
 country="MY"
-state="Kelantan"
-locality="Kota Bharu"
-organization="@meaaoouuuu"
-organizationalunit="@meaaoouuuu"
+state="Sabah"
+locality="KK"
+organization="@Phantom"
+organizationalunit="@Phantom"
 commonname="JsPhantom"
 email="admin@JsPhantom.com"
 
