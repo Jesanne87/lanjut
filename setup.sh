@@ -82,8 +82,6 @@ mkdir /var/lib/premium-script;
 default_email=$( curl https://raw.githubusercontent.com/${GitUser}/email/main/default.conf )
 clear
 #Nama penyedia script
-echo -e "${PURPLE}════════════════════════════════════════════════════════════\e[0m"
-echo -e ""
 echo -e "   \e[93mPlease Enter the name of the Script Provider\e[0m"
 read -p "   Name : " nm
 echo $nm > /root/provided
@@ -108,9 +106,7 @@ echo $sts > /usr/local/etc/xray/email
 echo ""
 echo -e "${PURPLE}════════════════════════════════════════════════════════════\e[0m"
 echo ""
-echo -e "   ${PURPLE}╔══════════════════════════════════╗\e[0m"
-echo -e "   ${PURPLE}║\e[93mPlease select a domain type below ${PURPLE}║\e[0m"
-echo -e "   ${PURPLE}╚══════════════════════════════════╝\e[0m"
+echo -e "   \e[93mPlease select a domain type below \e[0m"
 echo -e "     \e[1;32m1)\e[0m \e[93mEnter your Subdomain\e[0m"
 echo -e "     \e[1;32m2)\e[0m \e[93mUse a random Subdomain\e[0m"
 echo -e "   ${PURPLE}════════════════════════════════════\e[0m"
@@ -257,10 +253,10 @@ echo -e "\e[1;32m══════════════════\e[93mAut
 sleep 5
 clear
 echo ""
-echo -e "    \e[1;32m╔══════════════════════════════════════════════════════╗|\e[0m"
-echo -e "    \e[1;32m║       \e[93m SUCCESFULLY INSTALLED MODED SCRIPT            \e[1;32m║|\e[0m"
-echo -e "    \e[1;32m║                  \e[93m BY JsPhantom                       \e[1;32m║|\e[0m"
-echo -e "    \e[1;32m╚══════════════════════════════════════════════════════╝|\e[0m"
+echo -e "    \e[1;32m╔══════════════════════════════════════════════════════╗\e[0m"
+echo -e "    \e[1;32m║       \e[93m SUCCESFULLY INSTALLED MODED SCRIPT           \e[1;32m║\e[0m"
+echo -e "    \e[1;32m║                  \e[93m BY JsPhantom                      \e[1;32m║\e[0m"
+echo -e "    \e[1;32m╚══════════════════════════════════════════════════════╝\e[0m"
 echo ""
 echo -e "   \e[93mYour VPS Will Be Automatical Reboot In 3 seconds\e[0m"
 rm -r setup.sh
