@@ -5,7 +5,13 @@ GitUser="Jesanne87"
 MYIP=$(curl -sS ipv4.icanhazip.com)
 echo -e "\e[32mloading...\e[0m"
 clear
+# // LINE COLOUR
+export line=$(cat /etc/line)
+# NUMBER COLOUR
+number=$(cat /etc/number)
 # Valid Script
+# TEXT COLOUR BELOW
+below=$(cat /etc/below)
 VALIDITY () {
     today=`date -d "0 days" +"%Y-%m-%d"`
     Exp1=$(curl https://raw.githubusercontent.com/${GitUser}/allow/main/ipvps.conf | grep $MYIP | awk '{print $4}')
@@ -39,18 +45,18 @@ sts="${Error}"
 fi
 clear
 echo -e ""
-echo -e "======================================"
+echo -e "\e[$line•──────────────────────────────────────•\e[m"
 echo -e ""
 echo -e "     Status Autokill $sts        "
 echo -e ""
-echo -e "     [1]  AutoKill After 5 Minutes"
-echo -e "     [2]  AutoKill After 10 Minutes"
-echo -e "     [3]  AutoKill After 15 Minutes"
-echo -e "     [4]  Turn Off AutoKill/MultiLogin"
-echo -e "     [x]  Exit"
-echo -e "======================================"                                                                                                          
+echo -e "     [\e[$number 01${NC}]\e[$below • AutoKill After 5 Minutes\e[m"
+echo -e "     [\e[$number 02${NC}]\e[$below • AutoKill After 10 Minutes\e[m"
+echo -e "     [\e[$number 03${NC}]\e[$below • AutoKill After 15 Minutes\e[m"
+echo -e "     [\e[$number 04${NC}]\e[$below • Turn Off AutoKill/MultiLogin\e[m"
+echo -e "     [\e[$number 00${NC}]\e[$below • Exit\e[m"
+echo -e "\e[$line•──────────────────────────────────────•\e[m"                                                                                                          
 echo -e ""
-read -p "     Select From Options [1-4 or x] :  " AutoKill
+read -p "     Select From Options [1-4 or 0] :  " AutoKill
 read -p "     Multilogin Maximum Number Of Allowed: " max
 echo -e ""
 case $AutoKill in
@@ -62,13 +68,13 @@ case $AutoKill in
                 echo "# Autokill" >>/etc/cron.d/tendang
                 echo "*/5 * * * *  root /usr/bin/tendang $max" >>/etc/cron.d/tendang
                 echo -e ""
-                echo -e "======================================"
+                echo -e "\e[$line•──────────────────────────────────•\e[m"
                 echo -e ""
                 echo -e "      Allowed MultiLogin : $max"
                 echo -e "      AutoKill Every     : 5 Minutes"      
                 echo -e ""
-                echo -e "======================================"                                                                                                                                 
-                exit                                                                  
+                echo -e "\e[$line•──────────────────────────────────•\e[m"                                                                                                                                 
+                ssh                                                                  
                 ;;
                 2)
                 echo -e ""
@@ -78,13 +84,13 @@ case $AutoKill in
                 echo "# Autokill" >>/etc/cron.d/tendang
                 echo "*/10 * * * *  root /usr/bin/tendang $max" >>/etc/cron.d/tendang
                 echo -e ""
-                echo -e "======================================"
+                echo -e "\e[$line•────────────────────────────────────•\e[m"
                 echo -e ""
                 echo -e "      Allowed MultiLogin : $max"
                 echo -e "      AutoKill Every     : 10 Minutes"
                 echo -e ""
-                echo -e "======================================"
-                exit
+                echo -e "\e[$line•────────────────────────────────────•\e[m"
+                ssh
                 ;;
                 3)
                 echo -e ""
@@ -94,27 +100,27 @@ case $AutoKill in
                 echo "# Autokill" >>/etc/cron.d/tendang
                 echo "*/15 * * * *  root /usr/bin/tendang $max" >>/etc/cron.d/tendang
                 echo -e ""
-                echo -e "======================================"
+                echo -e "\e[$line•────────────────────────────────────•\e[m"
                 echo -e ""
                 echo -e "      Allowed MultiLogin : $max"
                 echo -e "      AutoKill Every     : 15 Minutes"
                 echo -e ""
-                echo -e "======================================"
-                exit
+                echo -e "\e[$line•────────────────────────────────────•\e[m"
+                ssh
                 ;;
                 4)
                 clear
                 echo > /etc/cron.d/tendang
                 echo -e ""
-                echo -e "======================================"
+                echo -e "\e[$line•────────────────────────────────────•\e[m"
                 echo -e ""
                 echo -e "      AutoKill MultiLogin Turned Off  "
                 echo -e ""
-                echo -e "======================================"
-                exit
+                echo -e "\e[$line•────────────────────────────────────•\e[m"
+                ssh
                 ;;
-                x)
+                0)
                 clear
-                exit
+                ssh
                 ;;
         esac
