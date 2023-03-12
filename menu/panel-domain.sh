@@ -22,16 +22,14 @@ NC='\e[0m'
 MYIP=$(wget -qO- ifconfig.me/ip);
 clear
 echo -e ""
-echo -e "   \e[$line════════════════════════════════════════\e[m"
-echo -e "   \e[$back_text            \e[30m═[\e[$box PANEL DOMAIN\e[30m ]═          \e[m"
-echo -e "   \e[$line════════════════════════════════════════\e[m"
-echo -e "   \e[$number (•1)\e[m \e[$below Add ID Cloudflare\e[m"
-echo -e "   \e[$number (•2)\e[m \e[$below Add Subdomain\e[m"
-echo -e "   \e[$number (•3)\e[m \e[$below Pointing IP\e[m"
+echo -e "\e[$line┌──────────────────────────────────────────────────────┐\e[m"
+echo -e "\e[$line│                     \e[$box PANEL DOMAIN\e[30m                    \e[$line│\e[m"
+echo -e "\e[$line└──────────────────────────────────────────────────────┘\e[m"
+echo -e "   [\e[$number 01${NC}]\e[$below • Add ID Cloudflare\e[m"
+echo -e "   [\e[$number 02${NC}]\e[$below • Add Subdomain\e[m"
+echo -e "   [\e[$number 03${NC}]\e[$below • Pointing IP\e[m"
 echo -e ""
-echo -e "   \e[$line════════════════════════════════════════\e[m"
-echo -e "   \e[$back_text \e[$box x) SYSTEM MENU                        \e[m"
-echo -e "   \e[$line════════════════════════════════════════\e[m"
+echo -e "              Press [ x ] To Go Main Menu " | lolcat
 echo -e "\e[$line"
 read -p "        Please Input Number  [1-3 or x] :  "  sys
 echo -e ""
