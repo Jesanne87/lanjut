@@ -10,7 +10,16 @@ Font_SkyBlue="\033[36m"
 Font_White="\033[37m"
 Font_Suffix="\033[0m"
 export NC='\033[0m'
-
+# LINE COLOUR
+line=$(cat /etc/line)
+# TEXT COLOUR BELOW
+below=$(cat /etc/below)
+# BACKGROUND TEXT COLOUR
+back_text=$(cat /etc/back)
+# NUMBER COLOUR
+number=$(cat /etc/number)
+# TEXT ON BOX COLOUR
+box=$(cat /etc/box)
 uptime="$(uptime -p | cut -d " " -f 2-10)"
 ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10)
 CITY=$(curl -s ipinfo.io/city)
@@ -2796,7 +2805,7 @@ function JP_UnlockTest() {
 }
 
 function Global_UnlockTest() {
-    echo -e "$COLOR1==============[ ENJOY!! ]===============${NC}"
+    echo -e "\e[$line==============[ \e[$below ENJOY!! \e[$line]===============${NC}"
     MediaUnlockTest_Dazn ${1}
     MediaUnlockTest_HotStar ${1}
     MediaUnlockTest_DisneyPlus ${1}
@@ -2810,7 +2819,7 @@ function Global_UnlockTest() {
     MediaUnlockTest_YouTube_CDN ${1}
     MediaUnlockTest_NetflixCDN ${1}
     GameTest_Steam ${1}
-    echo -e "$COLOR1=======================================${NC}"
+    echo -e "\e[$line=======================================${NC}"
 }
 
 function SA_UnlockTest() {
@@ -2895,7 +2904,7 @@ echo -e " \033[36mMedia Stream Unlocker Test Mod By ${NC}\033[33mJsPhantom\033[0
 echo -e " \033[1;37mVersion : ${NC}\033[33m${shell_version}${Font_Suffix}\033[0m"
 echo -e " \033[32mTime    : $(date)\033[0m"
             echo -e "       **SERVER INFORMATION**${Font_Suffix} "
-            echo -e "$COLOR1=======================================${NC}"
+            echo -e "\e[$line=========================================${NC}"
             echo -e " Cpu Model       :$cname"
             echo -e " Number Of Core  : $cores"
             echo -e " Cpu Frequency   :$freq MHz"
@@ -2905,7 +2914,7 @@ echo -e " \033[32mTime    : $(date)\033[0m"
             echo -e " City Location   : $CITY"
             echo -e " Time Location   : $WKT"
             echo -e " Ip Vps/Address  : $IPVPS"
-            echo -e "$COLOR1=======================================${NC}"            
+            echo -e "\e[$line=========================================${NC}"            
             check4=$(ping 1.1.1.1 -c 1 2>&1)
             if [[ "$check4" != *"unreachable"* ]] && [[ "$check4" != *"Unreachable"* ]]; then
                 isv4=1
@@ -3188,5 +3197,5 @@ function RunScript() {
 echo ""
 read -n1 -r -p "Press any key to continue..."
     sleep 1
-    menu
+    system
 esac
