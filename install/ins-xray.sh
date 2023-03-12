@@ -1,7 +1,7 @@
 #!/bin/bash
 # // wget https://github.com/${GitUser}/
 GitUser="Jesanne87"
-
+clear
 # // MY IPVPS
 export MYIP=$(curl -sS ipv4.icanhazip.com)
 

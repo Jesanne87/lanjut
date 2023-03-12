@@ -170,17 +170,6 @@ echo -e "\e[0;32mDONE INSTALLING SET-BR...\e[0m"
 clear
 # set time GMT +8
 ln -fs /usr/share/zoneinfo/Asia/Kuala_Lumpur /etc/localtime
-# install clouflare JQ
-apt install jq curl -y
-# install webserver
-apt -y install nginx
-cd
-rm /etc/nginx/sites-enabled/default
-rm /etc/nginx/sites-available/default
-wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/${GitUser}/lanjut/main/nginx.conf"
-mkdir -p /home/vps/public_html
-wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/${GitUser}/lanjut/main/vps.conf"
-/etc/init.d/nginx restart
 #finish
 rm -f /root/ssh-vpn.sh
 rm -f /root/ins-xray.sh
