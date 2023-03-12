@@ -191,7 +191,7 @@ clear
 echo " "
 echo -e  "\e[93mInstallation has been completed!!\e[0m"
 echo " "
-echo -e "\e[1;32m══════════════════\e[93mAutoscript PREMIUM\e[1;32m══════════════════\e[0m" | tee -a log-install.txt
+echo -e "\e[1;32m══════════════════ \e[93mAutoscript PREMIUM\e[1;32m ══════════════════\e[0m" | tee -a log-install.txt
 echo ""
 echo ""  | tee -a log-install.txt
 echo "   >>> Service & Port"  | tee -a log-install.txt
@@ -249,7 +249,7 @@ echo "   - Full Orders For Various Services" | tee -a log-install.txt
 echo "   - White Label" | tee -a log-install.txt
 echo "   - Installation Log --> /root/log-install.txt"  | tee -a log-install.txt
 echo ""
-echo -e "\e[1;32m══════════════════\e[93mAutoscript By JSphantom\e[1;32m══════════════════\e[0m" | tee -a log-install.txt
+echo -e "\e[1;32m══════════════════ \e[93mAutoscript By JSphantom\e[1;32m ══════════════════\e[0m" | tee -a log-install.txt
 sleep 5
 clear
 echo ""
