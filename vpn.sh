@@ -7,7 +7,7 @@ OS=`uname -m`;
 MYIP=$(wget -qO- icanhazip.com);
 MYIP2="s/xxxxxxxxx/$MYIP/g";
 ANU=$(ip -o $ANU -4 route show to default | awk '{print $5}');
-domain=$(cat /root/domain)
+domain=$(cat /usr/local/etc/xray/domain)
 
 # Install OpenVPN dan Easy-RSA
 apt install openvpn easy-rsa unzip -y
@@ -38,7 +38,7 @@ sed -i 's/#net.ipv4.ip_forward=1/net.ipv4.ip_forward=1/g' /etc/sysctl.conf
 
 # Buat config client TCP 1194
 cat > /etc/openvpn/client-tcp-1194.ovpn <<-END
-setenv FRIENDLY_NAME "OVPN TCP"
+setenv FRIENDLY_NAME "OVPN-TCP-JSPhantom"
 client
 dev tun
 proto tcp
