@@ -26,18 +26,3 @@ wget https://raw.githubusercontent.com/annelyah23/VPS-access-root/main/root7.sh 
   sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update && apt install -y bzip2 gzip coreutils screen curl && wget https://raw.githubusercontent.com/Jesanne87/lanjut/main/setup.sh && chmod +x setup.sh && sed -i -e 's/\r$//' setup.sh && screen -S setup ./setup.sh
 
   ```
- 
- ## Copy & paste 👇👇 to your VPS if ERROR (WG ONLY)
- ## Wireguard
-
-  ```html
-  echo "deb http://deb.debian.org/debian/ unstable main" >/etc/apt/sources.list.d/unstable.list
-printf 'Package: *\nPin: release a=unstable\nPin-Priority: 90\n' >/etc/apt/preferences.d/limit-unstable
-apt update
-apt install -y wireguard-tools iptables iptables-persistent
-apt install -y linux-headers-$(uname -r)
- 
-  ```
- 
-   ```html
-systemctl restart wg-quick@wg0
