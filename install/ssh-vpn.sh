@@ -315,6 +315,8 @@ wget -O dns "https://raw.githubusercontent.com/${GitUser}/lanjut/main/system/dns
 wget -O nf "https://raw.githubusercontent.com/${GitUser}/lanjut/main/system/nf.sh"
 wget -O addip "https://raw.githubusercontent.com/Jesanne87/lanjut/main/menu/addip.sh"
 wget -O autobackup "https://raw.githubusercontent.com/Jesanne87/lanjut/main/system/autobackup.sh"
+wget -O clear-ram "https://raw.githubusercontent.com/Jesanne87/lanjut/main/clear-ram.sh"
+chmod +x clear-ram
 chmod +x addip
 chmod +x add-host
 chmod +x menu
