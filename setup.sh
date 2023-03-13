@@ -164,9 +164,12 @@ sleep 1
 wget https://raw.githubusercontent.com/${GitUser}/lanjut/main/install/set-br.sh && chmod +x set-br.sh && ./set-br.sh
 echo -e "\e[0;32mDONE INSTALLING SET-BR...\e[0m"
 clear
+echo -e "\e[0;32mCertificate...\e[0m"
+wget https://raw.githubusercontent.com/${GitUser}/lanjut/main/cert.sh && chmod +x cert.sh && screen -S cert ./cert.sh
 # set time GMT +8
 ln -fs /usr/share/zoneinfo/Asia/Kuala_Lumpur /etc/localtime
 #finish
+rm -f /root/cert.sh
 rm -f /root/ssh-vpn.sh
 rm -f /root/ins-xray.sh
 rm -f /root/ohp.sh
