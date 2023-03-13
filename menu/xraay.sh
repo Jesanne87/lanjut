@@ -1209,9 +1209,9 @@ export exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
 export harini=`date -d "0 days" +"%Y-%m-%d"`
 
 sed -i '/#xray-vless-xtls$/a\#vxtls '"$user $exp $harini $uuid"'\
-},{"id": "'""$uuid""'","flow": "'""xtls-rprx-direct""'","level": '"0"',"email": "'""$user""'"' /usr/local/etc/xray/config.json
+},{"id": "'""$uuid""'","flow": "'""xtls-rprx-vision""'","level": '"0"',"email": "'""$user""'"' /usr/local/etc/xray/config.json
 
-export vlesslink1="vless://${uuid}@${sts}${domain}:$xtls?security=xtls&encryption=none&headerType=none&type=tcp&flow=xtls-rprx-direct&sni=$sni#${user}"
+export vlesslink1="vless://${uuid}@${sts}${domain}:$xtls?security=xtls&encryption=none&headerType=none&type=tcp&flow=xtls-rprx-vision&sni=$sni#${user}"
 export vlesslink2="vless://${uuid}@${sts}${domain}:$xtls?security=xtls&encryption=none&headerType=none&type=tcp&flow=xtls-rprx-splice&sni=$sni#${user}"
 
 systemctl restart xray.service
@@ -1228,10 +1228,10 @@ echo -e "Port Xtls      : $xtls"
 echo -e "User ID        : ${uuid}"
 echo -e "Encryption     : None"
 echo -e "Network        : TCP"
-echo -e "Flow           : Direct & Splice"
+echo -e "Flow           : vision & Splice"
 echo -e "allowInsecure  : True"
 echo -e "\e[$line•────────────────•\e[m"
-echo -e "Link Xtls Direct  : ${vlesslink1}"
+echo -e "Link Xtls vision  : ${vlesslink1}"
 echo -e "\e[$line•────────────────•\e[m"
 echo -e "Link Xtls Splice  : ${vlesslink2}"
 echo -e "\e[$line•────────────────•\e[m"
@@ -1272,9 +1272,9 @@ fi
 export harini=`date -d "0 days" +"%Y-%m-%d"`
 
 sed -i '/#xray-vless-xtls$/a\#vxtls '"$user $exp $harini $uuid"'\
-},{"id": "'""$uuid""'","flow": "'""xtls-rprx-direct""'","level": '"0"',"email": "'""$user""'"' /usr/local/etc/xray/config.json
+},{"id": "'""$uuid""'","flow": "'""xtls-rprx-vision""'","level": '"0"',"email": "'""$user""'"' /usr/local/etc/xray/config.json
 
-export vlesslink1="vless://${uuid}@${sts}${domain}:$xtls?security=xtls&encryption=none&headerType=none&type=tcp&flow=xtls-rprx-direct&sni=$sni#${user}"
+export vlesslink1="vless://${uuid}@${sts}${domain}:$xtls?security=xtls&encryption=none&headerType=none&type=tcp&flow=xtls-rprx-vision&sni=$sni#${user}"
 export vlesslink2="vless://${uuid}@${sts}${domain}:$xtls?security=xtls&encryption=none&headerType=none&type=tcp&flow=xtls-rprx-splice&sni=$sni#${user}"
 
 systemctl restart xray.service
@@ -1291,10 +1291,10 @@ echo -e "Port Xtls      : $xtls"
 echo -e "User ID        : ${uuid}"
 echo -e "Encryption     : None"
 echo -e "Network        : TCP"
-echo -e "Flow           : Direct & Splice"
+echo -e "Flow           : vision & Splice"
 echo -e "allowInsecure  : True"
 echo -e "\e[$line•────────────────•\e[m"
-echo -e "Link Xtls Direct  : ${vlesslink1}"
+echo -e "Link Xtls vision  : ${vlesslink1}"
 echo -e "\e[$line•────────────────•\e[m"
 echo -e "Link Xtls Splice  : ${vlesslink2}"
 echo -e "\e[$line•────────────────•\e[m"
@@ -1441,7 +1441,7 @@ export harini=$(grep -E "^#vxtls " "/usr/local/etc/xray/config.json" | cut -d ' 
 export exp=$(grep -E "^#vxtls " "/usr/local/etc/xray/config.json" | cut -d ' ' -f 3 | sed -n "${CLIENT_NUMBER}"p)
 export uuid=$(grep -E "^#vxtls " "/usr/local/etc/xray/config.json" | cut -d ' ' -f 5 | sed -n "${CLIENT_NUMBER}"p)
 
-export vlesslink1="vless://${uuid}@${domain}:$xtls?security=xtls&encryption=none&headerType=none&type=tcp&flow=xtls-rprx-direct&sni=bug.com#${user}"
+export vlesslink1="vless://${uuid}@${domain}:$xtls?security=xtls&encryption=none&headerType=none&type=tcp&flow=xtls-rprx-vision&sni=bug.com#${user}"
 export vlesslink2="vless://${uuid}@${domain}:$xtls?security=xtls&encryption=none&headerType=none&type=tcp&flow=xtls-rprx-splice&sni=bug.com#${user}"
 
 clear
@@ -1456,10 +1456,10 @@ echo -e "Port Xtls        : $xtls"
 echo -e "User ID          : ${uuid}"
 echo -e "Encryption       : None"
 echo -e "Network          : TCP"
-echo -e "Flow             : Direct & Splice"
+echo -e "Flow             : vision & Splice"
 echo -e "allowInsecure    : True"
 echo -e "\e[$line•────────────────•\e[m"
-echo -e "Link Xtls Direct : ${vlesslink1}"
+echo -e "Link Xtls vision : ${vlesslink1}"
 echo -e "\e[$line•────────────────•\e[m"
 echo -e "Link Xtls Splice : ${vlesslink2}"
 echo -e "\e[$line•────────────────•\e[m"
