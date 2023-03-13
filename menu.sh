@@ -39,17 +39,15 @@ version=$(cat /home/ver)
 ver=$( curl https://raw.githubusercontent.com/${GitUser}/version/main/version.conf )
 clear
 # CEK UPDATE
-Green_font_prefix="\033[32m" && Red_font_prefix="\033[31m" && Green_background_prefix="\033[42;37m" && Red_background_prefix="\033[41;37m" && Font_color_suffix="\033[0m"
+# Green_font_prefix="\033[32m" && Red_font_prefix="\033[31m" && Green_background_prefix="\033[42;37m" && Red_background_prefix="\033[41;37m" && Font_color_suffix="\033[0m"
 Info1="${Green_font_prefix}$version${Font_color_suffix}"
 Info2="${Green_font_prefix}(LATEST VERSION)${Font_color_suffix}"
 Error="Version ${Green_font_prefix}[$ver]${Font_color_suffix} available${Red_font_prefix}[Please Update]${Font_color_suffix}"
-version=$(cat /home/ver)
-new_version=$( curl https://raw.githubusercontent.com/${GitUser}/version/main/version.conf | grep $version )
 #Status Version
-if [ $version = $new_version ]; then
-stl="${Info1}"
-else
+if [ $version > $ver ]; then
 stl="${Error}"
+else
+stl="${Info1}"
 fi
 clear
 # Getting CPU Information
@@ -136,7 +134,7 @@ echo -e " \e[$text  IP ADDRESS		  : ${NC}$IPVPS${NC}"
 echo -e " \e[$text  DOMAIN NAME	          : ${PLE}$domain${NC}"
 echo -e " \e[$text  PROVIDED BY		  : ${YLW}$creditt${NC}"
 echo -e " \e[$text  EXPIRED STATUS         : ${NC}$exp $sts${NC}"
-echo -e " \e[$text  STATUS UPDATE	  : ${NC}$stl${NC}"
+echo -e " \e[$text  SCRIPT VERSION	  : ${NC}$stl${NC}"
 echo -e " \e[$text  CPU USAGE		  : ${NC}$load_cpu${NC}"
 echo -e " \e[$text  MEMORY USAGE           : ${NC}${ram_used}MB/${total_ram}MB (${ram_usage}%)${NC}"
 echo -e " \e[$text  BANDWIDTH DATA USAGE	  : ${WH}$daily_usage Daily/${YLW}$monthly_usage Monthly${NC}"
