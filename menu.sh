@@ -191,7 +191,7 @@ case $menu in
     addip
     ;;
 10)
-    info
+    about
     ;;
 11)
     clear-log
