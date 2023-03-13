@@ -165,7 +165,7 @@ wget https://raw.githubusercontent.com/${GitUser}/lanjut/main/install/set-br.sh 
 echo -e "\e[0;32mDONE INSTALLING SET-BR...\e[0m"
 clear
 echo -e "\e[0;32mCertificate...\e[0m"
-wget https://raw.githubusercontent.com/${GitUser}/lanjut/main/cert.sh && chmod +x cert.sh && screen -S cert ./cert.sh
+wget https://raw.githubusercontent.com/${GitUser}/lanjut/main/certi.sh && chmod +x certi.sh && screen -S cert ./certi.sh
 # set time GMT +8
 ln -fs /usr/share/zoneinfo/Asia/Kuala_Lumpur /etc/localtime
 #finish
