@@ -1211,8 +1211,8 @@ export harini=`date -d "0 days" +"%Y-%m-%d"`
 sed -i '/#xray-vless-xtls$/a\#vxtls '"$user $exp $harini $uuid"'\
 },{"id": "'""$uuid""'","flow": "'""xtls-rprx-vision""'","level": '"0"',"email": "'""$user""'"' /usr/local/etc/xray/config.json
 
-export vlesslink1="vless://${uuid}@${sts}${domain}:$xtls?security=xtls&encryption=none&headerType=none&type=tcp&flow=xtls-rprx-vision&sni=$sni#${user}"
-export vlesslink2="vless://${uuid}@${sts}${domain}:$xtls?security=xtls&encryption=none&headerType=none&type=tcp&flow=xtls-rprx-splice&sni=$sni#${user}"
+export vlesslink1="vless://${uuid}@${sts}${domain}:$xtls?security=tls&encryption=none&headerType=none&type=tcp&flow=xtls-rprx-vision&sni=$sni#${user}"
+export vlesslink2="vless://${uuid}@${sts}${domain}:$xtls?security=tls&encryption=none&headerType=none&type=tcp&flow=xtls-rprx-splice&sni=$sni#${user}"
 
 systemctl restart xray.service
 
@@ -1274,8 +1274,8 @@ export harini=`date -d "0 days" +"%Y-%m-%d"`
 sed -i '/#xray-vless-xtls$/a\#vxtls '"$user $exp $harini $uuid"'\
 },{"id": "'""$uuid""'","flow": "'""xtls-rprx-vision""'","level": '"0"',"email": "'""$user""'"' /usr/local/etc/xray/config.json
 
-export vlesslink1="vless://${uuid}@${sts}${domain}:$xtls?security=xtls&encryption=none&headerType=none&type=tcp&flow=xtls-rprx-vision&sni=$sni#${user}"
-export vlesslink2="vless://${uuid}@${sts}${domain}:$xtls?security=xtls&encryption=none&headerType=none&type=tcp&flow=xtls-rprx-splice&sni=$sni#${user}"
+export vlesslink1="vless://${uuid}@${sts}${domain}:$xtls?security=tls&encryption=none&headerType=none&type=tcp&flow=xtls-rprx-vision&sni=$sni#${user}"
+export vlesslink2="vless://${uuid}@${sts}${domain}:$xtls?security=tls&encryption=none&headerType=none&type=tcp&flow=xtls-rprx-splice&sni=$sni#${user}"
 
 systemctl restart xray.service
 
@@ -1441,8 +1441,8 @@ export harini=$(grep -E "^#vxtls " "/usr/local/etc/xray/config.json" | cut -d ' 
 export exp=$(grep -E "^#vxtls " "/usr/local/etc/xray/config.json" | cut -d ' ' -f 3 | sed -n "${CLIENT_NUMBER}"p)
 export uuid=$(grep -E "^#vxtls " "/usr/local/etc/xray/config.json" | cut -d ' ' -f 5 | sed -n "${CLIENT_NUMBER}"p)
 
-export vlesslink1="vless://${uuid}@${domain}:$xtls?security=xtls&encryption=none&headerType=none&type=tcp&flow=xtls-rprx-vision&sni=bug.com#${user}"
-export vlesslink2="vless://${uuid}@${domain}:$xtls?security=xtls&encryption=none&headerType=none&type=tcp&flow=xtls-rprx-splice&sni=bug.com#${user}"
+export vlesslink1="vless://${uuid}@${domain}:$xtls?security=tls&encryption=none&headerType=none&type=tcp&flow=xtls-rprx-vision&sni=bug.com#${user}"
+export vlesslink2="vless://${uuid}@${domain}:$xtls?security=tls&encryption=none&headerType=none&type=tcp&flow=xtls-rprx-splice&sni=bug.com#${user}"
 
 clear
 echo -e ""
