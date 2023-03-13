@@ -254,8 +254,8 @@ sleep 5
 clear
 echo ""
 echo -e "    \e[1;32m╔══════════════════════════════════════════════════════╗\e[0m"
-echo -e "    \e[1;32m║       \e[93m SUCCESFULLY INSTALLED MODED SCRIPT           \e[1;32m║\e[0m"
-echo -e "    \e[1;32m║                  \e[93m BY JsPhantom                      \e[1;32m║\e[0m"
+echo -e "    \e[1;32m║       \e[93m SUCCESFULLY INSTALLED MODED SCRIPT            \e[1;32m║\e[0m"
+echo -e "    \e[1;32m║                  \e[93m BY JsPhantom                       \e[1;32m║\e[0m"
 echo -e "    \e[1;32m╚══════════════════════════════════════════════════════╝\e[0m"
 echo ""
 echo -e "   \e[93mYour VPS Will Be Automatical Reboot In 3 seconds\e[0m"
