@@ -202,7 +202,7 @@ systemctl start stunnel4
 wget https://raw.githubusercontent.com/${GitUser}/lanjut/main/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
 
 # // install lolcat
-wget https://raw.githubusercontent.com/${GitUser}/lanjut/main/lolcat.sh &&  chmod +x lolcat.sh && ./lolcat.sh
+#wget https://raw.githubusercontent.com/${GitUser}/lanjut/main/lolcat.sh &&  chmod +x lolcat.sh && ./lolcat.sh
 
 # // install fail2ban
 apt -y install fail2ban
