@@ -61,8 +61,8 @@ echo -e "      [\e[$number 09${NC}]\e[$below • Restart Trojan Ws & Tcp Tls$NC"
 echo -e "      [\e[$number 10${NC}]\e[$below • Restart Badvpn$NC"
 echo -e "      [\e[$number 11${NC}]\e[$below • Restart OHP $NC"
 echo -e "      [\e[$number 12${NC}]\e[$below • Restart WebSocket$NC"
-echo -e "\e[$line"
-echo -e "              Press [ x ] To Go Main Menu " | lolcat
+echo -e ""
+echo -e "              Press [ x ] To Go Main Menu "
 echo -e ""
 read -p "    Select From Options [1-12 or x] :" Restart
 echo -e ""
