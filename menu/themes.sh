@@ -80,8 +80,8 @@ echo -e "     [\e[$number 01${NC}]\e[1;31m • Red       ${NC}[\e[$number 04${NC
 echo -e "     [\e[$number 02${NC}]\e[1;32m • Green     ${NC}[\e[$number 05${NC}]\e[1;35m • Magenta   ${NC}[\e[$number 08${NC}] • Black\e[m"
 echo -e "     [\e[$number 03${NC}]\e[1;33m • Yellow    ${NC}[\e[$number 06${NC}]\e[1;36m • Cyan      ${NC}[\e[$number 09${NC}] • Grey\e[m"
 echo -e ""
-echo -e "              Press [ x ] To Go Main Menu " | lolcat
-echo -e "\e[$line"
+echo -e "              Press [ x ] To Go Main Menu "
+echo -e " "
 read -rp "  Please Enter 1-9 or x : " -e bc
 if [[ "$bc" = "1" ]]; then
 clear
@@ -301,7 +301,7 @@ figlet -f Univers "Bee'P'N"
 echo -e "   \e[$number (35)\e[m \e[1;30m Univers\e[m"
 echo -e ""
 echo -e "              Press [ x ] To Go Main Menu " | lolcat
-echo -e "\e[$line"
+echo -e " "
 read -rp "     Please Enter 1-35 or x : " -e b
 if [[ "$b" = "1" ]]; then
 clear
@@ -567,8 +567,8 @@ echo -e "     [\e[$number 01${NC}]\e[1;31m • Red       ${NC}[\e[$number 04${NC
 echo -e "     [\e[$number 02${NC}]\e[1;32m • Green     ${NC}[\e[$number 05${NC}]\e[1;35m • Magenta   ${NC}[\e[$number 08${NC}] • Black\e[m"
 echo -e "     [\e[$number 03${NC}]\e[1;33m • Yellow    ${NC}[\e[$number 06${NC}]\e[1;36m • Cyan      ${NC}[\e[$number 09${NC}] • Grey\e[m"
 echo -e ""
-echo -e "               Press [ x ] To Go Main Menu " | lolcat
-echo -e "\e[$line"
+echo -e "               Press [ x ] To Go Main Menu "
+echo -e ""
 read -rp "      Please Enter 1-9 or x : " -e bc
 if [[ "$bc" = "1" ]]; then
 clear
@@ -652,8 +652,8 @@ echo -e "     [\e[$number 01${NC}]\e[1;31m • Red       ${NC}[\e[$number 04${NC
 echo -e "     [\e[$number 02${NC}]\e[1;32m • Green     ${NC}[\e[$number 05${NC}]\e[1;35m • Magenta   ${NC}[\e[$number 08${NC}] • Black\e[m"
 echo -e "     [\e[$number 03${NC}]\e[1;33m • Yellow    ${NC}[\e[$number 06${NC}]\e[1;36m • Cyan      ${NC}[\e[$number 09${NC}] • Grey\e[m"
 echo -e ""
-echo -e "               Press [ x ] To Go Main Menu " | lolcat
-echo -e "\e[$line"
+echo -e "               Press [ x ] To Go Main Menu "
+echo -e ""
 read -rp "  Please Enter 1-9 or x : " -e bc
 if [[ "$bc" = "1" ]]; then
 clear
@@ -737,8 +737,8 @@ echo -e "     [\e[$number 01${NC}]\e[1;31m • Red       ${NC}[\e[$number 04${NC
 echo -e "     [\e[$number 02${NC}]\e[1;32m • Green     ${NC}[\e[$number 05${NC}]\e[1;35m • Magenta   ${NC}[\e[$number 08${NC}] • Black\e[m"
 echo -e "     [\e[$number 03${NC}]\e[1;33m • Yellow    ${NC}[\e[$number 06${NC}]\e[1;36m • Cyan      ${NC}[\e[$number 09${NC}] • Grey\e[m"
 echo -e ""
-echo -e "              Press [ x ] To Go Main Menu " | lolcat
-echo -e "\e[$line"
+echo -e "              Press [ x ] To Go Main Menu "
+echo -e ""
 read -rp "      Please Enter 1-9 or x : " -e bc
 if [[ "$bc" = "1" ]]; then
 clear
@@ -822,8 +822,8 @@ echo -e "     [\e[$number 01${NC}]\e[1;31m • Red       ${NC}[\e[$number 04${NC
 echo -e "     [\e[$number 02${NC}]\e[1;32m • Green     ${NC}[\e[$number 05${NC}]\e[1;35m • Magenta   ${NC}[\e[$number 08${NC}] • Black\e[m"
 echo -e "     [\e[$number 03${NC}]\e[1;33m • Yellow    ${NC}[\e[$number 06${NC}]\e[1;36m • Cyan      ${NC}[\e[$number 09${NC}] • Grey\e[m"
 echo -e ""
-echo -e "              Press [ x ] To Go Main Menu " | lolcat
-echo -e "\e[$line"
+echo -e "              Press [ x ] To Go Main Menu "
+echo -e ""
 read -rp "      Please Enter 1-9 or x : " -e bc
 if [[ "$bc" = "1" ]]; then
 clear
@@ -907,8 +907,8 @@ echo -e "     [\e[$number 01${NC}]\e[1;31m • Red       ${NC}[\e[$number 04${NC
 echo -e "     [\e[$number 02${NC}]\e[1;32m • Green     ${NC}[\e[$number 05${NC}]\e[1;35m • Magenta   ${NC}[\e[$number 08${NC}] • Grey\e[m"
 echo -e "     [\e[$number 03${NC}]\e[1;33m • Yellow    ${NC}[\e[$number 06${NC}]\e[1;36m • Cyan      ${NC}[\e[$number 09${NC}] • No Colour\e[m"
 echo -e ""
-echo -e "              Press [ x ] To Go Main Menu " | lolcat
-echo -e "\e[$line"
+echo -e "              Press [ x ] To Go Main Menu "
+echo -e ""
 read -rp "      Please Enter 1-9 or x : " -e bc
 if [[ "$bc" = "1" ]]; then
 clear
@@ -992,8 +992,8 @@ echo -e "     [\e[$number 01${NC}]\e[1;31m • Red       ${NC}[\e[$number 04${NC
 echo -e "     [\e[$number 02${NC}]\e[1;32m • Green     ${NC}[\e[$number 05${NC}]\e[1;35m • Magenta   ${NC}[\e[$number 08${NC}] • Black\e[m"
 echo -e "     [\e[$number 03${NC}]\e[1;33m • Yellow    ${NC}[\e[$number 06${NC}]\e[1;36m • Cyan      ${NC}[\e[$number 09${NC}] • Grey\e[m"
 echo -e ""
-echo -e "              Press [ x ] To Go Main Menu " | lolcat
-echo -e "\e[$line"
+echo -e "              Press [ x ] To Go Main Menu "
+echo -e ""
 read -rp "      Please Enter 1-9 or x : " -e bc
 if [[ "$bc" = "1" ]]; then
 clear
@@ -1092,8 +1092,8 @@ echo -e "    [\e[$number 05${NC}]\e[1;31m • Horror Style\e[m"
 echo -e "    [\e[$number 06${NC}]\e[1;36m • Colour Cyan Style\e[m"
 echo -e "    [\e[$number 07${NC}]\e[1;33m • Default Theme\e[m"
 echo -e ""
-echo -e "              Press [ x ] To Go Main Menu " | lolcat
-echo -e "\e[$line"
+echo -e "              Press [ x ] To Go Main Menu "
+echo -e ""
 read -rp "     Please Enter 1-7 or x : " -e bc
 if [[ "$bc" = "1" ]]; then
 clear
@@ -1282,8 +1282,8 @@ echo -e "   [\e[$number 09${NC}]\e[$below • Change Colour Of The Number Menu\e
 echo -e "   [\e[$number 10${NC}]\e[$below • Change Vps Provider Name\e[m"
 echo -e "   [\e[$number 11${NC}]\e[$below • Change Theme Style\e[m"
 echo -e ""
-echo -e "              Press [ x ] To Go Main Menu " | lolcat
-echo -e "\e[$line"
+echo -e "              Press [ x ] To Go Main Menu "
+echo -e ""
 read -rp "     Please Enter 1-11 or x : " -e num
 if [[ "$num" = "1" ]]; then
 menu1
