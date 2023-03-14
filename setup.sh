@@ -87,7 +87,7 @@ read -p "   Name : " nm
 echo $nm > /root/provided
 echo -e ""
 #Email domain
-echo -e "${PURPLE}════════════════════════════════════════════════════════════\e[0m"
+echo -e "${ORANGE}════════════════════════════════════════════════════════════\e[0m"
 echo -e ""
 echo -e "   \e[93mPlease enter your email Domain/Cloudflare\e[0m"
 echo -e "   \e[93m(Press ENTER for default email)\e[0m"
@@ -104,7 +104,7 @@ mkdir -p /usr/local/etc/xray/
 touch /usr/local/etc/xray/email
 echo $sts > /usr/local/etc/xray/email
 echo ""
-echo -e "${PURPLE}════════════════════════════════════════════════════════════\e[0m"
+echo -e "${ORANGE}════════════════════════════════════════════════════════════\e[0m"
 echo ""
 echo -e "   \e[93mPlease select a domain type below \e[0m"
 echo -e "     \e[1;32m1)\e[0m \e[93mEnter your Subdomain\e[0m"
