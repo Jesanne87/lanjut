@@ -2,6 +2,7 @@
 #wget https://github.com/${GitUser}/
 GitUser="Jesanne87"
 #IZIN SCRIPT
+export YLW='\033[0;33m'
 MYIP=$(curl -sS ipv4.icanhazip.com)
 echo -e "\e[32mloading...\e[0m"
 clear
@@ -25,12 +26,12 @@ echo -e ""
 echo -e "\e[$line┌──────────────────────────────────────────────────────┐\e[m"
 echo -e "\e[$line│                     \e[$box PANEL DOMAIN\e[30m                    \e[$line│\e[m"
 echo -e "\e[$line└──────────────────────────────────────────────────────┘\e[m"
-echo -e "   [\e[$number 01${NC}]\e[$below • Add ID Cloudflare\e[m"
-echo -e "   [\e[$number 02${NC}]\e[$below • Add Subdomain\e[m"
-echo -e "   [\e[$number 03${NC}]\e[$below • Pointing IP\e[m"
+echo -e "   [\e[$number 01${NC}]${YLW} • Add ID Cloudflare\e[m"
+echo -e "   [\e[$number 02${NC}]${YLW} • Add Subdomain\e[m"
+echo -e "   [\e[$number 03${NC}]${YLW} • Pointing IP\e[m"
 echo -e ""
-echo -e "              Press [ x ] To Go Main Menu " | lolcat
-echo -e "\e[$line"
+echo -e "              Press [ x ] To Go Main Menu "
+echo -e ""
 read -p "        Please Input Number  [1-3 or x] :  "  sys
 echo -e ""
 case $sys in
