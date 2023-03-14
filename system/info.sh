@@ -82,6 +82,6 @@ echo "   - Installation Log --> /root/log-install.txt"  | tee -a log-install.txt
 echo ""
 echo -e "\e[1;32m══════════════════ \e[93mAutoscript By JSphantom\e[1;32m ══════════════════\e[0m" | tee -a log-install.txt
 echo ""
-read -n1 -r -p "                Press any key to continue..."  | lolcat
+read -n1 -r -p "                Press any key to continue..."
     sleep 1
     menu
