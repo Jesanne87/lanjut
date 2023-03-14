@@ -206,7 +206,7 @@ echo -e " [\e[$number 10${NC}]\e[$below • Turn off Auto-Reboot Server"$NC
 echo -e " [\e[$number 11${NC}]\e[$below • View reboot log"$NC
 echo -e " [\e[$number 12${NC}]\e[$below • Remove reboot log"$NC
 echo -e ""
-echo -e "              [Ctrl + C] Exit From Script" | lolcat
+echo -e "              [Ctrl + C] Exit From Script"
 echo -e ""
 read -rp "Please Enter The Correct Number : " -e num
 if [[ "$num" = "1" ]]; then
