@@ -67,7 +67,7 @@ echo -e " [\e[$number 01${NC}]\e[$below • INPUT DNS TEMPORARY\e[m"
 echo -e " [\e[$number 02${NC}]\e[$below • INPUT DNS PERMANENTLY\e[m"
 echo -e " [\e[$number 03${NC}]\e[$below • BACK TO MAIN MENU\e[m"
 echo -e ""
-echo -e "                [Ctrl + C] Exit From Script" | lolcat
+echo -e "                [Ctrl + C] Exit From Script"
 echo -e ""
 read -p  "Select From Options [ 1 - 3 ] :" num
 echo -e ""
