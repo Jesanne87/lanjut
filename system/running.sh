@@ -4,7 +4,6 @@ export green="\e[0;32m"
 export NC="\e[0m"
 echo -e "\e[32mloading...\e[0m"
 clear
-figlet " Status " | lolcat
 echo -e "\e[0;34m•═══════════════════•\e[0m"
 status="$(systemctl show ssh.service --no-page)"
 status_text=$(echo "${status}" | grep 'ActiveState=' | cut -f2 -d=)
