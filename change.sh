@@ -54,7 +54,7 @@ echo -e " [\e[$number 04${NC}]\e[$below • Change Port Websocket SSH\e[m"
 echo -e " [\e[$number 05${NC}]\e[$below • Change Port Xray Core\e[m"
 echo -e " [\e[$number 06${NC}]\e[$below • Change Port Squid Proxy\e[m"
 echo -e ""
-echo -e "              Press [ x ] To Go Main Menu " | lolcat
+echo -e "              Press [ x ] To Go Main Menu "
 echo -e ""
 read -p "     Select From Options [1-8 or x] :  " port
 echo -e ""
