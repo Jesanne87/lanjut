@@ -201,6 +201,12 @@ systemctl start stunnel4
 # // OpenVPN
 wget https://raw.githubusercontent.com/${GitUser}/lanjut/main/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
 
+# Install figlet ascii
+sudo apt-get install figlet
+cd /usr/share
+git clone https://github.com/xero/figlet-fonts
+mv figlet-fonts/* figlet && rm –rf figlet-fonts
+
 # // install lolcat
 #wget https://raw.githubusercontent.com/${GitUser}/lanjut/main/lolcat.sh &&  chmod +x lolcat.sh && ./lolcat.sh
 
