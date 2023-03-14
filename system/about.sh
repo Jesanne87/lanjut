@@ -14,18 +14,18 @@ bl='\e[36;1m'
 gl='\e[32;1m'
 clear
 echo ""
-figlet "    Moded Script" | lolcat
-figlet " By JsPhantom" | lolcat
+figlet "    Moded Script"
+figlet " By JsPhantom"
 echo -e "    \e[32;1m╔══════════════════════════════════════════════════════╗\e[0m"
 echo -e "    \e[32;1m║                   \e[36;1mINFO SCRIPT VPS \e[0m                   \e[32;1m║\e[0m"
 echo -e "    \e[32;1m╚══════════════════════════════════════════════════════╝ \e[0m"
-echo -e "             \e[031;1m> Premium Moded Script By JSphantom <\e[0m" | lolcat
+echo -e "             \e[031;1m> Premium Moded Script By JSphantom <\e[0m"
 echo -e "    \e[0;32m╔══════════════════════════════════════════════════════╗\e[0m"
 echo -e "    \e[0;32m║        \e[1;35mFor OS Debian 10 & Ubuntu 20.04 64 bit        \e[0;32m║\e[0m"
 echo -e "    \e[0;32m║        \e[1;35mFor VPS with KVM and VMWare JSphantom         \e[0;32m║\e[0m"
 echo -e "    \e[0;32m║                      \e[1;35m Enjoy!!!                       \e[0;32m║\e[0m"  
 echo -e "    \e[0;32m╚══════════════════════════════════════════════════════╝\e[0m"
 echo ""
-read -n1 -r -p "                Press any key to continue..."  | lolcat
+read -n1 -r -p "                Press any key to continue..."
     sleep 1
     menu
