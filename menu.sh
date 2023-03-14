@@ -74,8 +74,6 @@ else
 fi
 echo -e "\e[32mloading...\e[0m"
 clear
-bold=$(tput bold)
-normal=$(tput sgr0)
 # // Export Color & Information
 export WH='\033[1;37m'                   
 export RED='\033[0;31m'
@@ -123,43 +121,43 @@ banner=$(cat /usr/bin/bannerku)
 ascii=$(cat /usr/bin/test)
 clear
 echo -e "\e[$banner_colour"
-figlet -f $ascii "$banner" | lolcat
+figlet -f $ascii "$banner"
 echo -e " \e[$line ┌──────────────────────────────────────────────────────┐${NC}"
 echo -e " \e[$line │\e[$box	       ───[ Server Information ]───              \e[$line│${NC}"
 echo -e " \e[$line └──────────────────────────────────────────────────────┘${NC}"
-echo -e " \e[$text  OPERATING SYSTEM       : ${NC}$(hostnamectl | grep "Operating System" | cut -d ' ' -f5-)${NC}"
-echo -e " \e[$text  KERNEL	          : ${NC}$(uname -r)${NC}"
-echo -e " \e[$text  SYSTEM UPTIME          : ${NC}$uptime${NC}"
-echo -e " \e[$text  IP ADDRESS		  : ${NC}$IPVPS${NC}"
-echo -e " \e[$text  DOMAIN NAME	          : ${PLE}$domain${NC}"
-echo -e " \e[$text  PROVIDED BY		  : ${YLW}$creditt${NC}"
-echo -e " \e[$text  EXPIRED STATUS         : ${NC}$exp $sts${NC}"
-echo -e " \e[$text  SCRIPT VERSION	  : ${NC}$stl${NC}"
-echo -e " \e[$text  CPU USAGE		  : ${NC}$load_cpu${NC}"
-echo -e " \e[$text  MEMORY USAGE           : ${NC}${ram_used}MB/${total_ram}MB (${ram_usage}%)${NC}"
-echo -e " \e[$text  BANDWIDTH DATA USAGE	  : ${WH}$daily_usage Daily/${YLW}$monthly_usage Monthly${NC}"
+echo -e " ${YLW}  OPERATING SYSTEM       : ${NC}$(hostnamectl | grep "Operating System" | cut -d ' ' -f5-)${NC}"
+echo -e " ${YLW}  KERNEL	          : ${NC}$(uname -r)${NC}"
+echo -e " ${YLW}  SYSTEM UPTIME          : ${NC}$uptime${NC}"
+echo -e " ${YLW}  IP ADDRESS		  : ${NC}$IPVPS${NC}"
+echo -e " ${YLW}  DOMAIN NAME	          : ${PLE}$domain${NC}"
+echo -e " ${YLW}  PROVIDED BY		  : ${YLW}$creditt${NC}"
+echo -e " ${YLW}  EXPIRED STATUS         : ${NC}$exp $sts${NC}"
+echo -e " ${YLW}  SCRIPT VERSION	  : ${NC}$stl${NC}"
+echo -e " ${YLW}  CPU USAGE		  : ${NC}$load_cpu${NC}"
+echo -e " ${YLW}  MEMORY USAGE           : ${NC}${ram_used}MB/${total_ram}MB (${ram_usage}%)${NC}"
+echo -e " ${YLW}  BANDWIDTH DATA USAGE	  : ${WH}$daily_usage Daily/${YLW}$monthly_usage Monthly${NC}"
 echo -e " \e[$line ┌──────────────────────────────────────────────────────┐${NC}"
-echo -e "   Ssh/Ovpn  V2ray  Vless  Vlessxtls   Troj-Ws   Troj-Tls${NC}"
-echo -e "      \e[$text $total_ssh       $vmess      $vless        $xtls          $trws         $trtls${NC}"
+echo -e "   ${WH}Ssh/Ovpn  V2ray  Vless  Vlessxtls   Troj-Ws   Troj-Tls${NC}"
+echo -e "      ${GRN} $total_ssh       $vmess      $vless        $xtls          $trws         $trtls${NC}"
 echo -e " \e[$line └──────────────────────────────────────────────────────┘${NC}"	
 echo -e " \e[$line ┌──────────────────────────────────────────────────────┐${NC}"
 echo -e " \e[$line │\e[$box               ───[ SERVER MENU ]───                  \e[$line│${NC}"
 echo -e " \e[$line └──────────────────────────────────────────────────────┘${NC}"
 echo -e "  "
-echo -e "    [\e[$number 01${NC}]\e[$below • Xray Vmess & Vless ${NC}      [\e[$number 07${NC}]\e[$below • Reboot ${NC}"
-echo -e "    [\e[$number 02${NC}]\e[$below • Trojan Xray & WS ${NC}        [\e[$number 08${NC}]\e[$below • Themes ${NC}"
-echo -e "    [\e[$number 03${NC}]\e[$below • SSH & OPENVPN  ${NC}          [\e[$number 09${NC}]\e[$below • Add IP ${NC}"
-echo -e "    [\e[$number 04${NC}]\e[$below • System Menu ${NC}             [\e[$number 10${NC}]\e[$below • Info ${NC}"
-echo -e "    [\e[$number 05${NC}]\e[$below • Check Running ${NC}           [\e[$number 11${NC}]\e[$below • Log Cleaner ${NC}"
-echo -e "    [\e[$number 06${NC}]\e[$below • Change Port ${NC}             [\e[$number 12${NC}]\e[$below • Exit ${NC}"
+echo -e "    [\e[$number 01${NC}]${YLW} • Xray Vmess & Vless ${NC}      [\e[$number 07${NC}]${YLW} • Reboot ${NC}"
+echo -e "    [\e[$number 02${NC}]${YLW} • Trojan Xray & WS ${NC}        [\e[$number 08${NC}]${YLW} • Themes ${NC}"
+echo -e "    [\e[$number 03${NC}]${YLW} • SSH & OPENVPN  ${NC}          [\e[$number 09${NC}]${YLW} • Add IP ${NC}"
+echo -e "    [\e[$number 04${NC}]${YLW} • System Menu ${NC}             [\e[$number 10${NC}]${YLW} • Info ${NC}"
+echo -e "    [\e[$number 05${NC}]${YLW} • Check Running ${NC}           [\e[$number 11${NC}]${YLW} • Log Cleaner ${NC}"
+echo -e "    [\e[$number 06${NC}]${YLW} • Change Port ${NC}             [\e[$number 12${NC}]${YLW} • Exit ${NC}"
 echo -e " "
 echo -e " \e[$line ┌──────────────────────────────────────────────────────┐${NC}"
 echo -e " \e[$line │\e[$box   •••───[ Moded Script By JsPhantom @ 2023 ]───•••   \e[$line│${NC}"
 echo -e " \e[$line └──────────────────────────────────────────────────────┘${NC}"
-echo -e "                [Ctrl + C] Exit From Script" | lolcat
-echo -e "\e[$below "
+echo -e "                [Ctrl + C] Exit From Script"
+echo -e " "
 read -p " Select menu :  " menu
-echo -e ""
+echo -e " "
 case $menu in
 1 | 01 )
     xraay
