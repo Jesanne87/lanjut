@@ -201,7 +201,7 @@ trojaan
 	echo " DELETE XRAY TROJAN TCP"
 	echo " Select the existing client you want to remove"
 	echo " Press CTRL+C to return"
-	echo " •───────────────────────────────•" | lolcat
+	echo " •───────────────────────────────•"
 	echo "     No  Expired   User"
 	grep -E "^### " "/usr/local/etc/xray/akunxtr.conf" | cut -d ' ' -f 2-3 | nl -s ') '
 	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
@@ -250,7 +250,7 @@ trojaan
 	echo "Renew User Xray Trojan Tcp"
 	echo "Select the existing client you want to renew"
 	echo " Press CTRL+C to return"
-	echo -e "•───────────────────────────────•" | lolcat
+	echo -e "•───────────────────────────────•"
 	grep -E "^### " "/usr/local/etc/xray/akunxtr.conf" | cut -d ' ' -f 2-3 | nl -s ') '
 	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
 		if [[ ${CLIENT_NUMBER} == '1' ]]; then
@@ -559,7 +559,7 @@ trojaan
 	echo " DELETE XRAY TROJAN WS TLS"
 	echo " Select the existing client you want to remove"
 	echo " Press CTRL+C to return"
-	echo " •───────────────────────────────•" | lolcat
+	echo " •───────────────────────────────•"
 	echo "     No  Expired   User"
 	grep -E "^#trws " "/usr/local/etc/xray/trojan.json" | cut -d ' ' -f 2-3 | nl -s ') '
 	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
@@ -609,7 +609,7 @@ trojaan
 	echo "Renew User Xray Trojan Ws Tls"
 	echo "Select the existing client you want to renew"
 	echo " Press CTRL+C to return"
-	echo -e "•───────────────────────────────•" | lolcat
+	echo -e "•───────────────────────────────•"
 	grep -E "^#trws " "/usr/local/etc/xray/trojan.json" | cut -d ' ' -f 2-3 | nl -s ') '
 	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
 		if [[ ${CLIENT_NUMBER} == '1' ]]; then
@@ -665,7 +665,7 @@ trojaan
 	echo "SHOW USER XRAY TROJAN TCP TLS"
 	echo "Select the existing client you want to renew"
 	echo " Press CTRL+C to return"
-	echo -e "•───────────────────────────────•" | lolcat
+	echo -e "•───────────────────────────────•"
 	grep -E "^#trws " "/usr/local/etc/xray/trojan.json" | cut -d ' ' -f 2-3 | nl -s ') '
 	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
 		if [[ ${CLIENT_NUMBER} == '1' ]]; then
@@ -786,9 +786,9 @@ echo -e "      [\e[$number 11${NC}]\e[$below • Show Config Trojan WS TLS Accou
 echo -e "      [\e[$number 12${NC}]\e[$below • Check User Login Trojan WS TLS\e[m"
 echo -e ""
 echo -e "   \e[$number    >> Total :\e[m \e[$below ${total2} Client\e[m"
-echo -e "\e[$line"
-echo -e "                 Press [ x ] To Go Main Menu " | lolcat
-echo -e "\e[$line"
+echo -e ""
+echo -e "                 Press [ x ] To Go Main Menu "
+echo -e ""
 read -rp "      Please Input Number  [1-12 or x] :  "  num
 echo -e ""
 if [[ "$num" = "1" ]]; then
