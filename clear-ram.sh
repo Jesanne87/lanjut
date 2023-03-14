@@ -27,8 +27,9 @@ sync && echo 3 > /proc/sys/vm/drop_caches
 freemem_after=$(cat /proc/meminfo | grep MemFree | tr -s ' ' | cut -d ' ' -f2) && freemem_after=$(echo "$freemem_after/1024.0" | bc)
 
 # Output Summary
+echo ""
 echo -e "This freed $(echo "$freemem_after - $freemem_before" | bc) MiB, so now you have $freemem_after MiB of free RAM."
 echo ""
-read -n1 -r -p "                Press any key to continue..."  | lolcat
+read -n1 -r -p "                Press any key to continue..."
     sleep 1
     system
