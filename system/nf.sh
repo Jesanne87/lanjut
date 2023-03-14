@@ -2903,6 +2903,7 @@ function CheckV4() {
 echo -e " \033[36mMedia Stream Unlocker Test Mod By ${NC}\033[33mJsPhantom\033[0m"
 echo -e " \033[1;37mVersion : ${NC}\033[33m${shell_version}${Font_Suffix}\033[0m"
 echo -e " \033[32mTime    : $(date)\033[0m"
+            echo -e ""
             echo -e "       **SERVER INFORMATION**${Font_Suffix} "
             echo -e "\e[$line=========================================${NC}"
             echo -e " Cpu Model       :$cname"
