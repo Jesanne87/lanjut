@@ -50,11 +50,11 @@ tokengit=$(cat /etc/adminip/access.conf)
 MYIP=$(wget -qO- ipinfo.io/ip);
 adminip=$( curl -sS https://raw.githubusercontent.com/Jesanne87/allow/main/accessmenu | grep $MYIP )
 if [ $adminip = $MYIP ]; then
-echo -e "${green}Permission Accepted...${NC}"
+echo -e "${GRN}Permission Accepted...${NC}"
 else
 rm -rf addip.sh
 clear
-echo -e "${red}Permission Denied!${NC}";
+echo -e "${RED}Permission Denied!${NC}";
 echo "OWNER AREA ONLY"
 exit 0
 fi
@@ -242,7 +242,7 @@ addip
 
 renew-ip() {
 if [ -z $tokengit]; then
-echo -e "[ ${green}INFO${NC} ] Please Set IP ADMIN FIRST!!!"
+echo -e "[ ${GRN}INFO${NC} ] Please Set IP ADMIN FIRST!!!"
 sleep 3
 clear
 exit 0
@@ -320,7 +320,7 @@ addip
 
 cek-ip() {
 if [ -z $tokengit]; then
-echo -e "[ ${green}INFO${NC} ] Please Set IP ADMIN FIRST!!!"
+echo -e "[ ${GRN}INFO${NC} ] Please Set IP ADMIN FIRST!!!"
 sleep 3
 clear
 exit 0
