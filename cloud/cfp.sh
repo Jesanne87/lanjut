@@ -5,6 +5,8 @@ GitUser="Jesanne87"
 MYIP=$(curl -sS ipv4.icanhazip.com)
 echo -e "\e[32mloading...\e[0m"
 clear
+# LINE COLOUR
+line=$(cat /etc/line)
 # Valid Script
 VALIDITY () {
     today=`date -d "0 days" +"%Y-%m-%d"`
