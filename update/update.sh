@@ -70,8 +70,8 @@ echo -e ""
 echo -e " [\e[$number 01${NC}]\e[$below • Change Banner SSH\e[m"
 echo -e " [\e[$number 02${NC}]\e[$below • Check Update/New Version Script\e[m"
 echo -e ""
-echo -e "       Press [ x ] To Go Main Menu " | lolcat
-echo -e "\e[$line"
+echo -e "       Press [ x ] To Go Main Menu "
+echo -e ""
 read -p "Select From Options [1-3 or x] :  " port
 echo -e ""
 case $port in
