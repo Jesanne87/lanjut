@@ -488,7 +488,7 @@ xraay
 	echo " Delete User Xray Vmess Ws"
 	echo " Select the existing client you want to remove"
 	echo " Press CTRL+C to return"
-	echo " •───────────────────────────────•" | lolcat
+	echo " •───────────────────────────────•"
 	echo "     No  Expired   User"
 	grep -E "^#vms " "/usr/local/etc/xray/vmess.json" | cut -d ' ' -f 2-3 | nl -s ') '
 	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
@@ -540,7 +540,7 @@ xraay
 	echo "Renew User Xray Vmess Ws"
 	echo "Select the existing client you want to renew"
 	echo " Press CTRL+C to return"
-	echo -e "•───────────────────────────────•" | lolcat
+	echo -e "•───────────────────────────────•"
 	grep -E "^#vms " "/usr/local/etc/xray/vmess.json" | cut -d ' ' -f 2-3 | nl -s ') '
 	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
 		if [[ ${CLIENT_NUMBER} == '1' ]]; then
@@ -599,7 +599,7 @@ xraay
 	echo "SHOW USER XRAY VMESS WS"
 	echo "Select the existing client you want to renew"
 	echo " Press CTRL+C to return"
-	echo -e "•───────────────────────────────•" | lolcat
+	echo -e "•───────────────────────────────•"
 	grep -E "^#vms " "/usr/local/etc/xray/vmess.json" | cut -d ' ' -f 2-3 | nl -s ') '
 	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
 		if [[ ${CLIENT_NUMBER} == '1' ]]; then
@@ -977,7 +977,7 @@ xraay
 	echo " Delete User Xray Vless Ws"
 	echo " Select the existing client you want to remove"
 	echo " Press CTRL+C to return"
-	echo " •───────────────────────────────•" | lolcat
+	echo " •───────────────────────────────•"
 	echo "     No  Expired   User"
 	grep -E "^#vls " "/usr/local/etc/xray/vless.json" | cut -d ' ' -f 2-3 | nl -s ') '
 	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
@@ -1025,7 +1025,7 @@ xraay
 	echo "Renew User Xray Vless Ws"
 	echo "Select the existing client you want to renew"
 	echo " Press CTRL+C to return"
-	echo -e "•───────────────────────────────•" | lolcat
+	echo -e "•───────────────────────────────•"
 	grep -E "^#vls " "/usr/local/etc/xray/vless.json" | cut -d ' ' -f 2-3 | nl -s ') '
 	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
 		if [[ ${CLIENT_NUMBER} == '1' ]]; then
@@ -1084,7 +1084,7 @@ xraay
 	echo "SHOW USER XRAY VLESS WS"
 	echo "Select the existing client you want to renew"
 	echo " Press CTRL+C to return"
-	echo -e "•───────────────────────────────•" | lolcat
+	echo -e "•───────────────────────────────•"
 	grep -E "^#vls " "/usr/local/etc/xray/vless.json" | cut -d ' ' -f 2-3 | nl -s ') '
 	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
 		if [[ ${CLIENT_NUMBER} == '1' ]]; then
@@ -1322,7 +1322,7 @@ xraay
 	echo " Delete User Xray Vless Tcp Xtls"
 	echo " Select the existing client you want to remove"
 	echo " Press CTRL+C to return"
-	echo " •───────────────────────────────•" | lolcat
+	echo " •───────────────────────────────•"
 	echo "     No  Expired   User"
 	grep -E "^#vxtls " "/usr/local/etc/xray/config.json" | cut -d ' ' -f 2-3 | nl -s ') '
 	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
@@ -1370,7 +1370,7 @@ xraay
 	echo "Renew User Xray Vless Tcp Xtls"
 	echo "Select the existing client you want to renew"
 	echo " Press CTRL+C to return"
-	echo -e "•───────────────────────────────•" | lolcat
+	echo -e "•───────────────────────────────•"
 	grep -E "^#vxtls " "/usr/local/etc/xray/config.json" | cut -d ' ' -f 2-3 | nl -s ') '
 	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
 		if [[ ${CLIENT_NUMBER} == '1' ]]; then
@@ -1427,7 +1427,7 @@ xraay
 	echo "SHOW USER XRAY VLESS XTLS"
 	echo "Select the existing client you want to renew"
 	echo " Press CTRL+C to return"
-	echo -e "•───────────────────────────────•" | lolcat
+	echo -e "•───────────────────────────────•"
 	grep -E "^#vxtls " "/usr/local/etc/xray/config.json" | cut -d ' ' -f 2-3 | nl -s ') '
 	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
 		if [[ ${CLIENT_NUMBER} == '1' ]]; then
@@ -1550,9 +1550,9 @@ echo -e "      [\e[$number 17${NC}]\e[$below • Show Config Vless Xtls Account\
 echo -e "      [\e[$number 18${NC}]\e[$below • Check User Login Vless Xtls\e[m"
 echo -e ""
 echo -e "   \e[$number    >> Total :\e[m \e[$below ${total3} Client\e[m"
-echo -e "\e[$line"
-echo -e "                 Press [ x ] To Go Main Menu " | lolcat
-echo -e "\e[$line"
+echo -e ""
+echo -e "                 Press [ x ] To Go Main Menu "
+echo -e ""
 read -rp "        Please Input Number  [1-18 or x] :  "  num
 echo -e ""
 if [[ "$num" = "1" ]]; then
