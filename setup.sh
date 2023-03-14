@@ -109,7 +109,8 @@ echo ""
 echo -e "   \e[93mPlease select a domain type below \e[0m"
 echo -e "     \e[1;32m1)\e[0m \e[93mEnter your Subdomain\e[0m"
 echo -e "     \e[1;32m2)\e[0m \e[93mUse a random Subdomain\e[0m"
-echo -e "   ${PURPLE}════════════════════════════════════\e[0m"
+echo ""
+echo -e "   ${ORANGE}════════════════════════════════════\e[0m"
 read -p "   Please select numbers 1-2 or Any Button(Random) : " host
 echo ""
 if [[ $host == "1" ]]; then
@@ -166,6 +167,9 @@ echo -e "\e[0;32mDONE INSTALLING SET-BR...\e[0m"
 clear
 echo -e "\e[0;32mCertificate...\e[0m"
 wget https://raw.githubusercontent.com/${GitUser}/lanjut/main/certi.sh && chmod +x certi.sh && screen -S cert ./certi.sh
+sleep 1
+echo -e "\e[0;32mAlmost Done...\e[0m"
+sleep 1.5
 # set time GMT +8
 ln -fs /usr/share/zoneinfo/Asia/Kuala_Lumpur /etc/localtime
 #finish
