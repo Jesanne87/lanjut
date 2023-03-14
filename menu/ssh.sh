@@ -43,29 +43,30 @@ red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
 MYIP=$(wget -qO- ifconfig.me/ip);
+export YLW='\033[0;33m'
 
 echo -e ""
 echo -e "   \e[$line┌──────────────────────────────────────────────────────┐\e[m"
 echo -e "   \e[$line│                  \e[$box SSH & OpenVPN Menu                 \e[$line│\e[m"
 echo -e "   \e[$line└──────────────────────────────────────────────────────┘\e[m"
-echo -e "      [\e[$number 01${NC}]\e[$below • Create SSH & OpenVPN Account\e[m"
-echo -e "      [\e[$number 02${NC}]\e[$below • Trial Account SSH & OpenVPN\e[m"
-echo -e "      [\e[$number 03${NC}]\e[$below • Renew SSH & OpenVPN Account\e[m"
-echo -e "      [\e[$number 04${NC}]\e[$below • Delete SSH & OpenVPN Account\e[m"
-echo -e "      [\e[$number 05${NC}]\e[$below • Check User Login SSH & OpenVPN\e[m"
-echo -e "      [\e[$number 06${NC}]\e[$below • List Member SSH & OpenVPN\e[m"
-echo -e "      [\e[$number 07${NC}]\e[$below • Delete User Expired SSH & OpenVPN\e[m"
-echo -e "      [\e[$number 08${NC}]\e[$below • Set up Autokill SSH\e[m"
-echo -e "      [\e[$number 09${NC}]\e[$below • Cek Users Who Do Multi Login SSH\e[m"
-echo -e "      [\e[$number 10${NC}]\e[$below • User List\e[m"
-echo -e "      [\e[$number 11${NC}]\e[$below • User Lock\e[m"
-echo -e "      [\e[$number 12${NC}]\e[$below • User Unlock\e[m"
-echo -e "      [\e[$number 13${NC}]\e[$below • User Password\e[m"
-echo -e "      [\e[$number 14${NC}]\e[$below • Restart Service Dropbear, Squid3,\e[m"
-echo -e "              \e[$below OpenVPN & SSH\e[m"
+echo -e "      [\e[$number 01${NC}]${YLW} • Create SSH & OpenVPN Account\e[m"
+echo -e "      [\e[$number 02${NC}]${YLW} • Trial Account SSH & OpenVPN\e[m"
+echo -e "      [\e[$number 03${NC}]${YLW} • Renew SSH & OpenVPN Account\e[m"
+echo -e "      [\e[$number 04${NC}]${YLW} • Delete SSH & OpenVPN Account\e[m"
+echo -e "      [\e[$number 05${NC}]${YLW} • Check User Login SSH & OpenVPN\e[m"
+echo -e "      [\e[$number 06${NC}]${YLW} • List Member SSH & OpenVPN\e[m"
+echo -e "      [\e[$number 07${NC}]${YLW} • Delete User Expired SSH & OpenVPN\e[m"
+echo -e "      [\e[$number 08${NC}]${YLW} • Set up Autokill SSH\e[m"
+echo -e "      [\e[$number 09${NC}]${YLW} • Cek Users Who Do Multi Login SSH\e[m"
+echo -e "      [\e[$number 10${NC}]${YLW} • User List\e[m"
+echo -e "      [\e[$number 11${NC}]${YLW} • User Lock\e[m"
+echo -e "      [\e[$number 12${NC}]${YLW} • User Unlock\e[m"
+echo -e "      [\e[$number 13${NC}]${YLW} • User Password\e[m"
+echo -e "      [\e[$number 14${NC}]${YLW} • Restart Service Dropbear, Squid3,\e[m"
+echo -e "              ${YLW} OpenVPN & SSH\e[m"
 echo -e ""
-echo -e "              Press [ x ] To Go Main Menu " | lolcat
-echo -e "\e[$line"
+echo -e "              Press [ x ] To Go Main Menu "
+echo -e " "
 read -p "       Please Input Number  [1-14 or x] :  "  ssh
 echo -e ""
 case $ssh in
