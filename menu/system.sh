@@ -38,6 +38,7 @@ back_text=$(cat /etc/back)
 number=$(cat /etc/number)
 # TEXT ON BOX COLOUR
 box=$(cat /etc/box)
+export YLW='\033[0;33m'
 clear
 red='\e[1;31m'
 green='\e[0;32m'
@@ -57,9 +58,9 @@ echo -e "   [\e[$number 06${NC}]\e[$below • Backup Vps           ${NC}[\e[$num
 echo -e "   [\e[$number 07${NC}]\e[$below • Autobackup Vps       ${NC}[\e[$number 16${NC}]\e[$below • Change Password VPS\e[m"
 echo -e "   [\e[$number 08${NC}]\e[$below • Restore Vps          ${NC}[\e[$number 17${NC}]\e[$below • UPDATE SCRIPT\e[m"
 echo -e "   [\e[$number 09${NC}]\e[$below • Install Webmin       ${NC}[\e[$number 18${NC}]\e[$below • Clear Ram\e[m"
-echo -e "\e[$line"
-echo -e "              Press [ x ] To Go Main Menu " | lolcat
-echo -e "\e[$line"
+echo -e " "
+echo -e "              Press [ x ] To Go Main Menu "
+echo -e " "
 read -p "    Please Input Number  [1-17 or x] :  "  sys
 echo -e ""
 case $sys in
