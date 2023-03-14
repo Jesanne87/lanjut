@@ -173,7 +173,7 @@ sleep 1.5
 # set time GMT +8
 ln -fs /usr/share/zoneinfo/Asia/Kuala_Lumpur /etc/localtime
 #finish
-rm -f /root/cert.sh
+rm -f /root/certi.sh
 rm -f /root/ssh-vpn.sh
 rm -f /root/ins-xray.sh
 rm -f /root/ohp.sh
