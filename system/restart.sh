@@ -189,7 +189,7 @@ case $Restart in
 				read -n 1 -s -r -p "Press any key to back on menu"
 				ssh
                 ;;
-				8)
+		8)
                 clear
 				systemctl restart xray
 				systemctl restart xray@none
@@ -207,7 +207,7 @@ case $Restart in
 				read -n 1 -s -r -p "Press any key to back on menu"
 				ssh
                 ;;
-				9)
+		9)
 				clear
 				systemctl restart xray@tcp
 				systemctl restart xray@trojan
@@ -243,7 +243,7 @@ case $Restart in
 				read -n 1 -s -r -p "Press any key to back on menu"
 				ssh
                 ;;
-				11)
+		11)
 				clear
                 systemctl restart ohp
 				systemctl restart ohpd
@@ -257,8 +257,8 @@ case $Restart in
 				echo ""
 				read -n 1 -s -r -p "Press any key to back on menu"
 				ssh
-				;;
-				12)
+		;;
+		12)
 				clear
 				systemctl restart ws-http
 				systemctl restart ws-https
@@ -274,8 +274,7 @@ case $Restart in
 				echo ""
 				read -n 1 -s -r -p "Press any key to back on menu"
 				ssh
-                ;;
-            
+                ;;      
                 x)
                 clear
                 ssh
