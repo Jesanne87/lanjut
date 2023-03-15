@@ -20,7 +20,8 @@ NC='\e[0m'
 export WH='\033[1;37m' 
 # ===================
 apt install git curl -y >/dev/null 2>&1
-clear
+echo -e "\e[32mloading...\e[0m"
+sleep 3
 echo -e "${NC}[ ${green}INFO${NC} ] \e[93mPreparing the install file"
 echo -e "${NC}[ ${green}INFO${NC} ] \e[93mAlright good ... installation file is ready"
 sleep 2
